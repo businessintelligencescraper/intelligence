@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>CA Intelligence — Admin</title>
+<style>
+  :root{--navy:#12355b;--navy2:#1d4e89;--bg:#f5f7fa;--card:#fff;--ink:#1c2733;--muted:#5b6b7b;--line:#e3e8ee;--ok:#2e6b34;--err:#a31226}
+  *{box-sizing:border-box}
+  body{margin:0;font-family:-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;background:var(--bg);color:var(--ink);font-size:15px;line-height:1.5}
+  header{background:var(--navy);color:#fff;padding:18px 20px}
+  header h1{margin:0;font-size:19px;max-width:980px;margin:0 auto}
+  header a{color:#cfe0f5;font-size:13px}
+  main{max-width:980px;margin:0 auto;padding:20px 16px 60px}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:18px;margin-bottom:16px}
+  .card h2{margin:0 0 10px;font-size:16px;color:var(--navy)}
+  label{display:block;font-size:13px;font-weight:600;color:var(--muted);margin:10px 0 4px}
+  input[type=text],input[type=password],input[type=url],input[type=number],select{width:100%;padding:9px 10px;border:1px solid var(--line);border-radius:8px;font-size:14px;background:#fff;color:var(--ink)}
+  input[type=number]{width:110px}
+  button{background:var(--navy2);color:#fff;border:0;border-radius:8px;padding:9px 16px;font-size:14px;font-weight:600;cursor:pointer}
+  button:hover{background:var(--navy)}
+  button.ghost{background:#eef2f7;color:var(--navy)}
+  button.danger{background:transparent;color:var(--err);padding:4px 8px;font-size:16px;line-height:1}
+  .row{display:flex;gap:10px;flex-wrap:wrap;align-items:end}
+  .row>div{flex:1;min-width:160px}
+  table{width:100%;border-collapse:collapse;font-size:13.5px}
+  th{ text-align:left;color:var(--muted);font-size:12px;text-transform:uppercase;letter-spacing:.05em;padding:8px 6px;border-bottom:1px solid var(--line)}
+  td{padding:8px 6px;border-bottom:1px solid var(--line);vertical-align:middle}
+  td input[type=text],td input[type=url],td select{font-size:13px;padding:6px 8px}
+  .tag{font-size:10.5px;font-weight:700;padding:2px 7px;border-radius:99px;background:#eaf0f7;color:var(--navy2);text-transform:uppercase}
+  .tag.auto{background:#f0ecf7;color:#59468b}
+  .status{margin-top:10px;font-size:14px;min-height:20px}
+  .status.ok{color:var(--ok)} .status.err{color:var(--err)}
+  .note{font-size:12.5px;color:var(--muted)}
+  #gate{max-width:420px;margin:60px auto}
+  .hidden{display:none}
+  @media (max-width:700px){ table,thead,tbody,tr,td,th{display:block} thead{display:none} td{border:0;padding:4px 0} tr{border-bottom:1px solid var(--line);padding:10px 0} }
+</style>
+</head>
+<body>
+<header>
+  <h1>CA Intelligence — Admin Portal &nbsp;<a href="index.html">← back to dashboard</a></h1>
+</header>
+<main>
+
+  <div id="gate" class="card">
+    <h2>Enter portal password</h2>
+    <input type="password" id="pw" placeholder="Password" autofocus>
+    <div style="margin-top:12px"><button id="pwBtn">Unlock</button></div>
+    <div class="status err" id="pwErr"></div>
+    <p class="note">Note: this gate deters casual access only — the page itself is public. Nothing sensitive lives behind it.</p>
+  </div>
+
+  <div id="app" class="hidden">
+
+    <div class="card">
+      <h2>Repository connection</h2>
+      <div class="row">
+        <div><label>GitHub owner (username)</label><input type="text" id="owner"></div>
+        <div><label>Repository name</label><input type="text" id="repo"></div>
+      </div>
+      <label>GitHub token (fine-grained, this repo only, Contents: read &amp; write)</label>
+      <input type="password" id="token" placeholder="github_pat_…">
+      <p class="note">Stored only in this browser (localStorage). Create at github.com → Settings → Developer settings → Fine-grained tokens. Needed to save changes; loading works without it.</p>
+      <div style="margin-top:8px"><button id="loadBtn">Load current settings</button></div>
+      <div class="status" id="loadStatus"></div>
+    </div>
+
+    <div id="editor" class="hidden">
+      <div class="card">
+        <h2>Automatic source discovery</h2>
+        <label>How many additional similar sources should the agent find and monitor on its own?</label>
+        <input type="number" id="autoCount" min="0" max="25" value="0">
+        <p class="note">The agent adds up to this many extra reputable sources (tagged AUTO below) on its next daily run. Set to 0 to stop discovering; delete any AUTO row to drop a source it added.</p>
+      </div>
+
+      <div class="card">
+        <h2>Sources monitored every day</h2>
+        <table id="srcTable">
+          <thead><tr><th>On</th><th>Name</th><th>Category</th><th>Feed URL</th><th>Origin</th><th></th></tr></thead>
+          <tbody></tbody>
+        </table>
+        <h2 style="margin-top:18px">Add a source</h2>
+        <div class="row">
+          <div><label>Name</label><input type="text" id="newName" placeholder="e.g. Politico Agriculture"></div>
+          <div><label>Category</label><select id="newCat"></select></div>
+        </div>
+        <label>Feed URL (RSS/Atom — or a normal site URL and the agent will find its feed)</label>
+        <input type="url" id="newUrl" placeholder="https://…">
+        <div style="margin-top:10px"><button class="ghost" id="addBtn">Add to list</button></div>
+      </div>
+
+      <div class="card">
+        <button id="saveBtn">Save all changes</button>
+        <div class="status" id="saveStatus"></div>
+        <p class="note">Saving commits <code>sources.json</code> and <code>config.json</code> to the repository; the next daily run picks them up automatically.</p>
+      </div>
+    </div>
+  </div>
+</main>
+<script>
+"use strict";
+const PW_HASH="26fff2f8310d1d079761a508d1c41a5c3df9a40d7a821dbb3b898afa548261d4";
+const CATS=["Regulatory","Nutrition","Dairy Industry","Food Industry","Sustainability","Reputation","Public Affairs"];
+const $=s=>document.querySelector(s);
+const esc=s=>String(s??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+let sourcesDoc=null, configDoc=null, shas={};
+
+async function sha256(t){
+  const b=await crypto.subtle.digest("SHA-256",new TextEncoder().encode(t));
+  return [...new Uint8Array(b)].map(x=>x.toString(16).padStart(2,"0")).join("");
+}
+$("#pwBtn").onclick=async()=>{
+  if(await sha256($("#pw").value)===PW_HASH){ sessionStorage.setItem("ca_admin","1"); unlock(); }
+  else $("#pwErr").textContent="Incorrect password.";
+};
+$("#pw").addEventListener("keydown",e=>{if(e.key==="Enter")$("#pwBtn").click();});
+
+function unlock(){
+  $("#gate").classList.add("hidden");
+  $("#app").classList.remove("hidden");
+  // Auto-derive owner/repo when hosted on *.github.io/<repo>/
+  const h=location.hostname, seg=location.pathname.split("/").filter(Boolean);
+  const savedOwner=localStorage.getItem("ca_owner"), savedRepo=localStorage.getItem("ca_repo");
+  $("#owner").value=savedOwner||(h.endsWith(".github.io")?h.split(".")[0]:"");
+  $("#repo").value=savedRepo||(h.endsWith(".github.io")&&seg.length?seg[0]:"");
+  $("#token").value=localStorage.getItem("ca_token")||"";
+  $("#newCat").innerHTML=CATS.map(c=>`<option>${c}</option>`).join("");
+}
+if(sessionStorage.getItem("ca_admin")==="1") unlock();
+
+function apiHeaders(withAuth){
+  const h={"Accept":"application/vnd.github+json"};
+  const t=$("#token").value.trim();
+  if(withAuth&&t)h["Authorization"]="Bearer "+t;
+  return h;
+}
+function repoPath(file){
+  return `https://api.github.com/repos/${$("#owner").value.trim()}/${$("#repo").value.trim()}/contents/${file}`;
+}
+const b64enc=s=>btoa(String.fromCharCode(...new TextEncoder().encode(s)));
+const b64dec=s=>new TextDecoder().decode(Uint8Array.from(atob(s.replace(/\n/g,"")),c=>c.charCodeAt(0)));
+
+async function fetchFile(file){
+  const r=await fetch(repoPath(file)+"?ref=main&t="+Date.now(),{headers:apiHeaders(true)});
+  if(!r.ok)throw new Error(`${file}: HTTP ${r.status}`);
+  const j=await r.json();
+  shas[file]=j.sha;
+  return JSON.parse(b64dec(j.content));
+}
+async function putFile(file,obj,msg){
+  const r=await fetch(repoPath(file),{
+    method:"PUT",headers:{...apiHeaders(true),"Content-Type":"application/json"},
+    body:JSON.stringify({message:msg,branch:"main",sha:shas[file],content:b64enc(JSON.stringify(obj,null,2)+"\n")})
+  });
+  if(!r.ok){const t=await r.text();throw new Error(`${file}: HTTP ${r.status} ${t.slice(0,140)}`);}
+  const j=await r.json(); shas[file]=j.content.sha;
+}
+
+$("#loadBtn").onclick=async()=>{
+  const st=$("#loadStatus"); st.className="status"; st.textContent="Loading…";
+  localStorage.setItem("ca_owner",$("#owner").value.trim());
+  localStorage.setItem("ca_repo",$("#repo").value.trim());
+  localStorage.setItem("ca_token",$("#token").value.trim());
+  try{
+    sourcesDoc=await fetchFile("sources.json");
+    configDoc=await fetchFile("config.json");
+    $("#autoCount").value=configDoc.auto_discover_count??0;
+    renderTable();
+    $("#editor").classList.remove("hidden");
+    st.className="status ok"; st.textContent=`Loaded ${sourcesDoc.sources.length} sources.`;
+  }catch(e){ st.className="status err"; st.textContent="Load failed — check owner/repo. "+e.message; }
+};
+
+function renderTable(){
+  const tb=$("#srcTable tbody");
+  tb.innerHTML=sourcesDoc.sources.map((s,i)=>`<tr data-i="${i}">
+    <td><input type="checkbox" ${s.enabled?"checked":""} data-f="enabled"></td>
+    <td><input type="text" value="${esc(s.name)}" data-f="name"></td>
+    <td><select data-f="category">${CATS.map(c=>`<option ${c===s.category?"selected":""}>${c}</option>`).join("")}</select></td>
+    <td><input type="url" value="${esc(s.url)}" data-f="url" style="min-width:220px"></td>
+    <td><span class="tag ${s.origin==="auto"?"auto":""}">${esc(s.origin||"seed")}</span></td>
+    <td><button class="danger" title="Remove" data-del="${i}">✕</button></td>
+  </tr>`).join("");
+  tb.querySelectorAll("[data-del]").forEach(b=>b.onclick=()=>{sourcesDoc.sources.splice(+b.dataset.del,1);renderTable();});
+  tb.querySelectorAll("[data-f]").forEach(el=>el.addEventListener("change",()=>{
+    const i=+el.closest("tr").dataset.i, f=el.dataset.f;
+    sourcesDoc.sources[i][f]=(el.type==="checkbox")?el.checked:el.value;
+    if(f!=="enabled")sourcesDoc.sources[i].origin=sourcesDoc.sources[i].origin==="seed"?"admin":sourcesDoc.sources[i].origin;
+  }));
+}
+
+$("#addBtn").onclick=()=>{
+  const name=$("#newName").value.trim(), url=$("#newUrl").value.trim();
+  if(!name||!url){alert("Name and URL are required.");return;}
+  sourcesDoc.sources.push({
+    id:name.toLowerCase().replace(/[^a-z0-9]+/g,"-").replace(/^-|-$/g,"").slice(0,40)||("src-"+Date.now()),
+    name, url, category:$("#newCat").value, origin:"admin", enabled:true
+  });
+  $("#newName").value=""; $("#newUrl").value="";
+  renderTable();
+};
+
+$("#saveBtn").onclick=async()=>{
+  const st=$("#saveStatus"); st.className="status"; st.textContent="Saving…";
+  if(!$("#token").value.trim()){ st.className="status err"; st.textContent="A GitHub token is required to save."; return; }
+  localStorage.setItem("ca_token",$("#token").value.trim());
+  configDoc.auto_discover_count=Math.max(0,parseInt($("#autoCount").value,10)||0);
+  try{
+    await putFile("sources.json",sourcesDoc,"admin: update sources");
+    await putFile("config.json",configDoc,"admin: update config");
+    st.className="status ok"; st.textContent="Saved. The next daily run will use the new settings.";
+  }catch(e){ st.className="status err"; st.textContent="Save failed — "+e.message; }
+};
+</script>
+</body>
+</html>

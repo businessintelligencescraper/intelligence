@@ -1,0 +1,8 @@
+{
+  "auto_discover_count": 0,
+  "dashboard_days": 30,
+  "daily_max_items": 25,
+  "weekly_max_items": 12,
+  "lookback_hours": 36,
+  "notes": "auto_discover_count = how many ADDITIONAL reputable sources (beyond the current list) the agent may find and add on its own, tagged origin=auto. Set from the admin portal."
+}

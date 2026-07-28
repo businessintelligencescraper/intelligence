@@ -1,0 +1,164 @@
+{
+  "sources": [
+    {
+      "id": "fda-press",
+      "name": "FDA Press Releases",
+      "url": "https://www.fda.gov/about-fda/contact-fda/stay-informed/rss-feeds/press-releases/rss.xml",
+      "category": "Regulatory",
+      "origin": "seed",
+      "enabled": true
+    },
+    {
+      "id": "fda-food-recalls",
+      "name": "FDA Food Safety Recalls",
+      "url": "https://www.fda.gov/about-fda/contact-fda/stay-informed/rss-feeds/food-safety-recalls/rss.xml",
+      "category": "Regulatory",
+      "origin": "seed",
+      "enabled": true
+    },
+    {
+      "id": "fedreg-fda",
+      "name": "Federal Register — FDA Documents",
+      "url": "https://www.federalregister.gov/api/v1/documents.rss?conditions%5Bagencies%5D%5B%5D=food-and-drug-administration",
+      "category": "Regulatory",
+      "origin": "seed",
+      "enabled": true
+    },
+    {
+      "id": "fedreg-usda",
+      "name": "Federal Register — USDA Documents",
+      "url": "https://www.federalregister.gov/api/v1/documents.rss?conditions%5Bagencies%5D%5B%5D=agriculture-department",
+      "category": "Regulatory",
+      "origin": "seed",
+      "enabled": true
+    },
+    {
+      "id": "usda-ams",
+      "name": "USDA Agricultural Marketing Service",
+      "url": "https://www.ams.usda.gov/rss.xml",
+      "category": "Regulatory",
+      "origin": "seed",
+      "enabled": true
+    },
+    {
+      "id": "gnews-usda-fns",
+      "name": "USDA / FNS news (via Google News)",
+      "url": "https://news.google.com/rss/search?q=site%3Ausda.gov+OR+%22USDA%22+dairy+OR+%22school+meals%22&hl=en-US&gl=US&ceid=US:en",
+      "category": "Regulatory",
+      "origin": "seed",
+      "enabled": true
+    },
+    {
+      "id": "dairyfoods-news",
+      "name": "Dairy Foods — Processor News",
+      "url": "https://www.dairyfoods.com/rss/topic/2659-dairy-processor-news",
+      "category": "Dairy Industry",
+      "origin": "seed",
+      "enabled": true
+    },
+    {
+      "id": "dairyfoods-reg",
+      "name": "Dairy Foods — Dairy Regulations",
+      "url": "https://www.dairyfoods.com/rss/topic/111065-dairy-regulations",
+      "category": "Dairy Industry",
+      "origin": "seed",
+      "enabled": true
+    },
+    {
+      "id": "dairyfoods-sust",
+      "name": "Dairy Foods — Sustainability",
+      "url": "https://www.dairyfoods.com/rss/topic/110978-sustainability",
+      "category": "Sustainability",
+      "origin": "seed",
+      "enabled": true
+    },
+    {
+      "id": "gnews-idfa-nmpf",
+      "name": "IDFA & NMPF coverage (via Google News)",
+      "url": "https://news.google.com/rss/search?q=site%3Aidfa.org+OR+site%3Anmpf.org+OR+%22International+Dairy+Foods+Association%22+OR+%22National+Milk+Producers+Federation%22&hl=en-US&gl=US&ceid=US:en",
+      "category": "Dairy Industry",
+      "origin": "seed",
+      "enabled": true
+    },
+    {
+      "id": "gnews-cheesemarket",
+      "name": "Cheese Market News (via Google News)",
+      "url": "https://news.google.com/rss/search?q=site%3Acheesemarketnews.com+OR+%22Cheese+Market+News%22&hl=en-US&gl=US&ceid=US:en",
+      "category": "Dairy Industry",
+      "origin": "seed",
+      "enabled": true
+    },
+    {
+      "id": "fooddive",
+      "name": "Food Dive",
+      "url": "https://www.fooddive.com/feeds/news/",
+      "category": "Food Industry",
+      "origin": "seed",
+      "enabled": true
+    },
+    {
+      "id": "gnews-foodnav",
+      "name": "FoodNavigator USA (via Google News)",
+      "url": "https://news.google.com/rss/search?q=site%3Afoodnavigator-usa.com&hl=en-US&gl=US&ceid=US:en",
+      "category": "Food Industry",
+      "origin": "seed",
+      "enabled": true
+    },
+    {
+      "id": "gnews-fbn",
+      "name": "Food Business News (via Google News)",
+      "url": "https://news.google.com/rss/search?q=site%3Afoodbusinessnews.net&hl=en-US&gl=US&ceid=US:en",
+      "category": "Food Industry",
+      "origin": "seed",
+      "enabled": true
+    },
+    {
+      "id": "gnews-upf",
+      "name": "Ultra-Processed Foods coverage (via Google News)",
+      "url": "https://news.google.com/rss/search?q=%22ultra-processed+foods%22&hl=en-US&gl=US&ceid=US:en",
+      "category": "Nutrition",
+      "origin": "seed",
+      "enabled": true
+    },
+    {
+      "id": "gnews-dga",
+      "name": "Dietary Guidelines coverage (via Google News)",
+      "url": "https://news.google.com/rss/search?q=%22Dietary+Guidelines+for+Americans%22&hl=en-US&gl=US&ceid=US:en",
+      "category": "Nutrition",
+      "origin": "seed",
+      "enabled": true
+    },
+    {
+      "id": "gnews-school-nutrition",
+      "name": "School Nutrition coverage (via Google News)",
+      "url": "https://news.google.com/rss/search?q=%22school+nutrition%22+OR+%22school+meals%22+milk&hl=en-US&gl=US&ceid=US:en",
+      "category": "Nutrition",
+      "origin": "seed",
+      "enabled": true
+    },
+    {
+      "id": "cspi",
+      "name": "CSPI (Center for Science in the Public Interest)",
+      "url": "https://www.cspinet.org/rss.xml",
+      "category": "Public Affairs",
+      "origin": "seed",
+      "enabled": true
+    },
+    {
+      "id": "gnews-packaging",
+      "name": "Packaging & EPR legislation (via Google News)",
+      "url": "https://news.google.com/rss/search?q=%22extended+producer+responsibility%22+packaging+OR+%22packaging+legislation%22+food&hl=en-US&gl=US&ceid=US:en",
+      "category": "Sustainability",
+      "origin": "seed",
+      "enabled": true
+    },
+    {
+      "id": "gnews-epa-food",
+      "name": "EPA rules affecting food manufacturers (via Google News)",
+      "url": "https://news.google.com/rss/search?q=site%3Aepa.gov+OR+EPA+rule+food+OR+dairy+manufacturer&hl=en-US&gl=US&ceid=US:en",
+      "category": "Sustainability",
+      "origin": "seed",
+      "enabled": true
+    }
+  ]
+}
