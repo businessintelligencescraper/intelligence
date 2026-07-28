@@ -35,8 +35,8 @@ jobs:
           secure: true
           username: ${{ secrets.MAIL_USERNAME }}
           password: ${{ secrets.MAIL_APP_PASSWORD }}
-          from: Lactalis CA Intelligence <${{ secrets.MAIL_USERNAME }}>
-          to: jade.ritchie@us.lactalis.com
+          from: Corporate Affairs Intelligence <${{ secrets.MAIL_USERNAME }}>
+          to: ${{ secrets.MAIL_TO }}
           subject: "CA Intelligence Daily Brief — ${{ env.TODAY }}"
           html_body: file://outbox/daily.md
           convert_markdown: true
@@ -50,8 +50,8 @@ jobs:
           secure: true
           username: ${{ secrets.MAIL_USERNAME }}
           password: ${{ secrets.MAIL_APP_PASSWORD }}
-          from: Lactalis CA Intelligence <${{ secrets.MAIL_USERNAME }}>
-          to: jade.ritchie@us.lactalis.com
+          from: Corporate Affairs Intelligence <${{ secrets.MAIL_USERNAME }}>
+          to: ${{ secrets.MAIL_TO }}
           subject: "CA Intelligence Weekly Briefing — ${{ env.TODAY }}"
           html_body: file://outbox/weekly.md
           convert_markdown: true
