@@ -49,6 +49,7 @@
   .action{margin:0 0 6px;font-size:13.5px;color:var(--muted);font-style:italic}
   .srcs{font-size:12.5px;color:var(--muted)}
   .srcs a{color:var(--navy2)}
+  .pub{opacity:.8}
   .empty{background:#fff;border:1px dashed var(--line);border-radius:10px;padding:36px;text-align:center;color:var(--muted);margin-top:24px}
   footer{max-width:980px;margin:0 auto;padding:0 16px 40px;font-size:12px;color:var(--muted)}
   .md h1,.md h2{color:var(--navy);font-size:16px;margin:14px 0 6px}
@@ -117,18 +118,20 @@ function md(src){
 let DATA={items:[]};
 function relClass(r){ return /Executive|Messaging/.test(r||"")?"b-rel hot":"b-rel"; }
 function fmtDate(d){ try{ return new Date(d+"T12:00:00").toLocaleDateString(undefined,{weekday:"long",month:"long",day:"numeric",year:"numeric"});}catch(e){return d;} }
+function fmtShort(d){ try{ return new Date(d+"T12:00:00").toLocaleDateString(undefined,{month:"short",day:"numeric"});}catch(e){return d;} }
 
 function render(){
   const q=$("#q").value.trim().toLowerCase(), cat=$("#fCat").value, risk=$("#fRisk").value,
         rel=$("#fRel").value, days=parseInt($("#fDays").value,10);
   const cutoff=new Date(Date.now()-days*864e5).toISOString().slice(0,10);
+  const seenOn=it=>it.first_seen||it.date||"";
   const items=(DATA.items||[]).filter(it=>
-    (it.date||"")>=cutoff &&
+    seenOn(it)>=cutoff &&
     (!cat||it.category===cat) && (!risk||it.risk===risk) && (!rel||it.comms_relevance===rel) &&
     (!q||JSON.stringify([it.title,it.summary,it.why_it_matters]).toLowerCase().includes(q))
   );
   const byDay={};
-  for(const it of items)(byDay[it.date]=byDay[it.date]||[]).push(it);
+  for(const it of items)(byDay[seenOn(it)]=byDay[seenOn(it)]||[]).push(it);
   const dayKeys=Object.keys(byDay).sort().reverse();
   const listEl=$("#list");
   if(!dayKeys.length){
@@ -136,8 +139,9 @@ function render(){
     return;
   }
   const rank={High:0,Medium:1,Low:2};
+  const today=new Date().toISOString().slice(0,10);
   listEl.innerHTML=dayKeys.map(d=>
-    `<div class="day">${esc(fmtDate(d))}</div>`+
+    `<div class="day">${d===today?"Today · ":""}${esc(fmtDate(d))}</div>`+
     byDay[d].sort((a,b)=>(rank[a.risk]??3)-(rank[b.risk]??3)).map(it=>{
       const primary=(it.sources&&it.sources[0])||{};
       return `<div class="card">
@@ -150,7 +154,7 @@ function render(){
         <p class="summary">${esc(it.summary||"")}</p>
         ${it.why_it_matters?`<p class="why"><b>Why it matters:</b> ${esc(it.why_it_matters)}</p>`:""}
         ${it.recommended_action?`<p class="action">Recommended: ${esc(it.recommended_action)}</p>`:""}
-        <div class="srcs">${(it.sources||[]).map(s=>`<a href="${esc(s.url)}" target="_blank" rel="noopener">${esc(s.outlet||"source")}</a>`).join(" · ")}</div>
+        <div class="srcs">${(it.sources||[]).map(s=>`<a href="${esc(s.url)}" target="_blank" rel="noopener">${esc(s.outlet||"source")}</a>`).join(" · ")}${it.date&&it.date!==seenOn(it)?` <span class="pub">· published ${esc(fmtShort(it.date))}</span>`:""}</div>
       </div>`;
     }).join("")
   ).join("");

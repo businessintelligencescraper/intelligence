@@ -40,8 +40,9 @@ For each story produce:
 - **comms_relevance** — one of: `Monitor Only`, `Potential Media Interest`, `Executive Awareness Required`, `Messaging Review Required`.
 - **recommended_action** — one short sentence (e.g., "Monitor stakeholder reactions; no action needed" or "Brief leadership before the comment period closes Oct 14").
 - **sources** — array of `{outlet, url}`, primary/original source first.
-- **date** — publication date (ET, YYYY-MM-DD).
-- **id** — stable slug: `YYYY-MM-DD-<kebab-title-fragment>`.
+- **date** — the story's **actual publication date** (ET, YYYY-MM-DD), read from the article or feed. Do not default several stories to the same date for convenience, and do not use today's date as a stand-in: if you genuinely cannot determine a publication date, set it to `null` rather than guessing.
+- **first_seen** — **today's run date** (ET, YYYY-MM-DD). Always set this on every new story; never backdate it. This is what the dashboard groups by, so it must reflect the run that surfaced the item.
+- **id** — stable slug: `YYYY-MM-DD-<kebab-title-fragment>` using the publication date (or `first_seen` when publication date is unknown).
 
 Be honest and unspectacular: do not inflate risk to seem useful. Most days most items are Low/Monitor Only.
 
@@ -105,8 +106,9 @@ On non-Mondays, do NOT touch `outbox/weekly.md`.
 {
   "generated_at": "ISO-8601 UTC timestamp",
   "weekly": {"week_of": "YYYY-MM-DD", "markdown": "<latest weekly.md content>"} ,
-  "items": [ ...all stories from the last config.dashboard_days days,
-             newest first, same fields as the jsonl records... ]
+  "items": [ ...all stories whose first_seen falls in the last
+             config.dashboard_days days, newest first_seen first,
+             same fields as the jsonl records (including first_seen)... ]
 }
 ```
 (`weekly` may be null before the first Monday run.)

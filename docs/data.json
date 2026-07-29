@@ -2,13 +2,13 @@
   "generated_at": "2026-07-29T11:07:59Z",
   "weekly": {
     "week_of": "2026-07-21",
-    "markdown": "# Corporate Affairs Intelligence \u2014 Weekly Briefing \u2014 Week of July 21\u201327, 2026\n\n## The week in one paragraph\n\nThis is the CA Intelligence system's first week of operation, so this briefing reflects only July 27 \u2014 its first daily run \u2014 rather than a full seven days of tracked coverage. The day's most consequential thread is the continued mainstreaming of ultra-processed-food scrutiny into products marketed to families, exemplified by a new audit finding over 80% of toddler foods on store shelves are ultra-processed; this keeps pressure on \"clean label\" positioning for yogurt and dairy-snack products. A fast-moving, 17-state Salmonella outbreak tied to recalled eggs is a useful live case study in recall communications even though it sits outside the company's own category. A new EU packaging rule taking effect August 12 is a lower-urgency compliance item worth a quick internal check. Two significant items from earlier in the week \u2014 new US tariffs on Canadian dairy imports and USDA's push for whole milk/cheese/yogurt in school meals \u2014 predate this system's tracking window and are flagged separately for manual awareness; daily runs going forward will catch new developments on both threads.\n\n## Top developments\n\n**Multistate Salmonella Outbreak Tied to Recalled Eggs Grows to 17 States** (Medium \u00b7 Monitor Only) \u2014 CDC's investigation update confirmed the Salmonella Enteritidis outbreak linked to Midwest Poultry Services shell eggs has reached at least 98 illnesses and 26 hospitalizations across 17 states, with Georgia added as of July 27. The recall, issued July 22 for roughly 1.59 million dozen eggs, affects Kroger, Brookshire's, and several private-label brands.\n*Why it matters:* A fast-spreading, multi-retailer recall shows how quickly a contamination event can escalate into sustained national coverage and CDC/FDA joint action; while eggs are outside the company's category, the case is a useful live benchmark for recall-response speed, retailer communication, and outbreak-tracking cadence. [CDC](https://www.cdc.gov/salmonella/outbreaks/shell-eggs-07-26/index.html), [Food Safety News](https://www.foodsafetynews.com/2026/07/recalled-eggs-linked-to-salmonella-outbreak-spanning-17-states/), [News4JAX](https://www.news4jax.com/news/local/2026/07/27/salmonella-outbreak-tied-to-recalled-eggs-spreads-to-georgia/)\n\n**New Audit Finds Over 80% of Toddler Foods on Store Shelves Are Ultra-Processed** (Medium \u00b7 Monitor Only) \u2014 Researchers presenting at the Nutrition 2026 conference audited 2,783 foods marketed to children ages 6-36 months in Austin, TX grocery stores and found more than 80% qualify as ultra-processed; nearly half failed at least one WHO nutrition standard for children's food, most often on sugar content. STAT News covered the findings July 27.\n*Why it matters:* Keeps ultra-processed foods squarely in the spotlight for products marketed to families, a category the company competes in through yogurt and dairy snack products; reinforces the value of a recognizable-ingredient, minimally-processed positioning as UPF scrutiny continues to build toward possible labeling or procurement policy. [STAT News](https://www.statnews.com/2026/07/27/health-news-ultra-processed-baby-food-is-booming-is-it-okay/)\n\n**EU Packaging Rule's PFAS Ban and Producer-Responsibility Requirements Start the Clock for US Exporters** (Low \u00b7 Monitor Only) \u2014 Trade press this week reminded food exporters that the EU's Packaging and Packaging Waste Regulation becomes applicable August 12, 2026, banning PFAS above set thresholds in food-contact packaging and adding conformity, minimization, and extended-producer-responsibility requirements on any packaging placed on the EU market regardless of origin, with no transition period for noncompliant stock.\n*Why it matters:* Any product or packaging component the company ships into the EU would need to meet the PFAS thresholds and PPWR requirements by the mid-August deadline; worth a quick confirmation with supply chain/packaging teams if EU-bound volume exists, though most of the company's output is domestic. [FreshFruitPortal](https://www.freshfruitportal.com/news/2026/07/27/eu-produce-packaging/), [Food Safety Magazine](https://www.food-safety.com/articles/11228-pfas-free-food-packaging-by-august-2026)\n\n## Key watch items\n\n- **August 12, 2026** \u2014 EU Packaging and Packaging Waste Regulation (PPWR) becomes applicable; PFAS limits on food-contact packaging take effect with no transition period.\n- **Ongoing** \u2014 CDC/FDA Salmonella (shell eggs) outbreak investigation; watch for additional states, case counts, or a widened recall.\n- **Flagged for manual awareness (outside this week's tracked window):** July 23 White House proclamation imposing 50% tariffs on Canadian imports including dairy, with IDFA/NMPF public statements; USDA's July 17 \"Pledge for Healthier School Meals\" naming whole milk, cheese sticks, and yogurt. Both will be picked up by daily runs as they develop further.\n- **System note:** this is the first week of automated tracking; the source-fetch pipeline (curl/RSS) was blocked by this session's network policy and a WebSearch-based fallback was used instead \u2014 see the July 27 daily brief's Notes section for detail. Coverage depth should improve once the fetch mechanism is restored.\n"
+    "markdown": "# Corporate Affairs Intelligence — Weekly Briefing — Week of July 21–27, 2026\n\n## The week in one paragraph\n\nThis is the CA Intelligence system's first week of operation, so this briefing reflects only July 27 — its first daily run — rather than a full seven days of tracked coverage. The day's most consequential thread is the continued mainstreaming of ultra-processed-food scrutiny into products marketed to families, exemplified by a new audit finding over 80% of toddler foods on store shelves are ultra-processed; this keeps pressure on \"clean label\" positioning for yogurt and dairy-snack products. A fast-moving, 17-state Salmonella outbreak tied to recalled eggs is a useful live case study in recall communications even though it sits outside the company's own category. A new EU packaging rule taking effect August 12 is a lower-urgency compliance item worth a quick internal check. Two significant items from earlier in the week — new US tariffs on Canadian dairy imports and USDA's push for whole milk/cheese/yogurt in school meals — predate this system's tracking window and are flagged separately for manual awareness; daily runs going forward will catch new developments on both threads.\n\n## Top developments\n\n**Multistate Salmonella Outbreak Tied to Recalled Eggs Grows to 17 States** (Medium · Monitor Only) — CDC's investigation update confirmed the Salmonella Enteritidis outbreak linked to Midwest Poultry Services shell eggs has reached at least 98 illnesses and 26 hospitalizations across 17 states, with Georgia added as of July 27. The recall, issued July 22 for roughly 1.59 million dozen eggs, affects Kroger, Brookshire's, and several private-label brands.\n*Why it matters:* A fast-spreading, multi-retailer recall shows how quickly a contamination event can escalate into sustained national coverage and CDC/FDA joint action; while eggs are outside the company's category, the case is a useful live benchmark for recall-response speed, retailer communication, and outbreak-tracking cadence. [CDC](https://www.cdc.gov/salmonella/outbreaks/shell-eggs-07-26/index.html), [Food Safety News](https://www.foodsafetynews.com/2026/07/recalled-eggs-linked-to-salmonella-outbreak-spanning-17-states/), [News4JAX](https://www.news4jax.com/news/local/2026/07/27/salmonella-outbreak-tied-to-recalled-eggs-spreads-to-georgia/)\n\n**New Audit Finds Over 80% of Toddler Foods on Store Shelves Are Ultra-Processed** (Medium · Monitor Only) — Researchers presenting at the Nutrition 2026 conference audited 2,783 foods marketed to children ages 6-36 months in Austin, TX grocery stores and found more than 80% qualify as ultra-processed; nearly half failed at least one WHO nutrition standard for children's food, most often on sugar content. STAT News covered the findings July 27.\n*Why it matters:* Keeps ultra-processed foods squarely in the spotlight for products marketed to families, a category the company competes in through yogurt and dairy snack products; reinforces the value of a recognizable-ingredient, minimally-processed positioning as UPF scrutiny continues to build toward possible labeling or procurement policy. [STAT News](https://www.statnews.com/2026/07/27/health-news-ultra-processed-baby-food-is-booming-is-it-okay/)\n\n**EU Packaging Rule's PFAS Ban and Producer-Responsibility Requirements Start the Clock for US Exporters** (Low · Monitor Only) — Trade press this week reminded food exporters that the EU's Packaging and Packaging Waste Regulation becomes applicable August 12, 2026, banning PFAS above set thresholds in food-contact packaging and adding conformity, minimization, and extended-producer-responsibility requirements on any packaging placed on the EU market regardless of origin, with no transition period for noncompliant stock.\n*Why it matters:* Any product or packaging component the company ships into the EU would need to meet the PFAS thresholds and PPWR requirements by the mid-August deadline; worth a quick confirmation with supply chain/packaging teams if EU-bound volume exists, though most of the company's output is domestic. [FreshFruitPortal](https://www.freshfruitportal.com/news/2026/07/27/eu-produce-packaging/), [Food Safety Magazine](https://www.food-safety.com/articles/11228-pfas-free-food-packaging-by-august-2026)\n\n## Key watch items\n\n- **August 12, 2026** — EU Packaging and Packaging Waste Regulation (PPWR) becomes applicable; PFAS limits on food-contact packaging take effect with no transition period.\n- **Ongoing** — CDC/FDA Salmonella (shell eggs) outbreak investigation; watch for additional states, case counts, or a widened recall.\n- **Flagged for manual awareness (outside this week's tracked window):** July 23 White House proclamation imposing 50% tariffs on Canadian imports including dairy, with IDFA/NMPF public statements; USDA's July 17 \"Pledge for Healthier School Meals\" naming whole milk, cheese sticks, and yogurt. Both will be picked up by daily runs as they develop further.\n- **System note:** this is the first week of automated tracking; the source-fetch pipeline (curl/RSS) was blocked by this session's network policy and a WebSearch-based fallback was used instead — see the July 27 daily brief's Notes section for detail. Coverage depth should improve once the fetch mechanism is restored.\n"
   },
   "items": [
     {
       "id": "2026-07-27-chobani-zero-sugar-allulose-ruling",
       "title": "Appeals Court Revives Class Action Over Chobani's 'Zero Sugar' Yogurt Claims, Says Allulose Counts as Sugar",
-      "summary": "The 7th U.S. Circuit Court of Appeals in Chicago ruled July 27 that a proposed class action against Chobani over its Chobani Zero Sugar yogurt can proceed, rejecting Chobani's argument that allulose \u2014 a low-calorie sweetener the yogurt contains at 4 grams per serving \u2014 doesn't count toward FDA's threshold for \"sugar free\"/\"zero sugar\" label claims. The panel credited an FDA amicus brief stating that \"total sugars\" on Nutrition Facts panels includes all monosaccharides, including allulose, and sent the case back to a Chicago federal judge.",
+      "summary": "The 7th U.S. Circuit Court of Appeals in Chicago ruled July 27 that a proposed class action against Chobani over its Chobani Zero Sugar yogurt can proceed, rejecting Chobani's argument that allulose — a low-calorie sweetener the yogurt contains at 4 grams per serving — doesn't count toward FDA's threshold for \"sugar free\"/\"zero sugar\" label claims. The panel credited an FDA amicus brief stating that \"total sugars\" on Nutrition Facts panels includes all monosaccharides, including allulose, and sent the case back to a Chicago federal judge.",
       "why_it_matters": "This is a reputable-court interpretation of what counts as \"sugar\" for FDA label-claim purposes; any dairy product using allulose or a comparable novel sweetener while making \"sugar free,\" \"zero sugar,\" or \"no added sugar\" claims is now on notice that those claims may not survive scrutiny, making it worth a quick legal/regulatory-affairs check of the company's own labeling wherever such sweeteners or claims are used.",
       "category": "Regulatory",
       "risk": "Medium",
@@ -28,13 +28,14 @@
           "url": "https://gvwire.com/2026/07/28/chobani-must-face-lawsuit-over-zero-sugar-yogurt-claim-us-appeals-court-rules/"
         }
       ],
-      "date": "2026-07-27"
+      "date": "2026-07-27",
+      "first_seen": "2026-07-29"
     },
     {
       "id": "2026-07-27-fairlife-ransomware-production-resumes",
       "title": "Coca-Cola's fairlife Dairy Brand Resumes Production After Ransomware Attack Forced Plant Shutdowns",
       "summary": "Coca-Cola disclosed July 16 that its fairlife, LLC dairy subsidiary detected unauthorized third-party access to its systems, including production systems, in a ransomware event; a group calling itself Anubis claimed responsibility, and production was temporarily suspended at fairlife's four US facilities. On July 27, Coca-Cola announced fairlife had resumed the majority of production, said product quality and safety were not affected, and that retail availability was largely unimpacted due to existing inventory; the company said it does not expect a material financial impact.",
-      "why_it_matters": "A ransomware attack that halted production at a national dairy processor's plants for over a week is a live case study in operational-technology cyber risk for dairy manufacturing \u2014 a direct precedent for the company's own IT/OT security posture, incident response, and business-continuity/inventory planning; it also shows a major dairy brand can face retail-availability and reputation questions from a cyber incident even absent any food-safety issue, a natural media and analyst question (\"could this happen at your plants?\").",
+      "why_it_matters": "A ransomware attack that halted production at a national dairy processor's plants for over a week is a live case study in operational-technology cyber risk for dairy manufacturing — a direct precedent for the company's own IT/OT security posture, incident response, and business-continuity/inventory planning; it also shows a major dairy brand can face retail-availability and reputation questions from a cyber incident even absent any food-safety issue, a natural media and analyst question (\"could this happen at your plants?\").",
       "category": "Dairy Industry",
       "risk": "Medium",
       "comms_relevance": "Executive Awareness Required",
@@ -57,7 +58,8 @@
           "url": "https://www.cbsnews.com/news/coca-cola-fairlife-milk-production-ransomware-attack/"
         }
       ],
-      "date": "2026-07-27"
+      "date": "2026-07-27",
+      "first_seen": "2026-07-29"
     },
     {
       "id": "2026-07-27-danone-chobani-cold-brew-suit-survives",
@@ -78,7 +80,8 @@
           "url": "https://www.fooddive.com/news/danone-chobani-lawsuit-stok-la-colombe-cold-brew-packaging/756305/"
         }
       ],
-      "date": "2026-07-27"
+      "date": "2026-07-27",
+      "first_seen": "2026-07-28"
     },
     {
       "id": "2026-07-27-eu-packaging-pfas-rule-exporters",
@@ -99,7 +102,8 @@
           "url": "https://www.food-safety.com/articles/11228-pfas-free-food-packaging-by-august-2026"
         }
       ],
-      "date": "2026-07-27"
+      "date": "2026-07-27",
+      "first_seen": "2026-07-27"
     },
     {
       "id": "2026-07-27-upf-toddler-foods-audit",
@@ -116,7 +120,8 @@
           "url": "https://www.statnews.com/2026/07/27/health-news-ultra-processed-baby-food-is-booming-is-it-okay/"
         }
       ],
-      "date": "2026-07-27"
+      "date": "2026-07-27",
+      "first_seen": "2026-07-27"
     },
     {
       "id": "2026-07-27-salmonella-egg-outbreak-spreads",
@@ -141,7 +146,8 @@
           "url": "https://www.news4jax.com/news/local/2026/07/27/salmonella-outbreak-tied-to-recalled-eggs-spreads-to-georgia/"
         }
       ],
-      "date": "2026-07-27"
+      "date": "2026-07-27",
+      "first_seen": "2026-07-27"
     }
   ]
 }
