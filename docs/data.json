@@ -28,8 +28,9 @@
           "url": "https://gvwire.com/2026/07/28/chobani-must-face-lawsuit-over-zero-sugar-yogurt-claim-us-appeals-court-rules/"
         }
       ],
-      "date": "2026-07-27",
-      "first_seen": "2026-07-29"
+      "date": "2026-07-28",
+      "first_seen": "2026-07-29",
+      "date_evidence": "url slug: /2026/07/28/ on all sources"
     },
     {
       "id": "2026-07-27-fairlife-ransomware-production-resumes",
@@ -58,13 +59,14 @@
           "url": "https://www.cbsnews.com/news/coca-cola-fairlife-milk-production-ransomware-attack/"
         }
       ],
-      "date": "2026-07-27",
-      "first_seen": "2026-07-29"
+      "date": "2026-07-28",
+      "first_seen": "2026-07-29",
+      "date_evidence": "byline: Food Dive 'Published July 28, 2026'"
     },
     {
       "id": "2026-07-27-danone-chobani-cold-brew-suit-survives",
       "title": "Federal Judge Lets Danone's Trademark Suit Against Chobani Over Cold-Brew Coffee Packaging Proceed",
-      "summary": "A federal judge in Manhattan denied Chobani's motion to dismiss a trademark and trade-dress lawsuit brought by Danone (Dannon's parent), which alleges Chobani's La Colombe ready-to-drink cold brew line copies the yellow-and-black packaging and \"Bright & Mellow\" slogan Danone uses for its Stok cold brew brand. The July 27 ruling lets the case proceed toward discovery; it is a separate dispute from Danone's ongoing suit accusing Chobani of overstating protein content on its Oikos-competing yogurt tubs.",
+      "summary": "A federal judge in Manhattan denied Chobani's motion to dismiss a trademark and trade-dress lawsuit brought by Danone (Dannon's parent), which alleges Chobani's La Colombe ready-to-drink cold brew line copies the yellow-and-black packaging and \"Bright & Mellow\" slogan Danone uses for its Stok cold brew brand. The July 27 ruling lets the case proceed toward discovery; it is a separate dispute from Danone's ongoing suit accusing Chobani of overstating protein content on its Oikos-competing yogurt tubs. [Correction: a background article from July 2025 was originally cited alongside this ruling and has been removed.]",
       "why_it_matters": "Highlights an increasingly litigious rivalry between two of the largest US yogurt/dairy companies, spanning both product-claims and brand-packaging disputes; not a regulatory or category-wide risk, but sustained legal sparring between major players keeps dairy brand practices (labeling, packaging, claims) in trade and consumer press and is useful context if the company is asked to comment on industry dynamics.",
       "category": "Dairy Industry",
       "risk": "Low",
@@ -74,14 +76,11 @@
         {
           "outlet": "Reuters",
           "url": "https://www.tradingview.com/news/reuters.com,2026:newsml_L6N43T12F:0-chobani-fails-to-end-dannon-parent-danone-s-cold-brew-coffee-lawsuit/"
-        },
-        {
-          "outlet": "Food Dive",
-          "url": "https://www.fooddive.com/news/danone-chobani-lawsuit-stok-la-colombe-cold-brew-packaging/756305/"
         }
       ],
-      "date": "2026-07-27",
-      "first_seen": "2026-07-28"
+      "date": null,
+      "first_seen": "2026-07-28",
+      "date_evidence": "unknown: remaining source is paywalled, date unverified"
     },
     {
       "id": "2026-07-27-eu-packaging-pfas-rule-exporters",
