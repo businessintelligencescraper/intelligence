@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Information — Corporate Affairs Intelligence</title>
+<style>
+  :root{
+    --navy:#12355b; --navy2:#1d4e89;
+    --paper:#f5f7fa; --card:#ffffff;
+    --ink:#14183D; --muted:#676C96; --line:#E4E7F5;
+
+    --high:#FF2D55; --high-bg:#FFEDF1;
+    --med:#F2740C;  --med-bg:#FFF1E3;
+    --low:#0EA47A;  --low-bg:#E0F6EF;
+
+    --c1:#9B8CFF; --c1-bg:#F1EEFF;
+    --c2:#7B5FF0; --c2-bg:#EDE9FF;
+    --c3:#5B36E0; --c3-bg:#E8E2FF;
+    --c4:#3F1FAE; --c4-bg:#E3DCFF;
+
+    --display:"Avenir Next","Futura","Segoe UI",system-ui,sans-serif;
+    --body:-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--body);font-size:15px;line-height:1.5;-webkit-font-smoothing:antialiased}
+
+  header{background:var(--navy);color:#fff;padding:18px 20px}
+  header .wrap{max-width:1060px;margin:0 auto;padding:0 4px}
+  header h1{margin:0;font-size:20px;font-weight:650;letter-spacing:.2px}
+  header .sub{font-size:12.5px;opacity:.75;margin-top:3px}
+  nav{display:flex;gap:6px;margin-top:13px}
+  nav a{font-size:13.5px;font-weight:600;color:#cfe0f5;text-decoration:none;padding:6px 13px;border-radius:99px;line-height:1}
+  nav a:hover{background:rgba(255,255,255,.12);color:#fff}
+  nav a.active{background:#fff;color:var(--navy)}
+  nav a:focus-visible{outline:2px solid #fff;outline-offset:2px}
+
+  main{max-width:1060px;margin:0 auto;padding:30px 16px 56px;display:flex;flex-direction:column;gap:28px}
+
+  .lede h2{font-family:var(--display);font-weight:800;font-size:clamp(26px,4vw,38px);letter-spacing:-.025em;line-height:1.05;margin:0;text-wrap:balance}
+  .lede p{margin:11px 0 0;font-size:16.5px;color:var(--muted);max-width:62ch}
+  .lede p b{color:var(--ink);font-weight:650}
+
+  .twoq{display:grid;grid-template-columns:1fr 1fr;gap:13px}
+  .q{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:15px 17px;display:flex;gap:12px;align-items:baseline}
+  .q .k{font-family:var(--display);font-weight:800;font-size:11.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);white-space:nowrap}
+  .q .v{font-size:15.5px}
+  .q .v b{font-weight:700}
+
+  section{display:flex;flex-direction:column;gap:13px}
+  .shead{display:flex;align-items:baseline;gap:12px;flex-wrap:wrap}
+  .shead h3{font-family:var(--display);font-weight:800;font-size:21px;letter-spacing:-.015em;margin:0}
+  .shead .note{font-size:14px;color:var(--muted)}
+
+  .grid3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:13px}
+  .grid4{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:13px}
+
+  .tier{border-radius:16px;padding:17px;display:flex;flex-direction:column;gap:10px;border:1px solid var(--line);background:var(--card)}
+  .t-high{background:var(--high-bg);border-color:color-mix(in srgb,var(--high) 26%,transparent)}
+  .t-med {background:var(--med-bg); border-color:color-mix(in srgb,var(--med) 26%,transparent)}
+  .t-low {background:var(--low-bg); border-color:color-mix(in srgb,var(--low) 26%,transparent)}
+  .c-1{background:var(--c1-bg);border-color:color-mix(in srgb,var(--c1) 30%,transparent)}
+  .c-2{background:var(--c2-bg);border-color:color-mix(in srgb,var(--c2) 30%,transparent)}
+  .c-3{background:var(--c3-bg);border-color:color-mix(in srgb,var(--c3) 30%,transparent)}
+  .c-4{background:var(--c4-bg);border-color:color-mix(in srgb,var(--c4) 30%,transparent)}
+
+  .toprow{display:flex;align-items:center;justify-content:space-between;gap:10px}
+  .pill{font-family:var(--display);font-weight:800;font-size:12.5px;letter-spacing:.02em;padding:6px 13px;border-radius:99px;color:#fff;line-height:1.25}
+  .p-high{background:var(--high)} .p-med{background:var(--med)} .p-low{background:var(--low)}
+  .p-c1{background:var(--c1)} .p-c2{background:var(--c2)} .p-c3{background:var(--c3)} .p-c4{background:var(--c4)}
+
+  .steps{display:flex;gap:3px;align-items:center}
+  .steps i{width:13px;height:5px;border-radius:2px;background:currentColor;opacity:.22}
+  .steps i.on{opacity:1}
+  .s-high{color:var(--high)} .s-med{color:var(--med)} .s-low{color:var(--low)}
+  .s-c1{color:var(--c1)} .s-c2{color:var(--c2)} .s-c3{color:var(--c3)} .s-c4{color:var(--c4)}
+
+  .means{font-size:15.5px;font-weight:600;line-height:1.4;margin:0}
+  .does{font-size:14px;color:var(--muted);line-height:1.45;margin:0}
+  .does b{color:var(--ink);font-weight:650}
+  .eg{margin:auto 0 0;padding-top:11px;border-top:1px dashed color-mix(in srgb,var(--ink) 18%,transparent);font-size:13px;line-height:1.4;color:var(--muted)}
+  .eg .lab{display:block;font-family:var(--display);font-size:10px;font-weight:700;letter-spacing:.13em;text-transform:uppercase;margin-bottom:3px;opacity:.85}
+  .eg .t{color:var(--ink);font-weight:600}
+
+  .tests{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:19px 21px;display:flex;flex-direction:column;gap:13px}
+  .tests h3{font-family:var(--display);font-weight:800;font-size:16px;margin:0;letter-spacing:-.01em}
+  .tlist{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+  .t{display:flex;flex-direction:column;gap:3px}
+  .t .n{font-family:var(--display);font-weight:800;font-size:12.5px;letter-spacing:.02em;color:var(--high)}
+  .t .d{font-size:14px;color:var(--muted);line-height:1.45}
+  .caveat{font-size:13.5px;color:var(--muted);line-height:1.5;border-top:1px solid var(--line);padding-top:13px;margin:0}
+  .caveat b{color:var(--ink);font-weight:650}
+
+  footer{max-width:1060px;margin:0 auto;padding:0 16px 40px;font-size:12px;color:var(--muted)}
+  footer a{color:var(--navy2)}
+
+  @media (max-width:900px){ .grid3,.grid4,.tlist,.twoq{grid-template-columns:1fr 1fr} }
+  @media (max-width:600px){ .grid3,.grid4,.tlist,.twoq{grid-template-columns:1fr} main{padding:24px 16px 36px;gap:22px} }
+  @media print{
+    header{background:#fff;color:#000;padding:0 0 12px} nav,footer{display:none}
+    body{background:#fff} main{padding:0;gap:16px;max-width:none}
+    .tier,.tests,.q{break-inside:avoid}
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <h1>Corporate Affairs Intelligence</h1>
+    <div class="sub">How items in the daily brief are rated</div>
+    <nav>
+      <a href="index.html">Feed</a>
+      <a href="information.html" class="active" aria-current="page">Information</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+  <div class="lede">
+    <h2>Reading the daily brief</h2>
+    <p>Every item carries <b>two labels</b>. They answer different questions, and reading them together is the point — an item can matter a great deal and still need nothing from you today.</p>
+  </div>
+
+  <div class="twoq">
+    <div class="q"><span class="k">Risk</span><span class="v">How much could this <b>affect the business?</b></span></div>
+    <div class="q"><span class="k">Comms relevance</span><span class="v">What, if anything, do <b>we need to do?</b></span></div>
+  </div>
+
+  <section>
+    <div class="shead">
+      <h3>Risk</h3>
+      <span class="note">Scale of potential impact — independent of whether we act.</span>
+    </div>
+    <div class="grid3">
+
+      <article class="tier t-high">
+        <div class="toprow">
+          <span class="pill p-high">High</span>
+          <span class="steps s-high"><i class="on"></i><i class="on"></i><i class="on"></i></span>
+        </div>
+        <p class="means">It reaches our own products, it's genuinely moving, and there's a window where acting matters.</p>
+        <p class="does">Expect a <b>named owner and a decision</b>. Typically a briefing, a compliance check, or a position to align before the moment passes.</p>
+        <p class="eg"><span class="lab">Seen 30 July</span><span class="t">Senate committee advances front-of-pack warning-label bill</span> — thresholds land on whole milk, butter and full-fat cheese, and it's headed for a floor vote.</p>
+      </article>
+
+      <article class="tier t-med">
+        <div class="toprow">
+          <span class="pill p-med">Medium</span>
+          <span class="steps s-med"><i class="on"></i><i class="on"></i><i></i></span>
+        </div>
+        <p class="means">Genuinely relevant and could escalate — but it's someone else's situation, or nothing forces a decision yet.</p>
+        <p class="does">Stay close to it. <b>Watch for the next development</b> rather than responding to this one.</p>
+        <p class="eg"><span class="lab">Seen 29 July</span><span class="t">Appeals court revives Chobani "zero sugar" case</span> — a real read-across for similar claims, but it landed on another company's product.</p>
+      </article>
+
+      <article class="tier t-low">
+        <div class="toprow">
+          <span class="pill p-low">Low</span>
+          <span class="steps s-low"><i class="on"></i><i></i><i></i></span>
+        </div>
+        <p class="means">Context that sharpens judgement later. No exposure implied today.</p>
+        <p class="does">Read it and move on. It's here so the picture stays <b>complete, not so it prompts action</b>.</p>
+        <p class="eg"><span class="lab">Seen 27 July</span><span class="t">EU packaging rule's PFAS deadline</span> — a hard legal date, but it only bites on EU-bound volume.</p>
+      </article>
+
+    </div>
+  </section>
+
+  <section>
+    <div class="shead">
+      <h3>Comms relevance</h3>
+      <span class="note">What the item asks of the team — escalating left to right.</span>
+    </div>
+    <div class="grid4">
+
+      <article class="tier c-1">
+        <div class="toprow">
+          <span class="pill p-c1">Monitor Only</span>
+          <span class="steps s-c1"><i class="on"></i><i></i><i></i><i></i></span>
+        </div>
+        <p class="means">Awareness. Nothing is asked of anyone.</p>
+        <p class="does">The default, and <b>most items land here</b>.</p>
+      </article>
+
+      <article class="tier c-2">
+        <div class="toprow">
+          <span class="pill p-c2">Potential Media Interest</span>
+          <span class="steps s-c2"><i class="on"></i><i class="on"></i><i></i><i></i></span>
+        </div>
+        <p class="means">A journalist could plausibly call about this.</p>
+        <p class="does">Make sure someone <b>could answer it today</b> if asked.</p>
+      </article>
+
+      <article class="tier c-3">
+        <div class="toprow">
+          <span class="pill p-c3">Executive Awareness</span>
+          <span class="steps s-c3"><i class="on"></i><i class="on"></i><i class="on"></i><i></i></span>
+        </div>
+        <p class="means">Leadership should know before they hear it elsewhere.</p>
+        <p class="does">Put it <b>in front of the relevant executive</b>, with the read-across.</p>
+        <p class="eg"><span class="lab">Seen 29 July</span><span class="t">fairlife ransomware halted plants</span> — invites "could this happen here?"</p>
+      </article>
+
+      <article class="tier c-4">
+        <div class="toprow">
+          <span class="pill p-c4">Messaging Review</span>
+          <span class="steps s-c4"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i></span>
+        </div>
+        <p class="means">Something we already say may no longer hold.</p>
+        <p class="does">Check <b>claims, labels or lines</b> against the development.</p>
+        <p class="eg"><span class="lab">Seen 29 July</span><span class="t">Allulose counts toward "sugar"</span> — puts similar claims on notice.</p>
+      </article>
+
+    </div>
+  </section>
+
+  <div class="tests">
+    <h3>What pushes an item to High</h3>
+    <div class="tlist">
+      <div class="t">
+        <span class="n">It's ours</span>
+        <span class="d">It applies to our own products or operations — not a story about another company.</span>
+      </div>
+      <div class="t">
+        <span class="n">It's moving</span>
+        <span class="d">A vote, a ruling, a signature deadline. Live text with momentum, not an argument someone is making.</span>
+      </div>
+      <div class="t">
+        <span class="n">There's a window</span>
+        <span class="d">Acting now is worth more than acting later — before a floor vote, before a decision lands.</span>
+      </div>
+    </div>
+    <p class="caveat"><b>A deliberate bias toward restraint.</b> The system is instructed not to inflate ratings, because the scale only works if High means something when it appears. Most days are Low and Medium. These are structured judgements rather than a formula — reliable on clear-cut cases, debatable at the margins, and worth challenging when a rating looks wrong.</p>
+  </div>
+
+</main>
+
+<footer>
+  Updated automatically by the daily intelligence agent · <a href="admin.html">Admin</a>
+</footer>
+
+</body>
+</html>
