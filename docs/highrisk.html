@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>High risk — Corporate Affairs Intelligence</title>
+<link rel="stylesheet" href="assets/site.css">
+<style>
+  .intro{
+    background:#fff;border:1px solid var(--line);border-left:4px solid #c8102e;
+    border-radius:10px;padding:14px 17px;margin-bottom:6px;
+  }
+  .intro p{margin:0;font-size:14.5px;color:var(--muted)}
+  .intro p b{color:var(--ink)}
+  .count{
+    font-family:var(--display);font-weight:800;font-size:13px;color:var(--hi-t);
+    background:var(--hi);padding:4px 12px;border-radius:99px;
+  }
+  .headrow{display:flex;align-items:center;gap:12px;margin:4px 0 14px;flex-wrap:wrap}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <h1>Corporate Affairs Intelligence</h1>
+    <div class="sub" id="meta">Loading…</div>
+    <nav>
+      <a href="index.html">Feed</a>
+      <a href="highrisk.html" class="active" aria-current="page">High risk</a>
+      <a href="information.html">Information</a>
+      <a href="sources.html">Sources</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <div class="intro">
+    <p><b>Everything ever rated High risk</b>, newest first. These are the items that reach our own products, are genuinely moving, and have a window where acting matters — the same bar that triggers an alert email on the day it's found. <a href="information.html">How ratings work</a></p>
+  </div>
+
+  <div class="headrow">
+    <span class="count" id="count">—</span>
+    <span class="seg" role="group" aria-label="Group by">
+      <button type="button" id="byDay" aria-pressed="true">Day</button>
+      <button type="button" id="byWeek" aria-pressed="false">Week</button>
+    </span>
+  </div>
+
+  <div id="list"></div>
+</main>
+
+<footer>
+  Updated automatically by the daily intelligence agent · <a href="admin.html">Admin</a>
+</footer>
+
+<script src="assets/site.js"></script>
+<script>
+"use strict";
+let DATA = {items:[]};
+let MODE = "day";
+
+function render(){
+  const items = (DATA.items || []).filter(it => it.risk === "High");
+  $("#count").textContent = items.length
+    ? `${items.length} high-risk item${items.length === 1 ? "" : "s"}`
+    : "None so far";
+  $("#list").innerHTML = renderGroups(
+    groupItems(items, MODE),
+    "No high-risk items yet. That is the expected state most days — High is reserved for developments that need a decision."
+  );
+}
+
+function setMode(m){
+  MODE = m;
+  $("#byDay").setAttribute("aria-pressed", String(m === "day"));
+  $("#byWeek").setAttribute("aria-pressed", String(m === "week"));
+  render();
+}
+
+(async function init(){
+  try { DATA = await loadData(); }
+  catch(e){
+    $("#meta").textContent = "Could not load data.json";
+    $("#list").innerHTML = '<div class="empty">Could not load data — if previewing locally, serve over http (not file://).</div>';
+    return;
+  }
+  setMeta($("#meta"), DATA);
+  render();
+})();
+
+$("#byDay").addEventListener("click", () => setMode("day"));
+$("#byWeek").addEventListener("click", () => setMode("week"));
+</script>
+</body>
+</html>

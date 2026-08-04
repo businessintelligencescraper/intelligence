@@ -50,7 +50,9 @@
     <h1>Corporate Affairs Intelligence — Admin</h1>
     <nav>
       <a href="index.html">Feed</a>
+      <a href="highrisk.html">High risk</a>
       <a href="information.html">Information</a>
+      <a href="sources.html">Sources</a>
       <a href="admin.html" class="active" aria-current="page">Admin</a>
     </nav>
   </div>
@@ -115,7 +117,7 @@
 <script>
 "use strict";
 const PW_HASH="26fff2f8310d1d079761a508d1c41a5c3df9a40d7a821dbb3b898afa548261d4";
-const CATS=["Regulatory","Nutrition","Dairy Industry","Food Industry","Sustainability","Reputation","Public Affairs"];
+const CATS=["Regulatory","Legislative","Nutrition","Dairy Industry","Food Industry","Sustainability","Reputation","Public Affairs"];
 const $=s=>document.querySelector(s);
 const esc=s=>String(s??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
 let sourcesDoc=null, configDoc=null, shas={};

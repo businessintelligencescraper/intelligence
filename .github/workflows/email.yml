@@ -1,10 +1,15 @@
 name: Send intelligence emails
 
+# Email is deliberately infrequent: the Monday weekly briefing, plus an
+# immediate alert on any day a High-risk item is found. The daily digest is
+# NOT emailed — it goes to digests/ and the dashboard.
+
 on:
   push:
     branches: [main]
     paths:
-      - "outbox/**"
+      - "outbox/weekly.md"
+      - "outbox/alert.md"
 
 permissions:
   contents: read
@@ -22,12 +27,12 @@ jobs:
         run: |
           CHANGED=$(git diff --name-only HEAD^ HEAD || true)
           echo "changed files: $CHANGED"
-          echo "daily=$(echo "$CHANGED" | grep -c '^outbox/daily.md$' || true)" >> "$GITHUB_OUTPUT"
           echo "weekly=$(echo "$CHANGED" | grep -c '^outbox/weekly.md$' || true)" >> "$GITHUB_OUTPUT"
+          echo "alert=$(echo "$CHANGED" | grep -c '^outbox/alert.md$' || true)" >> "$GITHUB_OUTPUT"
           echo "TODAY=$(TZ=America/New_York date +'%B %-d, %Y')" >> "$GITHUB_ENV"
 
-      - name: Send daily brief
-        if: steps.changes.outputs.daily != '0'
+      - name: Send high-risk alert
+        if: steps.changes.outputs.alert != '0'
         uses: dawidd6/action-send-mail@v3
         with:
           server_address: smtp.gmail.com
@@ -37,8 +42,8 @@ jobs:
           password: ${{ secrets.MAIL_APP_PASSWORD }}
           from: Corporate Affairs Intelligence <${{ secrets.MAIL_USERNAME }}>
           to: ${{ secrets.MAIL_TO }}
-          subject: "CA Intelligence Daily Brief — ${{ env.TODAY }}"
-          html_body: file://outbox/daily.md
+          subject: "⚠ High-Risk Alert — ${{ env.TODAY }}"
+          html_body: file://outbox/alert.md
           convert_markdown: true
 
       - name: Send weekly briefing

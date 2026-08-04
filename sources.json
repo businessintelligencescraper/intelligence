@@ -159,6 +159,54 @@
       "category": "Sustainability",
       "origin": "seed",
       "enabled": true
+    },
+    {
+      "id": "congress-dairy-bills",
+      "name": "Congress — dairy & food-labeling bills",
+      "url": "https://news.google.com/rss/search?q=site%3Acongress.gov+dairy+OR+milk+OR+%22food+labeling%22+OR+%22standards+of+identity%22&hl=en-US&gl=US&ceid=US:en",
+      "category": "Legislative",
+      "origin": "seed",
+      "enabled": true
+    },
+    {
+      "id": "congress-committee-action",
+      "name": "Congressional committee action on food & nutrition",
+      "url": "https://news.google.com/rss/search?q=%22committee%22+%28markup+OR+%22advances+bill%22+OR+hearing%29+food+OR+nutrition+OR+dairy+Senate+OR+House&hl=en-US&gl=US&ceid=US:en",
+      "category": "Legislative",
+      "origin": "seed",
+      "enabled": true
+    },
+    {
+      "id": "state-legislatures-dairy",
+      "name": "State legislatures — dairy & food bills",
+      "url": "https://news.google.com/rss/search?q=%22state+legislature%22+OR+governor+dairy+OR+milk+OR+%22food+labeling%22+bill+signed+OR+veto+OR+passed&hl=en-US&gl=US&ceid=US:en",
+      "category": "Legislative",
+      "origin": "seed",
+      "enabled": true
+    },
+    {
+      "id": "state-food-policy-bills",
+      "name": "State food-policy bills (additives, labeling, EPR)",
+      "url": "https://news.google.com/rss/search?q=state+bill+%22food+additives%22+OR+%22ingredient+disclosure%22+OR+%22extended+producer+responsibility%22+OR+%22front-of-package%22&hl=en-US&gl=US&ceid=US:en",
+      "category": "Legislative",
+      "origin": "seed",
+      "enabled": true
+    },
+    {
+      "id": "idfa-govt-affairs",
+      "name": "IDFA government affairs & regulatory updates",
+      "url": "https://news.google.com/rss/search?q=site%3Aidfa.org+OR+%22International+Dairy+Foods+Association%22+%28legislation+OR+Congress+OR+regulatory+OR+comments%29&hl=en-US&gl=US&ceid=US:en",
+      "category": "Legislative",
+      "origin": "seed",
+      "enabled": true
+    },
+    {
+      "id": "congress-most-viewed",
+      "name": "Congress.gov — most-viewed bills",
+      "url": "https://www.congress.gov/rss/most-viewed-bills.xml",
+      "category": "Legislative",
+      "origin": "seed",
+      "enabled": true
     }
   ]
 }

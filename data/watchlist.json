@@ -1,0 +1,54 @@
+[
+  {
+    "id": "eu-ppwr-applicable",
+    "title": "EU Packaging and Packaging Waste Regulation becomes applicable",
+    "date": "2026-08-12",
+    "date_precision": "exact",
+    "category": "Sustainability",
+    "what_happens": "PFAS limits on food-contact packaging take effect with no transition period for non-compliant stock; conformity, minimisation and EPR requirements apply to any packaging placed on the EU market.",
+    "why_watch": "Applies regardless of origin, so any EU-bound product or packaging component must comply from this date.",
+    "source_url": "https://www.food-safety.com/articles/11228-pfas-free-food-packaging-by-august-2026",
+    "status": "upcoming",
+    "added": "2026-07-30",
+    "resolution": null
+  },
+  {
+    "id": "ny-gras-veto-window",
+    "title": "New York Governor's decision on the GRAS ingredient-disclosure bill",
+    "date": "2026-08-07",
+    "date_precision": "week",
+    "category": "Legislative",
+    "what_happens": "Signature or veto due on S.1239F/A.1556G within 10 days (excluding Sundays) of formal presentment. IDFA has written urging a veto.",
+    "why_watch": "Would be the first state law mandating disclosure of self-affirmed GRAS safety data, and a likely template for other states.",
+    "source_url": "https://www.idfa.org/news/idfa-submits-letter-in-support-of-new-yorks-veto-letter-on-gras-bill",
+    "status": "upcoming",
+    "added": "2026-07-30",
+    "resolution": null
+  },
+  {
+    "id": "childhood-diabetes-reduction-act-floor",
+    "title": "Senate floor action on the Childhood Diabetes Reduction Act of 2026",
+    "date": "2026-09-01",
+    "date_precision": "month",
+    "category": "Legislative",
+    "what_happens": "Bill advanced out of the Senate HELP Committee 12-10 and awaits a full Senate vote; would require front-of-pack warning labels on high sugar, saturated fat and sodium products.",
+    "why_watch": "Thresholds would directly implicate whole milk, butter, full-fat cheese and sweetened dairy; the pre-floor-vote window is when positioning matters.",
+    "source_url": "https://www.foodnavigator.com/Article/2026/07/29/upf-warning-label-bill-clears-senate-panel/",
+    "status": "upcoming",
+    "added": "2026-07-30",
+    "resolution": null
+  },
+  {
+    "id": "us-canada-dairy-tariffs-effective",
+    "title": "US tariffs on Canadian imports including dairy take effect",
+    "date": "2026-08-19",
+    "date_precision": "exact",
+    "category": "Regulatory",
+    "what_happens": "50% tariffs announced by White House proclamation come into force.",
+    "why_watch": "Direct cost and supply-chain implications for cross-border dairy trade; IDFA and NMPF have both issued public statements.",
+    "source_url": null,
+    "status": "upcoming",
+    "added": "2026-07-30",
+    "resolution": null
+  }
+]

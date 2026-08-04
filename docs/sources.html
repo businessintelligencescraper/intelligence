@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Sources — Corporate Affairs Intelligence</title>
+<link rel="stylesheet" href="assets/site.css">
+<style>
+  .intro{background:#fff;border:1px solid var(--line);border-left:4px solid var(--navy2);border-radius:10px;padding:14px 17px;margin-bottom:18px}
+  .intro p{margin:0 0 8px;font-size:14.5px;color:var(--muted)}
+  .intro p:last-child{margin-bottom:0}
+  .intro b{color:var(--ink)}
+  .catblock{margin-bottom:22px}
+  .cathead{display:flex;align-items:baseline;gap:10px;margin:0 0 9px}
+  .cathead h2{font-family:var(--display);font-weight:800;font-size:17px;margin:0;color:var(--navy);letter-spacing:-.01em}
+  .cathead .n{font-size:12.5px;color:var(--muted)}
+  .srclist{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:9px}
+  .src{background:#fff;border:1px solid var(--line);border-radius:10px;padding:12px 14px;display:flex;flex-direction:column;gap:5px}
+  .src .nm{font-weight:650;font-size:14.5px;line-height:1.3}
+  .src .nm a{color:var(--navy);text-decoration:none}
+  .src .nm a:hover{text-decoration:underline}
+  .src .host{font-size:12.5px;color:var(--muted);word-break:break-all}
+  .src .tags{display:flex;gap:5px;flex-wrap:wrap;margin-top:1px}
+  .tag{font-size:10.5px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;padding:2px 8px;border-radius:99px;background:#eaf0f7;color:var(--navy2)}
+  .tag.auto{background:#f0ecf7;color:#59468b}
+  .tag.admin{background:#e8f1e9;color:var(--lo-t)}
+  .tag.off{background:#f1f2f5;color:var(--muted)}
+  .src.disabled{opacity:.6}
+  .bar{display:flex;gap:18px;flex-wrap:wrap;margin-bottom:16px;font-size:13.5px;color:var(--muted)}
+  .bar b{color:var(--ink);font-family:var(--display);font-weight:800;font-size:16px;display:block}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <h1>Corporate Affairs Intelligence</h1>
+    <div class="sub">Where the intelligence comes from</div>
+    <nav>
+      <a href="index.html">Feed</a>
+      <a href="highrisk.html">High risk</a>
+      <a href="information.html">Information</a>
+      <a href="sources.html" class="active" aria-current="page">Sources</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <div class="intro">
+    <p>These are the feeds and topic monitors the system sweeps every weekday morning. Each one is checked for items published in the last 36 hours, then filtered for relevance and for whether the outlet meets the reputable-source bar.</p>
+    <p><b>Not everything here becomes a story.</b> A source appearing on this list means it is watched — not that anything it publishes is reported. Items from unidentified blogs, content farms and unedited press-release wires are discarded even when they surface through one of these monitors.</p>
+    <p>Sources can be added, edited or switched off in the <a href="admin.html">admin portal</a>.</p>
+  </div>
+
+  <div class="bar" id="bar"></div>
+  <div id="list"></div>
+</main>
+
+<footer>
+  Updated automatically by the daily intelligence agent · <a href="admin.html">Admin</a>
+</footer>
+
+<script src="assets/site.js"></script>
+<script>
+"use strict";
+
+const CAT_ORDER = ["Regulatory","Legislative","Nutrition","Dairy Industry","Food Industry","Sustainability","Reputation","Public Affairs"];
+
+function hostOf(u){
+  try {
+    const url = new URL(u);
+    if (url.hostname === "news.google.com"){
+      const q = decodeURIComponent(url.searchParams.get("q") || "").replace(/\+/g," ");
+      return "Search monitor · " + (q.length > 90 ? q.slice(0,90) + "…" : q);
+    }
+    return url.hostname.replace(/^www\./,"") + url.pathname;
+  } catch(e){ return u; }
+}
+
+function render(sources){
+  const enabled = sources.filter(s => s.enabled !== false);
+  const cats = [...new Set(sources.map(s => s.category))]
+    .sort((a,b) => {
+      const ia = CAT_ORDER.indexOf(a), ib = CAT_ORDER.indexOf(b);
+      return (ia < 0 ? 99 : ia) - (ib < 0 ? 99 : ib);
+    });
+
+  $("#bar").innerHTML =
+    `<div><b>${sources.length}</b>sources tracked</div>` +
+    `<div><b>${enabled.length}</b>currently active</div>` +
+    `<div><b>${cats.length}</b>categories</div>`;
+
+  $("#list").innerHTML = cats.map(cat => {
+    const inCat = sources.filter(s => s.category === cat);
+    return `<div class="catblock">
+      <div class="cathead">
+        <h2>${esc(cat)}</h2>
+        <span class="n">${inCat.length} source${inCat.length === 1 ? "" : "s"}</span>
+      </div>
+      <div class="srclist">${inCat.map(s => {
+        const origin = s.origin === "auto" ? '<span class="tag auto">Auto-discovered</span>'
+                     : s.origin === "admin" ? '<span class="tag admin">Added manually</span>'
+                     : '<span class="tag">Core</span>';
+        const off = s.enabled === false ? '<span class="tag off">Paused</span>' : "";
+        return `<div class="src${s.enabled === false ? " disabled" : ""}">
+          <div class="nm"><a href="${esc(s.url)}" target="_blank" rel="noopener">${esc(s.name)}</a></div>
+          <div class="host">${esc(hostOf(s.url))}</div>
+          <div class="tags">${origin}${off}</div>
+        </div>`;
+      }).join("")}</div>
+    </div>`;
+  }).join("");
+}
+
+/* The published site is only the docs/ folder, so read sources.json from the
+   repository itself. This also means edits made in the admin portal show up
+   here immediately, without waiting for the next agent run. */
+const RAW = "https://raw.githubusercontent.com/jadealiseritchie/ca-intelligence/main/sources.json";
+
+(async function init(){
+  for (const url of [RAW + "?t=" + Date.now(), "../sources.json?t=" + Date.now()]){
+    try {
+      const r = await fetch(url);
+      if (!r.ok) continue;
+      const d = await r.json();
+      if (d && d.sources){ render(d.sources); return; }
+    } catch(e){ /* try next */ }
+  }
+  $("#list").innerHTML = '<div class="empty">Could not load the source list.</div>';
+})();
+</script>
+</body>
+</html>

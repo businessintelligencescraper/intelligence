@@ -19,8 +19,50 @@ All dates/times in outputs use **US Eastern Time**. "Today" means the current da
 6. **Story-level dedup**: the same story often appears in several feeds the same day. Cluster items that cover the same underlying development (same event/announcement, even with different headlines). Each cluster becomes ONE story. Record every outlet/link in the story's `sources` array, choosing the most authoritative link (government/original source first) as primary. Also compare against the last 7 days of `data/items/` so a story analyzed yesterday is not re-analyzed today just because another outlet picked it up — if genuinely new developments occurred, treat it as a new story and say what changed.
 7. **Reputable-source check per item**: for aggregate feeds (Google News queries), each item's actual outlet must pass the reputability rules below. Discard items from outlets that fail.
 8. **Analyze** each story (see *Analysis rubric*).
-9. **Write outputs** (see *Output files*).
-10. **Commit and push** everything to `main` with message `intel: daily scan YYYY-MM-DD` (ET date). This must be the last step; the push triggers the email workflow.
+9. **Update the watch list** (see *The watch list*) — this is the forward-looking half of the job and must happen every run, even on days with no new stories.
+10. **Write outputs** (see *Output files*).
+11. **Commit and push** everything to `main` with message `intel: daily scan YYYY-MM-DD` (ET date). This must be the last step; the push triggers the email workflow.
+
+## The watch list
+
+Most of this system reports what *has* happened. The watch list is the other half: **what is coming, and when**. It is what lets someone ask "what's on the horizon?" rather than only "what happened yesterday?" — and it is the thing an industry legislative update (an IDFA bulletin, a state-affairs roundup) would give you that a news feed does not.
+
+Maintain `data/watchlist.json` across runs — it is cumulative and long-lived, not rebuilt from scratch:
+
+```json
+[
+  {
+    "id": "ny-gras-veto-window",
+    "title": "NY Governor's decision on GRAS ingredient-disclosure bill",
+    "date": "2026-08-07",
+    "date_precision": "exact | week | month | unknown",
+    "category": "Legislative",
+    "what_happens": "Signature or veto due on S.1239F/A.1556G.",
+    "why_watch": "First state law mandating self-affirmed GRAS disclosure; template for other states.",
+    "source_url": "https://...",
+    "status": "upcoming | passed | resolved",
+    "added": "2026-07-30",
+    "resolution": null
+  }
+]
+```
+
+**What belongs on it** — anything with a date attached that could require a decision, a position, or a check:
+- Scheduled legislative action: committee markups, floor votes, session start/end dates, crossover deadlines.
+- Governor signature or veto windows; effective dates of enacted laws.
+- Federal rulemaking: comment-period closing dates, effective dates, compliance deadlines.
+- Court dates and expected rulings.
+- Expected publications: dietary-guidance releases, major study or report publication dates, scheduled agency reports.
+
+**Every run:**
+1. **Add** any new dated commitment mentioned in today's stories — the date is usually stated in the article ("comments close October 14", "the Governor has 10 days", "the bill heads to a floor vote"). Also actively look ahead: when a bill or rule is in play, check for its next scheduled step rather than waiting for coverage of it.
+2. **Update** entries when reality moves: a vote slips, a deadline is extended, a bill dies. Change `date` and note what changed.
+3. **Resolve** entries whose date has passed: set `status` to `"resolved"` and write one line in `resolution` saying what actually happened. Never silently delete — a resolved item is the record of a call that was tracked.
+4. **Prune** items resolved more than 90 days ago.
+
+If a date is approximate, say so honestly with `date_precision` (`"week"`, `"month"`) rather than inventing a precise day. If something matters but genuinely has no date yet ("expected this fall"), include it with `date_precision: "unknown"` and put the best available timing in `what_happens`.
+
+Surface the watch list in two places: `docs/data.json` (see below) and the **Key watch items** section of the Monday weekly briefing, where upcoming entries are listed soonest-first with the date in bold.
 
 ## Reputable-source rules
 
@@ -39,7 +81,7 @@ For each story produce:
 - **title** — clear, plain-language restatement (not clickbait).
 - **summary** — 2–3 sentences: what happened, who did it, key numbers/dates.
 - **why_it_matters** — 1–3 sentences specific to the dairy industry and, where applicable, the company: exposure, precedent, stakeholder reaction, timing (comment periods, effective dates).
-- **category** — one of: `Regulatory`, `Nutrition`, `Dairy Industry`, `Food Industry`, `Sustainability`, `Reputation`, `Public Affairs`.
+- **category** — one of: `Regulatory`, `Legislative`, `Nutrition`, `Dairy Industry`, `Food Industry`, `Sustainability`, `Reputation`, `Public Affairs`. Use `Legislative` for bills, committee action, floor votes, and state-house activity; use `Regulatory` for agency rulemaking, guidance, and enforcement.
 - **risk** — `Low` / `Medium` / `High`. High = plausible near-term business, reputation, or regulatory impact on the company or the US dairy category (e.g., FDA proposes front-of-pack labeling rule; major UPF study implicating dairy; recall at a competitor with category spillover). Medium = worth tracking, could escalate. Low = context.
 - **comms_relevance** — one of: `Monitor Only`, `Potential Media Interest`, `Executive Awareness Required`, `Messaging Review Required`.
 - **recommended_action** — one short sentence (e.g., "Monitor stakeholder reactions; no action needed" or "Brief leadership before the comment period closes Oct 14").
@@ -59,7 +101,9 @@ Append one JSON object per analyzed story (fields above). Never rewrite past lin
 ### 2. `data/seen.json`
 Add every fetched item URL/GUID you processed this run (including discarded ones) so it is never reprocessed: `{"<normalized-url-or-guid>": "YYYY-MM-DD", ...}`. Normalize URLs by stripping tracking params (`utm_*`, `fbclid`, etc.). Prune entries older than 60 days to keep the file small.
 
-### 3. `outbox/daily.md` — the daily email body (overwrite)
+> **What gets emailed.** `outbox/` is the email outbox: anything written there is sent. Only two things go there — the Monday weekly briefing, and a High-risk alert. **The daily digest is not emailed**; it goes to `digests/` and the dashboard.
+
+### 3. `digests/YYYY-MM-DD.md` — the daily digest (dashboard + archive, not emailed)
 Markdown, in this shape:
 
 ```
@@ -81,10 +125,33 @@ For each story: **title** (Risk badge · Comms relevance) — summary.
 auto-added today. Link to the dashboard.)
 ```
 
-Cap at `config.daily_max_items` stories (keep the highest-priority; note how many lower-priority items went straight to the dashboard). If there are **zero** new stories, still write the file with a "No significant developments today." line — the email should always arrive so silence is never ambiguous.
+Cap at `config.daily_max_items` stories (keep the highest-priority; note how many lower-priority items went straight to the dashboard). If there are **zero** new stories, still write the file with a "No significant developments today." line, so the archive has an entry for every run day.
 
-### 4. `digests/YYYY-MM-DD.md`
-Copy of today's daily.md (archive).
+**Do not write `outbox/daily.md`.** If that file exists from an earlier version of this system, delete it — its presence would send an unwanted email.
+
+### 4. `outbox/alert.md` — **only when this run found one or more `risk: "High"` stories**
+
+This is the one thing that can interrupt the weekly rhythm, so the bar is exactly the High-risk bar and nothing looser. Overwrite the file with:
+
+```
+# ⚠ High-Risk Alert — {Month D, YYYY}
+
+(For each High-risk story from THIS run, newest first:)
+**title**
+summary
+*Why it matters:* ...
+*Recommended action:* ...
+[Outlet](url), [Outlet2](url2)
+
+---
+Full context for today, including everything rated Medium and Low:
+https://jadealiseritchie.github.io/ca-intelligence/
+```
+
+Rules:
+- **If this run produced no High-risk story, do not touch `outbox/alert.md` at all** — leaving it unchanged is what prevents an email being sent.
+- Include only stories first surfaced in *this* run. Never re-alert on a High-risk story carried over from a previous day.
+- Always include the date in the heading, so consecutive alert days produce a changed file and the email actually sends.
 
 ### 5. `outbox/weekly.md` — **Mondays only** (ET). Overwrite with the "greatest hits" of the previous 7 days:
 
@@ -111,9 +178,14 @@ On non-Mondays, do NOT touch `outbox/weekly.md`.
 {
   "generated_at": "ISO-8601 UTC timestamp",
   "weekly": {"week_of": "YYYY-MM-DD", "markdown": "<latest weekly.md content>"} ,
-  "items": [ ...all stories whose first_seen falls in the last
-             config.dashboard_days days, newest first_seen first,
-             same fields as the jsonl records (including first_seen)... ]
+  "watchlist": [ ...contents of data/watchlist.json, upcoming entries first,
+                 soonest date first; include resolved entries too so the page
+                 can show what has already been settled... ],
+  "items": [ ...**every story ever analyzed**, newest first_seen first,
+             same fields as the jsonl records (including first_seen).
+             Rebuild this from ALL files in data/items/ on every run —
+             the dashboard lets people browse back by day and week, so
+             nothing is dropped for age... ]
 }
 ```
 (`weekly` may be null before the first Monday run.)
