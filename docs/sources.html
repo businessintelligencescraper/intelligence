@@ -29,6 +29,23 @@
   .src.disabled{opacity:.6}
   .bar{display:flex;gap:18px;flex-wrap:wrap;margin-bottom:16px;font-size:13.5px;color:var(--muted)}
   .bar b{color:var(--ink);font-family:var(--display);font-weight:800;font-size:16px;display:block}
+
+  .secthead{font-family:var(--display);font-weight:800;font-size:19px;color:var(--navy);
+    margin:26px 0 10px;letter-spacing:-.01em}
+  .lead{margin:-4px 0 12px;font-size:13.5px;color:var(--muted);max-width:78ch}
+
+  .cadence{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:10px;margin-bottom:6px}
+  .cd{background:#fff;border:1px solid var(--line);border-radius:10px;padding:13px 15px}
+  .cd.alert{border-color:#f0c8ce;background:#fffafb}
+  .cd .k{font-family:var(--display);font-weight:700;font-size:10.5px;letter-spacing:.11em;
+    text-transform:uppercase;color:var(--muted)}
+  .cd .v{font-family:var(--display);font-weight:800;font-size:17px;color:var(--navy);margin:3px 0 5px;letter-spacing:-.01em}
+  .cd.alert .v{color:#a31226}
+  .cd .n{font-size:12.5px;color:var(--muted);line-height:1.45}
+
+  .outlets{display:flex;flex-wrap:wrap;gap:7px}
+  .ot{background:#fff;border:1px solid var(--line);border-radius:99px;padding:5px 13px;font-size:13px}
+  .ot span{color:var(--muted);font-size:11.5px;margin-left:5px}
 </style>
 </head>
 <body>
@@ -49,13 +66,48 @@
 
 <main>
   <div class="intro">
-    <p>These are the feeds and topic monitors the system sweeps every weekday morning. Each one is checked for items published in the last 36 hours, then filtered for relevance and for whether the outlet meets the reputable-source bar.</p>
+    <p>Two kinds of source are listed below. <b>Named feeds</b> watch one publisher directly — the FDA newsroom, the Federal Register, Food Dive. <b>Search monitors</b> watch a <i>subject</i> rather than a publisher, and will return that subject from any outlet that covers it.</p>
+    <p><b>This means national press is included without being listed by name.</b> Reuters, CBS News, STAT News and Consumer Reports have all appeared in briefs through the topic monitors, despite none of them being a named source. The outlets that have actually come through are shown at the bottom of this page.</p>
     <p><b>Not everything here becomes a story.</b> A source appearing on this list means it is watched — not that anything it publishes is reported. Items from unidentified blogs, content farms and unedited press-release wires are discarded even when they surface through one of these monitors.</p>
     <p>Sources can be added, edited or switched off in the <a href="admin.html">admin portal</a>.</p>
   </div>
 
+  <h2 class="secthead">How often this runs</h2>
+  <div class="cadence">
+    <div class="cd">
+      <div class="k">Scan</div>
+      <div class="v">Every weekday</div>
+      <div class="n">Automatically at about 7:00am Eastern, Monday to Friday. Nobody has to start it.</div>
+    </div>
+    <div class="cd">
+      <div class="k">Window</div>
+      <div class="v">Last 36 hours</div>
+      <div class="n">Each scan considers items published in the preceding 36 hours, so a Monday run still covers the weekend.</div>
+    </div>
+    <div class="cd">
+      <div class="k">Dashboard</div>
+      <div class="v">Updated every scan</div>
+      <div class="n">New items appear here within minutes of the morning scan finishing.</div>
+    </div>
+    <div class="cd">
+      <div class="k">Weekly email</div>
+      <div class="v">Monday</div>
+      <div class="n">A briefing covering the previous seven days, with the dates coming up.</div>
+    </div>
+    <div class="cd alert">
+      <div class="k">Alert email</div>
+      <div class="v">Only when high risk</div>
+      <div class="n">If a scan finds a High-risk item, an email goes out that morning instead of waiting for Monday.</div>
+    </div>
+  </div>
+
+  <h2 class="secthead">Sources monitored</h2>
   <div class="bar" id="bar"></div>
   <div id="list"></div>
+
+  <h2 class="secthead">Outlets that have actually appeared</h2>
+  <p class="lead">Every publisher credited in a brief so far. Most were reached through topic monitors rather than being watched by name — which is how national coverage enters the system.</p>
+  <div id="outlets"></div>
 </main>
 
 <footer>
@@ -119,16 +171,37 @@ function render(sources){
    here immediately, without waiting for the next agent run. */
 const RAW = "https://raw.githubusercontent.com/jadealiseritchie/ca-intelligence/main/sources.json";
 
+/* Which publishers have actually been credited in a brief — the honest answer
+   to "are you looking beyond the listed sources?" */
+async function renderOutlets(){
+  let data;
+  try { data = await loadData(); } catch(e){ return; }
+  const counts = new Map();
+  for (const it of (data.items || [])){
+    for (const s of (it.sources || [])){
+      const name = (s.outlet || "").trim();
+      if (name) counts.set(name, (counts.get(name) || 0) + 1);
+    }
+  }
+  if (!counts.size) return;
+  const sorted = [...counts.entries()].sort((a,b) => b[1] - a[1] || a[0].localeCompare(b[0]));
+  $("#outlets").innerHTML =
+    `<div class="outlets">` +
+    sorted.map(([n,c]) => `<span class="ot">${esc(n)}${c > 1 ? `<span>×${c}</span>` : ""}</span>`).join("") +
+    `</div><p class="lead" style="margin-top:11px">${sorted.length} distinct outlets across ${(data.items||[]).length} items analysed so far.</p>`;
+}
+
 (async function init(){
   for (const url of [RAW + "?t=" + Date.now(), "../sources.json?t=" + Date.now()]){
     try {
       const r = await fetch(url);
       if (!r.ok) continue;
       const d = await r.json();
-      if (d && d.sources){ render(d.sources); return; }
+      if (d && d.sources){ render(d.sources); break; }
     } catch(e){ /* try next */ }
   }
-  $("#list").innerHTML = '<div class="empty">Could not load the source list.</div>';
+  if (!$("#list").innerHTML) $("#list").innerHTML = '<div class="empty">Could not load the source list.</div>';
+  renderOutlets();
 })();
 </script>
 </body>
