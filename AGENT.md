@@ -62,7 +62,7 @@ Maintain `data/watchlist.json` across runs — it is cumulative and long-lived, 
 
 If a date is approximate, say so honestly with `date_precision` (`"week"`, `"month"`) rather than inventing a precise day. If something matters but genuinely has no date yet ("expected this fall"), include it with `date_precision: "unknown"` and put the best available timing in `what_happens`.
 
-Surface the watch list in two places: `docs/data.json` (see below) and the **Key watch items** section of the Monday weekly briefing, where upcoming entries are listed soonest-first with the date in bold.
+The watch list drives the site's **Future dates** page (`docs/watch.html`), which buckets entries by how soon they are and counts down to each one — so keeping dates current is what makes that page trustworthy. Surface it in two places: `docs/data.json` (see below) and the **Key watch items** section of the Monday weekly briefing, where upcoming entries are listed soonest-first with the date in bold.
 
 ## Reputable-source rules
 

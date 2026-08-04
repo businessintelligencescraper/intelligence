@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Future dates to watch — Corporate Affairs Intelligence</title>
+<link rel="stylesheet" href="assets/site.css">
+<style>
+  .intro{background:#fff;border:1px solid var(--line);border-left:4px solid var(--navy2);border-radius:10px;padding:14px 17px;margin-bottom:16px}
+  .intro p{margin:0;font-size:14.5px;color:var(--muted)}
+  .intro p b{color:var(--ink)}
+
+  .bar{display:flex;gap:22px;flex-wrap:wrap;margin:0 0 20px}
+  .bar div{font-size:13px;color:var(--muted)}
+  .bar b{display:block;color:var(--ink);font-family:var(--display);font-weight:800;font-size:20px;letter-spacing:-.01em}
+  .bar .urgent b{color:#a31226}
+
+  .bucket{margin-bottom:26px}
+  .bucket > h2{
+    font-family:var(--display);font-weight:800;font-size:13px;letter-spacing:.09em;
+    text-transform:uppercase;color:var(--muted);margin:0 0 10px;
+  }
+
+  .ev{
+    display:grid;grid-template-columns:96px 1fr;gap:16px;
+    background:#fff;border:1px solid var(--line);border-radius:10px;
+    padding:14px 16px;margin-bottom:9px;align-items:start;
+  }
+  .ev.soon{border-color:#f3c9cf;background:#fffafb}
+
+  .when{text-align:center;border-right:1px solid var(--line);padding-right:12px}
+  .when .d{font-family:var(--display);font-weight:800;font-size:26px;line-height:1;color:var(--navy);letter-spacing:-.02em}
+  .when .m{font-family:var(--display);font-weight:700;font-size:11.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--navy2);margin-top:3px}
+  .when .y{font-size:11px;color:var(--muted);margin-top:1px}
+  .when .approx{font-size:10px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);margin-top:4px}
+  .ev.soon .when .d{color:#a31226}
+  .ev.soon .when .m{color:#a31226}
+
+  .body h3{margin:0 0 5px;font-size:15.5px;line-height:1.35;color:var(--navy)}
+  .body .what{margin:0 0 6px}
+  .body .why{margin:0 0 7px;color:#334252;font-size:14px}
+  .body .why b{color:var(--navy)}
+  .meta{display:flex;gap:8px;align-items:center;flex-wrap:wrap;font-size:12.5px;color:var(--muted)}
+  .meta a{color:var(--navy2)}
+  .countdown{font-weight:700;color:var(--navy2)}
+  .countdown.soon{color:#a31226}
+  .countdown.past{color:var(--muted);font-weight:600}
+
+  .ev.done{opacity:.72}
+  .ev.done .when .d,.ev.done .when .m{color:var(--muted)}
+  .res{margin:0;font-size:13.5px;color:var(--muted)}
+  .res b{color:var(--ink)}
+
+  @media (max-width:560px){
+    .ev{grid-template-columns:1fr;gap:8px}
+    .when{display:flex;gap:8px;align-items:baseline;text-align:left;border-right:0;border-bottom:1px solid var(--line);padding:0 0 8px}
+    .when .d{font-size:20px}
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <h1>Corporate Affairs Intelligence</h1>
+    <div class="sub" id="meta">Loading…</div>
+    <nav>
+      <a href="index.html">Feed</a>
+      <a href="highrisk.html">High risk</a>
+      <a href="watch.html" class="active" aria-current="page">Future dates</a>
+      <a href="information.html">Information</a>
+      <a href="sources.html">Sources</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <div class="intro">
+    <p><b>What is coming, and when.</b> Whenever a story carries a date — a scheduled vote, a comment deadline, a governor's signature window, a law taking effect — that date is captured here so it can be planned for rather than discovered late. Dates are updated when they move, and marked resolved with what actually happened.</p>
+  </div>
+
+  <div class="bar" id="bar"></div>
+  <div id="list"></div>
+</main>
+
+<footer>
+  Updated automatically by the daily intelligence agent · <a href="admin.html">Admin</a>
+</footer>
+
+<script src="assets/site.js"></script>
+<script>
+"use strict";
+
+const DAY = 864e5;
+const todayISO = () => new Date().toISOString().slice(0,10);
+
+function daysUntil(iso){
+  const a = new Date(todayISO() + "T12:00:00");
+  const b = new Date(iso + "T12:00:00");
+  return Math.round((b - a) / DAY);
+}
+function countdownText(n){
+  if (n === 0) return "today";
+  if (n === 1) return "tomorrow";
+  if (n > 1)  return `in ${n} days`;
+  if (n === -1) return "yesterday";
+  return `${Math.abs(n)} days ago`;
+}
+function dateParts(iso){
+  const d = new Date(iso + "T12:00:00");
+  return {
+    d: d.toLocaleDateString(undefined,{day:"numeric"}),
+    m: d.toLocaleDateString(undefined,{month:"short"}),
+    y: d.getFullYear()
+  };
+}
+
+function renderEvent(x, opts){
+  const done = opts && opts.done;
+  const n = x.date ? daysUntil(x.date) : null;
+  const soon = !done && n !== null && n >= 0 && n <= 14;
+  const p = x.date ? dateParts(x.date) : null;
+  const approx = x.date_precision && x.date_precision !== "exact"
+    ? `<div class="approx">approx. ${esc(x.date_precision)}</div>` : "";
+  const cd = n === null ? "date TBC" : countdownText(n);
+  const cdClass = done || n < 0 ? "past" : (soon ? "soon" : "");
+  const src = x.source_url
+    ? ` · <a href="${esc(x.source_url)}" target="_blank" rel="noopener">source</a>` : "";
+
+  return `<div class="ev${soon ? " soon" : ""}${done ? " done" : ""}">
+    <div class="when">
+      ${p ? `<div class="d">${esc(p.d)}</div><div class="m">${esc(p.m)}</div><div class="y">${esc(String(p.y))}</div>`
+          : `<div class="m">TBC</div>`}
+      ${approx}
+    </div>
+    <div class="body">
+      <h3>${esc(x.title)}</h3>
+      ${x.what_happens ? `<p class="what">${esc(x.what_happens)}</p>` : ""}
+      ${!done && x.why_watch ? `<p class="why"><b>Why watch:</b> ${esc(x.why_watch)}</p>` : ""}
+      ${done ? `<p class="res"><b>Outcome:</b> ${esc(x.resolution || "Date passed; no outcome recorded.")}</p>` : ""}
+      <div class="meta">
+        <span class="badge b-cat">${esc(x.category || "General")}</span>
+        <span class="countdown ${cdClass}">${esc(cd)}</span>${src}
+      </div>
+    </div>
+  </div>`;
+}
+
+function render(watch){
+  if (!watch.length){
+    $("#list").innerHTML = '<div class="empty">Nothing on the calendar yet. Dates are added automatically as stories that carry them come through.</div>';
+    $("#bar").innerHTML = "";
+    return;
+  }
+
+  const upcoming = watch
+    .filter(x => x.status !== "resolved" && (!x.date || daysUntil(x.date) >= 0))
+    .sort((a,b) => (a.date || "9999").localeCompare(b.date || "9999"));
+  const overdue = watch
+    .filter(x => x.status !== "resolved" && x.date && daysUntil(x.date) < 0)
+    .sort((a,b) => (b.date || "").localeCompare(a.date || ""));
+  const resolved = watch
+    .filter(x => x.status === "resolved")
+    .sort((a,b) => (b.date || "").localeCompare(a.date || ""));
+
+  const next = upcoming.find(x => x.date);
+  $("#bar").innerHTML =
+    `<div><b>${upcoming.length}</b>upcoming</div>` +
+    (next ? `<div class="${daysUntil(next.date) <= 14 ? "urgent" : ""}"><b>${esc(countdownText(daysUntil(next.date)))}</b>next date</div>` : "") +
+    (overdue.length ? `<div class="urgent"><b>${overdue.length}</b>awaiting outcome</div>` : "") +
+    (resolved.length ? `<div><b>${resolved.length}</b>resolved</div>` : "");
+
+  const within = (x, lo, hi) => {
+    if (!x.date) return false;
+    const n = daysUntil(x.date);
+    return n >= lo && n <= hi;
+  };
+  const buckets = [
+    ["Next 14 days",        upcoming.filter(x => within(x,0,14))],
+    ["Next 3 months",       upcoming.filter(x => within(x,15,90))],
+    ["Further ahead",       upcoming.filter(x => x.date && daysUntil(x.date) > 90)],
+    ["Date not yet set",    upcoming.filter(x => !x.date)],
+    ["Passed — outcome pending", overdue],
+    ["Resolved",            resolved]
+  ];
+
+  $("#list").innerHTML = buckets
+    .filter(([, items]) => items.length)
+    .map(([label, items]) =>
+      `<div class="bucket"><h2>${esc(label)}</h2>` +
+      items.map(x => renderEvent(x, {done: x.status === "resolved"})).join("") +
+      `</div>`)
+    .join("");
+}
+
+(async function init(){
+  try {
+    const data = await loadData();
+    setMeta($("#meta"), data);
+    render(data.watchlist || []);
+  } catch(e){
+    $("#meta").textContent = "Could not load data.json";
+    $("#list").innerHTML = '<div class="empty">Could not load data — if previewing locally, serve over http (not file://).</div>';
+  }
+})();
+</script>
+</body>
+</html>

@@ -32,6 +32,7 @@
     <nav>
       <a href="index.html" class="active" aria-current="page">Feed</a>
       <a href="highrisk.html">High risk</a>
+      <a href="watch.html">Future dates</a>
       <a href="information.html">Information</a>
       <a href="sources.html">Sources</a>
     </nav>
@@ -61,7 +62,7 @@
   </div>
 
   <details class="panel" id="watchBox" style="display:none">
-    <summary>Key watch items</summary>
+    <summary>Future dates to watch</summary>
     <div class="body"><div class="watch" id="watchList"></div></div>
   </details>
 
@@ -86,22 +87,29 @@ let MODE = "day";
 function renderWatch(){
   const w = (DATA.watchlist || []);
   if (!w.length) return;
-  const upcoming = w.filter(x => x.status !== "resolved").sort((a,b) => (a.date||"") .localeCompare(b.date||""));
-  const done = w.filter(x => x.status === "resolved").sort((a,b) => (b.date||"").localeCompare(a.date||"")).slice(0,5);
-  const row = (x, isDone) => {
+  const upcoming = w
+    .filter(x => x.status !== "resolved")
+    .sort((a,b) => (a.date || "9999").localeCompare(b.date || "9999"));
+  if (!upcoming.length) return;
+
+  const row = x => {
     const prec = x.date_precision && x.date_precision !== "exact" ? `<small>${esc(x.date_precision)}</small>` : "";
     const when = x.date ? esc(fmtShort(x.date)) : "TBC";
-    const link = x.source_url ? ` <a href="${esc(x.source_url)}" target="_blank" rel="noopener">source</a>` : "";
-    return `<div class="w${isDone ? " done" : ""}">
+    return `<div class="w">
       <span class="when">${when}${prec}</span>
       <span class="what"><b>${esc(x.title)}</b>
-        <div class="note">${esc(isDone ? (x.resolution || "Resolved.") : (x.what_happens || ""))}${link}</div></span>
+        <div class="note">${esc(x.what_happens || "")}</div></span>
     </div>`;
   };
-  $("#watchList").innerHTML =
-    upcoming.map(x => row(x,false)).join("") + done.map(x => row(x,true)).join("");
+
+  const shown = upcoming.slice(0,4);
+  const more = upcoming.length - shown.length;
+  $("#watchList").innerHTML = shown.map(row).join("") +
+    `<div class="w"><span class="when"></span><span class="what">
+       <a href="watch.html">${more > 0 ? `See all ${upcoming.length} upcoming dates` : "Open the full calendar"} →</a>
+     </span></div>`;
   $("#watchBox").style.display = "";
-  if (upcoming.length) $("#watchBox").open = true;
+  $("#watchBox").open = true;
 }
 
 function render(){
