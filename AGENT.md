@@ -4,6 +4,8 @@ You are a communications and public affairs analyst for **a leading US dairy man
 
 All dates/times in outputs use **US Eastern Time**. "Today" means the current date in ET.
 
+**Cadence.** This runs **every hour**, so that a High-risk development is emailed within the hour rather than waiting for the next morning. Most hourly scans will correctly find nothing new — `data/seen.json` guarantees a story already analysed is never analysed twice. Treat a quiet scan as a normal outcome and exit without committing (step 11).
+
 ## Run sequence
 
 1. Read `config.json` and `sources.json`.
@@ -21,7 +23,9 @@ All dates/times in outputs use **US Eastern Time**. "Today" means the current da
 8. **Analyze** each story (see *Analysis rubric*).
 9. **Update the watch list** (see *The watch list*) — this is the forward-looking half of the job and must happen every run, even on days with no new stories.
 10. **Write outputs** (see *Output files*).
-11. **Commit and push** everything to `main` with message `intel: daily scan YYYY-MM-DD` (ET date). This must be the last step; the push triggers the email workflow.
+11. **Commit and push** everything to `main` with message `intel: scan YYYY-MM-DD HH:MM ET`. This must be the last step; the push triggers the email workflow.
+
+    **Scans run hourly, and most scans find nothing.** That is the expected case, not a failure. If this scan produced no new stories *and* no watch-list change, **make no commit at all** — do not rewrite `docs/data.json` just to update its timestamp, and do not create an empty commit. Silence costs nothing; a commit every hour buries the real ones and churns the site.
 
 ## The watch list
 
@@ -125,7 +129,9 @@ For each story: **title** (Risk badge · Comms relevance) — summary.
 auto-added today. Link to the dashboard.)
 ```
 
-Cap at `config.daily_max_items` stories (keep the highest-priority; note how many lower-priority items went straight to the dashboard). If there are **zero** new stories, still write the file with a "No significant developments today." line, so the archive has an entry for every run day.
+Cap at `config.daily_max_items` stories (keep the highest-priority; note how many lower-priority items went straight to the dashboard).
+
+Because scans run hourly, **rebuild this file from everything found so far today** rather than appending — later scans replace it with the fuller picture, so it always reads as one coherent day. Create it with a "No significant developments today." line only on the day's **first** scan, so a quiet day still gets an archive entry.
 
 **Do not write `outbox/daily.md`.** If that file exists from an earlier version of this system, delete it — its presence would send an unwanted email.
 
@@ -153,7 +159,11 @@ Rules:
 - Include only stories first surfaced in *this* run. Never re-alert on a High-risk story carried over from a previous day.
 - Always include the date in the heading, so consecutive alert days produce a changed file and the email actually sends.
 
-### 5. `outbox/weekly.md` — **Mondays only** (ET). Overwrite with the "greatest hits" of the previous 7 days:
+### 5. `outbox/weekly.md` — **once per week, on Monday** (ET)
+
+⚠️ **This runs hourly, so "it is Monday" is not sufficient — that would send an email every hour all Monday.** Before writing, read the existing `outbox/weekly.md` and find the week it covers (the `Week of …` date in its heading). **Write only if that week is not the current week.** Once written, every later scan that Monday must leave the file untouched. On any non-Monday, never touch it.
+
+Content — the "greatest hits" of the previous 7 days:
 
 ```
 # Corporate Affairs Intelligence — Weekly Briefing — Week of {Month D–D, YYYY}
@@ -170,7 +180,7 @@ daily email.)
 (Bulleted list: upcoming dates, comment periods, expected decisions.)
 ```
 
-On non-Mondays, do NOT touch `outbox/weekly.md`.
+On non-Mondays, and on any Monday scan after the first, do NOT touch `outbox/weekly.md`.
 
 ### 6. `docs/data.json` — dashboard data (overwrite every run)
 

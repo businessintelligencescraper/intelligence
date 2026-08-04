@@ -4,7 +4,7 @@ Automated daily monitoring of regulatory, nutrition, dairy-industry, sustainabil
 
 ## How it works
 
-1. **A scheduled Claude cloud agent** runs every weekday morning. It follows [AGENT.md](AGENT.md): fetches every enabled feed in [sources.json](sources.json), dedupes (both exact URLs and same-story-different-outlet), keeps only items from reputable sources, and analyzes each story (summary, why it matters, category, risk level, comms relevance, recommended action).
+1. **A scheduled Claude cloud agent** runs every hour, so a High-risk development is emailed within the hour rather than waiting for the next morning. Most hourly scans correctly find nothing new and exit without committing. It follows [AGENT.md](AGENT.md): fetches every enabled feed in [sources.json](sources.json), dedupes (both exact URLs and same-story-different-outlet), keeps only items from reputable sources, and analyzes each story (summary, why it matters, category, risk level, comms relevance, recommended action).
 2. The agent commits its results here:
    - `data/items/` — the permanent library of analyzed stories
    - `outbox/daily.md` — today's email body (Mondays also `outbox/weekly.md`, the previous week's greatest hits)
