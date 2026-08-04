@@ -57,11 +57,37 @@
     "date": "2026-08-19",
     "date_precision": "exact",
     "category": "Regulatory",
-    "what_happens": "50% tariffs announced by White House proclamation come into force.",
-    "why_watch": "Direct cost and supply-chain implications for cross-border dairy trade; IDFA and NMPF have both issued public statements.",
-    "source_url": null,
+    "what_happens": "50% Section 338 tariffs (signed by proclamation July 20, 2026) come into force on Canadian-origin whey products, milk protein concentrates, lactose, casein/caseinates and milk powders; cheese, butter, yogurt, fluid milk/cream, sour cream and ice cream are exempted.",
+    "why_watch": "Direct cost and supply-chain implications for cross-border dairy ingredient trade; IDFA and NMPF have both issued public statements.",
+    "source_url": "https://cheesereporter.com/news/global-trade-tariffs/2026/07/24/us-to-impose-50-tariffs-on-some-dairy-imports-from-canada-starting-on-august-19/",
     "status": "upcoming",
     "added": "2026-07-30",
+    "resolution": null
+  },
+  {
+    "id": "fda-gras-mandatory-notification-rule-publication",
+    "title": "FDA's mandatory GRAS-notification proposed rule — anticipated Federal Register publication",
+    "date": "2026-12-01",
+    "date_precision": "month",
+    "category": "Regulatory",
+    "what_happens": "Proposed rule (RIN 0910-AJ02) ending reliance on purely self-affirmed GRAS status for most substances completed OMB/OIRA review July 31, 2026; the 2026 Unified Regulatory Agenda lists anticipated Federal Register publication, which opens the public comment period, for December 2026.",
+    "why_watch": "Publication starts the comment clock on the biggest change to the GRAS pathway in decades, affecting nearly every food and dairy ingredient supplier that relies on self-affirmed GRAS determinations.",
+    "source_url": "https://www.food-safety.com/articles/11703-regulatory-updates-gras-proposed-rule-clears-omb-review-fda-sends-upf-whitepaper-to-oira",
+    "status": "upcoming",
+    "added": "2026-08-04",
+    "resolution": null
+  },
+  {
+    "id": "fda-upf-definition-oira-review",
+    "title": "FDA ultra-processed food definition — outcome of OIRA review",
+    "date": "2026-11-01",
+    "date_precision": "unknown",
+    "category": "Regulatory",
+    "what_happens": "FDA/HHS sent a 'Proposed Definition of Ultra-Processed Food' whitepaper to OIRA on August 3, 2026, filed as a notice (not a rule; no legal deadline). HHS Secretary Kennedy has said it could become the basis for a front-of-pack red-yellow-green labeling system, but no rule, guidance, or timeline has been announced.",
+    "why_watch": "Would be the definitional foundation for any future UPF-based labeling or program restriction, running in parallel with the Sanders and Booker/Blumenthal Senate warning-label bills.",
+    "source_url": "https://www.food-safety.com/articles/11703-regulatory-updates-gras-proposed-rule-clears-omb-review-fda-sends-upf-whitepaper-to-oira",
+    "status": "upcoming",
+    "added": "2026-08-04",
     "resolution": null
   }
 ]
