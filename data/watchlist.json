@@ -41,12 +41,12 @@
   {
     "id": "senate-ag-farm-bill-markup",
     "title": "Senate Agriculture Committee markup of Farm Bill 2.0 (Agricultural Act of 2026)",
-    "date": "2026-08-06",
-    "date_precision": "exact",
+    "date": "2026-09-15",
+    "date_precision": "month",
     "category": "Legislative",
-    "what_happens": "Full committee markup and vote on whether to advance the farm bill to the full Senate; the dairy title includes mandatory manufacturer cost/yield reporting to update FMMO make-allowance factors, plus reauthorization of the Dairy Indemnity Payment Program and Dairy Promotion and Research Board through 2031.",
-    "why_watch": "First concrete legislative test of a new mandatory dairy-manufacturer reporting requirement tied to Federal Milk Marketing Order pricing; amendments offered during markup could expand or narrow the compliance scope.",
-    "source_url": "https://www.agriculture.senate.gov/newsroom/rep/press/release/chairman-boozman-releases-updated-farm-bill-20-text-announces-business-meeting",
+    "what_happens": "Committee vote failed 10-11 on Aug. 6 over an unrelated SNAP payment-error-rate dispute (dairy title was not the sticking point). Chairman Boozman says the committee will try again once the Senate returns from its late-summer recess; no specific date set yet, so this entry now tracks that retry rather than the original Aug. 6 markup.",
+    "why_watch": "Mandatory dairy-manufacturer cost/yield reporting tied to FMMO pricing, plus reauthorization of the Dairy Indemnity Payment Program and Dairy Promotion and Research Board through 2031, remain pending in the stalled bill.",
+    "source_url": "https://www.agri-pulse.com/articles/25091-senate-ag-committee-fails-to-advance-farm-bill-amid-snap-feud",
     "status": "upcoming",
     "added": "2026-08-04",
     "resolution": null
