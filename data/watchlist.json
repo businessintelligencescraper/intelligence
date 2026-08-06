@@ -89,5 +89,18 @@
     "status": "upcoming",
     "added": "2026-08-04",
     "resolution": null
+  },
+  {
+    "id": "ca-sb54-epr-program-plan-comment-period",
+    "title": "Public comment period closes on California SB 54's draft EPR program plan",
+    "date": "2026-08-14",
+    "date_precision": "exact",
+    "category": "Sustainability",
+    "what_happens": "Circular Action Alliance's draft statewide Extended Producer Responsibility program plan for SB 54 (California's packaging and plastic EPR law) is open for public comment through August 14, 2026; a final plan is due to CalRecycle in October 2026.",
+    "why_watch": "SB 54 is the largest state EPR packaging law now in effect; the program plan sets the fee structure and compliance mechanics that determine actual cost to packaged-food manufacturers, and other EPR states are watching California's approach as a template.",
+    "source_url": "https://resource-recycling.com/recycling/2026/02/02/calrecycle-opens-sb-54-draft-for-comments/",
+    "status": "upcoming",
+    "added": "2026-08-06",
+    "resolution": null
   }
 ]
