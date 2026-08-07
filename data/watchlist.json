@@ -102,5 +102,18 @@
     "status": "upcoming",
     "added": "2026-08-06",
     "resolution": null
+  },
+  {
+    "id": "screwworm-douglas-port-reopening",
+    "title": "Douglas, AZ port reopens to Mexican cattle imports under New World screwworm safeguards",
+    "date": "2026-08-24",
+    "date_precision": "exact",
+    "category": "Dairy Industry",
+    "what_happens": "USDA reopens the Douglas, Arizona port of entry to livestock trade from Mexico under strict New World screwworm inspection protocols — the first step in a phased reopening; Santa Teresa and Columbus, NM ports would follow if no problems arise.",
+    "why_watch": "First reopening of Mexican cattle imports since the border was closed in May 2025 over screwworm; a new detection near the border could reverse the reopening and re-tighten the cattle and dairy-replacement-heifer supply chain.",
+    "source_url": "https://www.dtnpf.com/agriculture/web/ag/livestock/article/2026/08/04/rollins-announces-25m-arizona-nws",
+    "status": "upcoming",
+    "added": "2026-08-07",
+    "resolution": null
   }
 ]
