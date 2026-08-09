@@ -57,11 +57,24 @@
     "date": "2026-08-19",
     "date_precision": "exact",
     "category": "Regulatory",
-    "what_happens": "50% Section 338 tariffs (signed by proclamation July 20, 2026) remain scheduled to take effect on Canadian-origin whey products, milk protein concentrates, lactose, casein/caseinates and milk powders; cheese, butter, yogurt, fluid milk/cream, sour cream and ice cream are exempted. As of Aug. 7, Canadian officials were reportedly discussing a broader trade deal with the US that would include dairy-quota allocation under USMCA in exchange for tariff relief on autos and eased alcohol restrictions; Dairy Farmers of Canada is publicly urging Ottawa not to make further concessions on dairy/supply management, and Ottawa says no major changes to supply management itself are expected. No deal confirmed as of this run.",
+    "what_happens": "50% Section 338 tariffs (signed by proclamation July 20, 2026) remain scheduled to take effect on Canadian-origin whey products, milk protein concentrates, lactose, casein/caseinates and milk powders; cheese, butter, yogurt, fluid milk/cream, sour cream and ice cream are exempted. With 12 days left before the deadline, reporting now indicates Ottawa has put its full concession package on the table, including dairy-quota reallocation under USMCA, removal of Canada's retaliatory auto tariffs, and an end to provincial bans on US alcohol sales; the alcohol piece is a provincial rather than federal authority, and Ontario and British Columbia have already signaled they won't comply, a structural obstacle to closing the deal. Dairy Farmers of Canada continues to publicly urge Ottawa not to make further concessions on dairy/supply management. No deal confirmed as of this run.",
     "why_watch": "Direct cost and supply-chain implications for cross-border dairy ingredient trade; IDFA and NMPF have both issued public statements. A negotiated deal could avert, narrow, or reshape the tariffs before they take effect.",
     "source_url": "https://cheesereporter.com/news/global-trade-tariffs/2026/07/24/us-to-impose-50-tariffs-on-some-dairy-imports-from-canada-starting-on-august-19/",
     "status": "upcoming",
     "added": "2026-07-30",
+    "resolution": null
+  },
+  {
+    "id": "ny-food-date-labeling-veto-window",
+    "title": "New York Governor's decision on the Food Date Labeling Reform Act",
+    "date": "2026-12-31",
+    "date_precision": "unknown",
+    "category": "Legislative",
+    "what_happens": "A7291B/S7618B passed both houses of the NY Legislature on June 2, 2026 and awaits presentment and the Governor's signature or veto; under NY procedure the Legislature can hold delivery until year-end, giving a statutory backstop of Dec. 31, 2026, with no presentment date yet reported. The bill would replace confusing 'sell by' dates with uniform 'Use By' (safety) and 'Best if Used By' (quality) labels on food produced after July 1, 2028; infant formula and alcoholic beverages are exempted.",
+    "why_watch": "Would make New York the first state with a uniform two-tier date-labeling standard, a likely template nationally; the 2028 compliance date means packaging and labeling lead-time decisions start well before then.",
+    "source_url": "https://www.nysenate.gov/legislation/bills/2025/A7291/amendment/B",
+    "status": "upcoming",
+    "added": "2026-08-09",
     "resolution": null
   },
   {
