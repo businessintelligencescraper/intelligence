@@ -167,5 +167,18 @@
     "status": "upcoming",
     "added": "2026-08-07",
     "resolution": null
+  },
+  {
+    "id": "fda-dairy-soi-revocation-final-rule",
+    "title": "FDA final rules revoking dairy standards of identity",
+    "date": "2026-11-01",
+    "date_precision": "month",
+    "category": "Regulatory",
+    "what_happens": "FDA proposed revoking 18 standards of identity for dairy products in July 2025 (RIN 0910-AJ11); the 2026 Unified Regulatory Agenda targets final rules on this and a companion revocation covering other food categories for November 2026.",
+    "why_watch": "Would remove mandatory compositional/formulation requirements for multiple dairy product categories, giving manufacturers more formulation flexibility while changing the baseline other companies' product and private-label claims are measured against.",
+    "source_url": "https://www.federalregister.gov/documents/2025/07/17/2025-13424/proposal-to-revoke-18-standards-of-identity-for-dairy-products",
+    "status": "upcoming",
+    "added": "2026-08-11",
+    "resolution": null
   }
 ]
