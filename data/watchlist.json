@@ -57,7 +57,7 @@
     "date": "2026-08-19",
     "date_precision": "exact",
     "category": "Regulatory",
-    "what_happens": "50% Section 338 tariffs (signed by proclamation July 20, 2026) remain scheduled to take effect on Canadian-origin whey products, milk protein concentrates, lactose, casein/caseinates and milk powders; cheese, butter, yogurt, fluid milk/cream, sour cream and ice cream are exempted. UPDATED: LeBlanc met Greer at USTR headquarters a second time in less than a week on Aug. 12, alongside Canada's chief trade negotiator Janice Charette, both sides still aiming to present Trump a deal layout before the Aug. 19 deadline. Reporting now frames Ottawa's dairy offer as a quota-compliance fix — ensuring US producers get the CUSMA-guaranteed market access they're already owed — rather than any expansion of total US market access; auto counter-tariff removal and the provincial alcohol bans remain the other two pieces on the table, with Ontario and British Columbia still not committing to comply on alcohol. Dairy Farmers of Canada continues to publicly urge Ottawa not to make further concessions on dairy/supply management. No deal confirmed as of this run.",
+    "what_happens": "50% Section 338 tariffs (signed by proclamation July 20, 2026) remain scheduled to take effect on Canadian-origin whey products, milk protein concentrates, lactose, casein/caseinates and milk powders; cheese, butter, yogurt, fluid milk/cream, sour cream and ice cream are exempted. UPDATED Aug 14: talks continue in Washington with both sides having exchanged written positions but still no deal confirmed; a former Canadian diplomat publicly warned the negotiations look set to ‘end in tears’ with the deadline four days out. Canada's proposed concessions remain framed as removing retaliatory auto tariffs, restoring US alcohol shelf access, dropping provincial procurement restrictions, and a dairy-quota allocation fix rather than expanded market access. Dairy Farmers of Canada continues to publicly urge Ottawa not to make further concessions on dairy/supply management.",
     "why_watch": "Direct cost and supply-chain implications for cross-border dairy ingredient trade; IDFA and NMPF have both issued public statements. A negotiated deal could avert, narrow, or reshape the tariffs before they take effect.",
     "source_url": "https://cheesereporter.com/news/global-trade-tariffs/2026/07/24/us-to-impose-50-tariffs-on-some-dairy-imports-from-canada-starting-on-august-19/",
     "status": "upcoming",
@@ -125,9 +125,9 @@
     "what_happens": "Circular Action Alliance's draft statewide Extended Producer Responsibility program plan for SB 54 (California's packaging and plastic EPR law) is open for public comment through August 14, 2026; a final plan is due to CalRecycle in October 2026.",
     "why_watch": "SB 54 is the largest state EPR packaging law now in effect; the program plan sets the fee structure and compliance mechanics that determine actual cost to packaged-food manufacturers, and other EPR states are watching California's approach as a template.",
     "source_url": "https://resource-recycling.com/recycling/2026/02/02/calrecycle-opens-sb-54-draft-for-comments/",
-    "status": "upcoming",
+    "status": "resolved",
     "added": "2026-08-06",
-    "resolution": null
+    "resolution": "Comment period closed Aug. 14, 2026 as scheduled. Circular Action Alliance will review comments as it prepares the final program plan, due to CalRecycle by October 2026 — that filing is what will actually set the fee structure and compliance mechanics producers face; projected 2027-2031 program costs run $9.3B-$17.2B, funded entirely through producer fees."
   },
   {
     "id": "screwworm-douglas-port-reopening",
