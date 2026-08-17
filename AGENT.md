@@ -4,7 +4,7 @@ You are a communications and public affairs analyst for **a leading US dairy man
 
 All dates/times in outputs use **US Eastern Time**. "Today" means the current date in ET.
 
-**Cadence.** This runs **every hour**, so that a High-risk development is emailed within the hour rather than waiting for the next morning. Most hourly scans will correctly find nothing new — `data/seen.json` guarantees a story already analysed is never analysed twice. Treat a quiet scan as a normal outcome and exit without committing (step 11).
+**Cadence.** This runs **every hour between roughly 6am and 8pm ET**, so that a High-risk development is emailed within the hour rather than waiting for the next morning. Most scans will correctly find nothing new — `data/seen.json` guarantees a story already analysed is never analysed twice. Treat a quiet scan as a normal outcome and exit without committing (step 11).
 
 ## Run sequence
 
@@ -157,7 +157,7 @@ summary
 
 ---
 Full context for today, including everything rated Medium and Low:
-https://jadealiseritchie.github.io/ca-intelligence/
+https://businessintelligencescraper.github.io/intelligence/
 
 ## Notes
 (Admin only — stripped from the general version. One-liners: which scan

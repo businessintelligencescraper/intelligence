@@ -8,4 +8,4 @@ The FDA on Wednesday, August 5 assigned a Class I risk classification — its hi
 
 ---
 Full context for today, including everything rated Medium and Low:
-https://jadealiseritchie.github.io/ca-intelligence/
+https://businessintelligencescraper.github.io/intelligence/
