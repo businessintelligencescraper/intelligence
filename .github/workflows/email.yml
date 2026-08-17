@@ -1,8 +1,14 @@
 name: Send intelligence emails
 
 # Email is deliberately infrequent: the Monday weekly briefing, plus an
-# immediate alert on any day a High-risk item is found. The daily digest is
+# immediate alert whenever a scan finds a High-risk item. The daily digest is
 # NOT emailed — it goes to digests/ and the dashboard.
+#
+# Each email is sent in TWO versions to the same address:
+#   • general — everything above the "## Notes" heading, safe to forward on
+#   • admin   — the complete file, including Notes
+# The general version is derived here by truncating at "## Notes", so the two
+# can never drift apart.
 
 on:
   push:
@@ -22,8 +28,8 @@ jobs:
         with:
           fetch-depth: 2
 
-      - name: Detect what changed
-        id: changes
+      - name: Detect what changed and build general versions
+        id: prep
         run: |
           CHANGED=$(git diff --name-only HEAD^ HEAD || true)
           echo "changed files: $CHANGED"
@@ -31,8 +37,25 @@ jobs:
           echo "alert=$(echo "$CHANGED" | grep -c '^outbox/alert.md$' || true)" >> "$GITHUB_OUTPUT"
           echo "TODAY=$(TZ=America/New_York date +'%B %-d, %Y')" >> "$GITHUB_ENV"
 
-      - name: Send high-risk alert
-        if: steps.changes.outputs.alert != '0'
+          # General version = everything before the "## Notes" heading, with any
+          # trailing blank lines trimmed. A file without a Notes section passes
+          # through whole, so a missing section can never produce an empty email.
+          STRIP='/^## Notes[[:space:]]*$/{exit} {l[n++]=$0}
+                 END{while(n>0 && l[n-1]=="") n--; for(i=0;i<n;i++) print l[i]}'
+          for f in weekly alert; do
+            if [ -f "outbox/$f.md" ]; then
+              awk "$STRIP" "outbox/$f.md" > "outbox/$f-general.md"
+              if [ ! -s "outbox/$f-general.md" ]; then
+                echo "::error::outbox/$f-general.md came out empty — refusing to send a blank email"
+                exit 1
+              fi
+              echo "--- outbox/$f-general.md: $(wc -l < "outbox/$f-general.md") lines (full: $(wc -l < "outbox/$f.md"))"
+            fi
+          done
+
+      # ---------- High-risk alert ----------
+      - name: Alert — general
+        if: steps.prep.outputs.alert != '0'
         uses: dawidd6/action-send-mail@v3
         with:
           server_address: smtp.gmail.com
@@ -43,11 +66,11 @@ jobs:
           from: Corporate Affairs Intelligence <${{ secrets.MAIL_USERNAME }}>
           to: ${{ secrets.MAIL_TO }}
           subject: "⚠ High-Risk Alert — ${{ env.TODAY }}"
-          html_body: file://outbox/alert.md
+          html_body: file://outbox/alert-general.md
           convert_markdown: true
 
-      - name: Send weekly briefing
-        if: steps.changes.outputs.weekly != '0'
+      - name: Alert — admin
+        if: steps.prep.outputs.alert != '0'
         uses: dawidd6/action-send-mail@v3
         with:
           server_address: smtp.gmail.com
@@ -57,6 +80,37 @@ jobs:
           password: ${{ secrets.MAIL_APP_PASSWORD }}
           from: Corporate Affairs Intelligence <${{ secrets.MAIL_USERNAME }}>
           to: ${{ secrets.MAIL_TO }}
-          subject: "CA Intelligence Weekly Briefing — ${{ env.TODAY }}"
+          subject: "[ADMIN] High-Risk Alert — ${{ env.TODAY }}"
+          html_body: file://outbox/alert.md
+          convert_markdown: true
+
+      # ---------- Weekly briefing ----------
+      - name: Weekly — general
+        if: steps.prep.outputs.weekly != '0'
+        uses: dawidd6/action-send-mail@v3
+        with:
+          server_address: smtp.gmail.com
+          server_port: 465
+          secure: true
+          username: ${{ secrets.MAIL_USERNAME }}
+          password: ${{ secrets.MAIL_APP_PASSWORD }}
+          from: Corporate Affairs Intelligence <${{ secrets.MAIL_USERNAME }}>
+          to: ${{ secrets.MAIL_TO }}
+          subject: "Corporate Affairs Intelligence — Weekly Briefing — ${{ env.TODAY }}"
+          html_body: file://outbox/weekly-general.md
+          convert_markdown: true
+
+      - name: Weekly — admin
+        if: steps.prep.outputs.weekly != '0'
+        uses: dawidd6/action-send-mail@v3
+        with:
+          server_address: smtp.gmail.com
+          server_port: 465
+          secure: true
+          username: ${{ secrets.MAIL_USERNAME }}
+          password: ${{ secrets.MAIL_APP_PASSWORD }}
+          from: Corporate Affairs Intelligence <${{ secrets.MAIL_USERNAME }}>
+          to: ${{ secrets.MAIL_TO }}
+          subject: "[ADMIN] Weekly Briefing — ${{ env.TODAY }}"
           html_body: file://outbox/weekly.md
           convert_markdown: true

@@ -106,6 +106,12 @@ Append one JSON object per analyzed story (fields above). Never rewrite past lin
 Add every fetched item URL/GUID you processed this run (including discarded ones) so it is never reprocessed: `{"<normalized-url-or-guid>": "YYYY-MM-DD", ...}`. Normalize URLs by stripping tracking params (`utm_*`, `fbclid`, etc.). Prune entries older than 60 days to keep the file small.
 
 > **What gets emailed.** `outbox/` is the email outbox: anything written there is sent. Only two things go there — the Monday weekly briefing, and a High-risk alert. **The daily digest is not emailed**; it goes to `digests/` and the dashboard.
+>
+> **Each of those is sent twice, in two versions.** The email workflow derives them automatically from the single file you write:
+> - a **general** version — everything *above* the `## Notes` heading, written to be forwarded to colleagues as-is;
+> - an **admin** version — the complete file including `## Notes`.
+>
+> So: **write one file, always ending with a `## Notes` section.** Everything before `## Notes` must read cleanly on its own for an outside reader — no references to scans, sources swept, fetch modes, or anything about how the system works. Put all of that in `## Notes`. Never mention the Notes section from the body above it, or the general version will refer to something its reader cannot see.
 
 ### 3. `digests/YYYY-MM-DD.md` — the daily digest (dashboard + archive, not emailed)
 Markdown, in this shape:
@@ -152,7 +158,15 @@ summary
 ---
 Full context for today, including everything rated Medium and Low:
 https://jadealiseritchie.github.io/ca-intelligence/
+
+## Notes
+(Admin only — stripped from the general version. One-liners: which scan
+found this and at what time ET; how many sources were swept; the fetch
+mode; anything relevant that was considered but not raised to High, with
+the reason.)
 ```
+
+Everything above `## Notes` must stand on its own for a colleague who knows nothing about the system.
 
 Rules:
 - **If this run produced no High-risk story, do not touch `outbox/alert.md` at all** — leaving it unchanged is what prevents an email being sent.
@@ -178,7 +192,16 @@ daily email.)
 
 ## Key watch items
 (Bulleted list: upcoming dates, comment periods, expected decisions.)
+
+## Notes
+(Admin only — stripped from the general version. One-liners: how many
+stories were analysed this week and how many were rated High; how many
+sources were swept and whether any were unreachable; the fetch mode; any
+sources auto-added; anything notable that was considered and not included,
+with the reason.)
 ```
+
+Everything above `## Notes` must stand on its own for a colleague who knows nothing about the system — no mention of scans, sources swept, or fetch modes.
 
 On non-Mondays, and on any Monday scan after the first, do NOT touch `outbox/weekly.md`.
 
