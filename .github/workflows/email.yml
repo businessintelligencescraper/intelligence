@@ -4,9 +4,10 @@ name: Send intelligence emails
 # immediate alert whenever a scan finds a High-risk item. The daily digest is
 # NOT emailed — it goes to digests/ and the dashboard.
 #
-# Each email is sent in TWO versions to the same address:
-#   • general — everything above the "## Notes" heading, safe to forward on
-#   • admin   — the complete file, including Notes
+# Each email is sent in TWO versions, to two recipient lists:
+#   • general (MAIL_TO)       — everything above the "## Notes" heading.
+#                               This is the version colleagues receive.
+#   • admin   (MAIL_TO_ADMIN) — the complete file, including Notes.
 # The general version is derived here by truncating at "## Notes", so the two
 # can never drift apart.
 
@@ -37,6 +38,45 @@ jobs:
           echo "alert=$(echo "$CHANGED" | grep -c '^outbox/alert.md$' || true)" >> "$GITHUB_OUTPUT"
           echo "TODAY=$(TZ=America/New_York date +'%B %-d, %Y')" >> "$GITHUB_ENV"
 
+
+          # ---- Freshness guard -------------------------------------------
+          # Sending depends on the CONTENT being current, not on the file having
+          # been touched. A cosmetic edit (a link change, a typo fix) by anyone
+          # must never re-send an old alert. An alert mails only if dated today
+          # or yesterday (ET); a weekly only if its week began within 7 days.
+          # Anything unparseable or missing fails closed — no email.
+          python3 - <<'FRESH'
+          import os, re, time, datetime
+          os.environ["TZ"] = "America/New_York"
+          try: time.tzset()
+          except AttributeError: pass
+          today = datetime.date.fromtimestamp(time.time())
+
+          def heading(path, n=5):
+              try:
+                  with open(path) as fh:
+                      return "".join([next(fh, "") for _ in range(n)])
+              except FileNotFoundError:
+                  return ""
+
+          def parse(text):
+              m = re.search(r"([A-Z][a-z]+)\s+(\d{1,2})(?:,\s*(\d{4}))?", text)
+              if not m: return None
+              mon, day, yr = m.group(1), int(m.group(2)), m.group(3)
+              try: mi = datetime.datetime.strptime(mon[:3], "%b").month
+              except ValueError: return None
+              try: return datetime.date(int(yr) if yr else today.year, mi, day)
+              except ValueError: return None
+
+          a = parse(heading("outbox/alert.md"))
+          w = parse(heading("outbox/weekly.md", 3))
+          af = 1 if a and 0 <= (today - a).days <= 1 else 0
+          wf = 1 if w and 0 <= (today - w).days <= 7 else 0
+          print(f"today(ET)={today} | alert dated {a} fresh={af} | weekly dated {w} fresh={wf}")
+          with open(os.environ["GITHUB_OUTPUT"], "a") as fh:
+              fh.write(f"alert_fresh={af}\nweekly_fresh={wf}\n")
+          FRESH
+
           # General version = everything before the "## Notes" heading, with any
           # trailing blank lines trimmed. A file without a Notes section passes
           # through whole, so a missing section can never produce an empty email.
@@ -55,7 +95,7 @@ jobs:
 
       # ---------- High-risk alert ----------
       - name: Alert — general
-        if: steps.prep.outputs.alert != '0'
+        if: steps.prep.outputs.alert != '0' && steps.prep.outputs.alert_fresh == '1'
         uses: dawidd6/action-send-mail@v3
         with:
           server_address: smtp.gmail.com
@@ -70,7 +110,7 @@ jobs:
           convert_markdown: true
 
       - name: Alert — admin
-        if: steps.prep.outputs.alert != '0'
+        if: steps.prep.outputs.alert != '0' && steps.prep.outputs.alert_fresh == '1'
         uses: dawidd6/action-send-mail@v3
         with:
           server_address: smtp.gmail.com
@@ -79,14 +119,14 @@ jobs:
           username: ${{ secrets.MAIL_USERNAME }}
           password: ${{ secrets.MAIL_APP_PASSWORD }}
           from: Corporate Affairs Intelligence <${{ secrets.MAIL_USERNAME }}>
-          to: ${{ secrets.MAIL_TO }}
+          to: ${{ secrets.MAIL_TO_ADMIN || secrets.MAIL_TO }}
           subject: "[ADMIN] High-Risk Alert — ${{ env.TODAY }}"
           html_body: file://outbox/alert.md
           convert_markdown: true
 
       # ---------- Weekly briefing ----------
       - name: Weekly — general
-        if: steps.prep.outputs.weekly != '0'
+        if: steps.prep.outputs.weekly != '0' && steps.prep.outputs.weekly_fresh == '1'
         uses: dawidd6/action-send-mail@v3
         with:
           server_address: smtp.gmail.com
@@ -101,7 +141,7 @@ jobs:
           convert_markdown: true
 
       - name: Weekly — admin
-        if: steps.prep.outputs.weekly != '0'
+        if: steps.prep.outputs.weekly != '0' && steps.prep.outputs.weekly_fresh == '1'
         uses: dawidd6/action-send-mail@v3
         with:
           server_address: smtp.gmail.com
@@ -110,7 +150,7 @@ jobs:
           username: ${{ secrets.MAIL_USERNAME }}
           password: ${{ secrets.MAIL_APP_PASSWORD }}
           from: Corporate Affairs Intelligence <${{ secrets.MAIL_USERNAME }}>
-          to: ${{ secrets.MAIL_TO }}
+          to: ${{ secrets.MAIL_TO_ADMIN || secrets.MAIL_TO }}
           subject: "[ADMIN] Weekly Briefing — ${{ env.TODAY }}"
           html_body: file://outbox/weekly.md
           convert_markdown: true
