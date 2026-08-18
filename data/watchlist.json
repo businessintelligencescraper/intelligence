@@ -57,7 +57,7 @@
     "date": "2026-08-19",
     "date_precision": "exact",
     "category": "Regulatory",
-    "what_happens": "50% Section 338 tariffs (signed by proclamation July 20, 2026) remain scheduled to take effect on Canadian-origin whey products, milk protein concentrates, lactose, casein/caseinates and milk powders; cheese, butter, yogurt, fluid milk/cream, sour cream and ice cream are exempted. UPDATED Aug 17: Trade Minister LeBlanc and USTR Greer held a fifth meeting (virtual, one hour) Sunday Aug. 16, described by LeBlanc's office as 'constructive' with negotiating teams 'continuing' discussions — but no agreement announced, two days out. Consistent with Aug 15-16 reporting: negotiators described as 'inching closer' to a framework deal (Bloomberg, Washington Post) built around Canada dropping retaliatory auto tariffs, easing provincial alcohol restrictions, and revisiting CUSMA dairy tariff-rate-quota allocation, in exchange for US relief on Section 232 steel/aluminum tariffs — but Global News separately reports a 'big gap' still remains between the two sides, and PM Carney says Canada 'will not accept a bad deal.' No deal confirmed as of Aug 17. Dairy Farmers of Canada continues to publicly urge Ottawa not to make further concessions on dairy/supply management.",
+    "what_happens": "50% Section 338 tariffs (signed by proclamation July 20, 2026) remain scheduled to take effect on Canadian-origin whey products, milk protein concentrates, lactose, casein/caseinates and milk powders; cheese, butter, yogurt, fluid milk/cream, sour cream and ice cream are exempted. UPDATED Aug 17: Trade Minister LeBlanc and USTR Greer held a fifth meeting (virtual, one hour) Sunday Aug. 16, described by LeBlanc's office as 'constructive' with negotiating teams 'continuing' discussions \u2014 but no agreement announced, two days out. Consistent with Aug 15-16 reporting: negotiators described as 'inching closer' to a framework deal (Bloomberg, Washington Post) built around Canada dropping retaliatory auto tariffs, easing provincial alcohol restrictions, and revisiting CUSMA dairy tariff-rate-quota allocation, in exchange for US relief on Section 232 steel/aluminum tariffs \u2014 but Global News separately reports a 'big gap' still remains between the two sides, and PM Carney says Canada 'will not accept a bad deal.' No deal confirmed as of Aug 17. Dairy Farmers of Canada continues to publicly urge Ottawa not to make further concessions on dairy/supply management.",
     "why_watch": "Direct cost and supply-chain implications for cross-border dairy ingredient trade; IDFA and NMPF have both issued public statements. A negotiated deal could avert, narrow, or reshape the tariffs before they take effect.",
     "source_url": "https://cheesereporter.com/news/global-trade-tariffs/2026/07/24/us-to-impose-50-tariffs-on-some-dairy-imports-from-canada-starting-on-august-19/",
     "status": "upcoming",
@@ -92,12 +92,12 @@
   },
   {
     "id": "fda-gras-mandatory-notification-rule-publication",
-    "title": "FDA's mandatory GRAS-notification proposed rule — Federal Register publication",
+    "title": "FDA's mandatory GRAS-notification proposed rule \u2014 Federal Register publication",
     "date": "2026-08-11",
     "date_precision": "exact",
     "category": "Regulatory",
-    "what_happens": "UPDATED: Trade-press and health-policy reporting on Aug. 10 (Food Safety Magazine, STAT News) clarifies the rule (RIN 0910-AJ02) is being filed for Federal Register publication this week — Aug. 11 — not December as earlier reporting anticipated; December was a misread of the comment-period close, not the publication date. Once published it opens a 120-day public comment period (see companion watch item for the close date). HHS Secretary Kennedy publicly announced the proposal Aug. 10, shifting GRAS notification from voluntary to mandatory.",
-    "why_watch": "Publication starts the comment clock on the biggest change to the GRAS pathway in decades, affecting nearly every food and dairy ingredient supplier that relies on self-affirmed GRAS determinations — four months sooner than the company's tracking assumed.",
+    "what_happens": "UPDATED: Trade-press and health-policy reporting on Aug. 10 (Food Safety Magazine, STAT News) clarifies the rule (RIN 0910-AJ02) is being filed for Federal Register publication this week \u2014 Aug. 11 \u2014 not December as earlier reporting anticipated; December was a misread of the comment-period close, not the publication date. Once published it opens a 120-day public comment period (see companion watch item for the close date). HHS Secretary Kennedy publicly announced the proposal Aug. 10, shifting GRAS notification from voluntary to mandatory.",
+    "why_watch": "Publication starts the comment clock on the biggest change to the GRAS pathway in decades, affecting nearly every food and dairy ingredient supplier that relies on self-affirmed GRAS determinations \u2014 four months sooner than the company's tracking assumed.",
     "source_url": "https://www.food-safety.com/articles/11713-fda-proposes-mandatory-gras-notifications-for-ingredients-introduced-to-us-food-supply",
     "status": "resolved",
     "added": "2026-08-04",
@@ -118,7 +118,7 @@
   },
   {
     "id": "fda-upf-definition-oira-review",
-    "title": "FDA ultra-processed food definition — outcome of OIRA review",
+    "title": "FDA ultra-processed food definition \u2014 outcome of OIRA review",
     "date": "2026-11-01",
     "date_precision": "unknown",
     "category": "Regulatory",
@@ -140,7 +140,7 @@
     "source_url": "https://resource-recycling.com/recycling/2026/02/02/calrecycle-opens-sb-54-draft-for-comments/",
     "status": "resolved",
     "added": "2026-08-06",
-    "resolution": "Comment period closed Aug. 14, 2026 as scheduled. Circular Action Alliance will review comments as it prepares the final program plan, due to CalRecycle by October 2026 — that filing is what will actually set the fee structure and compliance mechanics producers face; projected 2027-2031 program costs run $9.3B-$17.2B, funded entirely through producer fees."
+    "resolution": "Comment period closed Aug. 14, 2026 as scheduled. Circular Action Alliance will review comments as it prepares the final program plan, due to CalRecycle by October 2026 \u2014 that filing is what will actually set the fee structure and compliance mechanics producers face; projected 2027-2031 program costs run $9.3B-$17.2B, funded entirely through producer fees."
   },
   {
     "id": "screwworm-douglas-port-reopening",
@@ -148,7 +148,7 @@
     "date": "2026-08-24",
     "date_precision": "exact",
     "category": "Dairy Industry",
-    "what_happens": "USDA reopens the Douglas, Arizona port of entry to livestock trade from Mexico under strict New World screwworm inspection protocols — the first step in a phased reopening; Santa Teresa and Columbus, NM ports would follow if no problems arise.",
+    "what_happens": "USDA reopens the Douglas, Arizona port of entry to livestock trade from Mexico under strict New World screwworm inspection protocols \u2014 the first step in a phased reopening; Santa Teresa and Columbus, NM ports would follow if no problems arise.",
     "why_watch": "First reopening of Mexican cattle imports since the border was closed in May 2025 over screwworm; a new detection near the border could reverse the reopening and re-tighten the cattle and dairy-replacement-heifer supply chain.",
     "source_url": "https://www.dtnpf.com/agriculture/web/ag/livestock/article/2026/08/04/rollins-announces-25m-arizona-nws",
     "status": "upcoming",
@@ -175,7 +175,7 @@
     "date_precision": "month",
     "category": "Regulatory",
     "what_happens": "A federal court ruled USDA's exemption of highly refined bioengineered ingredients (e.g., refined corn oil, sugar) from mandatory GMO disclosure was arbitrary, and that QR-code-only compliance is unlawful; USDA's Unified Agenda reportedly targets a proposed rule as soon as August 2026, with the challenged provisions void by Jan. 1, 2028 absent a lawful replacement.",
-    "why_watch": "Would broaden mandatory bioengineered-ingredient disclosure to more processed foods, including dairy products relying on refined sweeteners or oils, and bar QR-code-only labeling — a compliance approach some manufacturers use.",
+    "why_watch": "Would broaden mandatory bioengineered-ingredient disclosure to more processed foods, including dairy products relying on refined sweeteners or oils, and bar QR-code-only labeling \u2014 a compliance approach some manufacturers use.",
     "source_url": "https://www.dtnpf.com/agriculture/web/ag/news/article/2026/08/05/federal-court-orders-usda-rewrite",
     "status": "upcoming",
     "added": "2026-08-07",
@@ -205,6 +205,19 @@
     "source_url": "https://www.federalregister.gov/documents/2025/07/17/2025-13424/proposal-to-revoke-18-standards-of-identity-for-dairy-products",
     "status": "upcoming",
     "added": "2026-08-11",
+    "resolution": null
+  },
+  {
+    "id": "epcra-manure-exemption-dc-circuit-appeal",
+    "title": "D.C. Circuit appeal of EPCRA farm air-emissions reporting exemption",
+    "date": "2026-11-01",
+    "date_precision": "unknown",
+    "category": "Regulatory",
+    "what_happens": "Environmental groups' appeal of the district court ruling upholding EPA's exemption of factory-farm ammonia/hydrogen sulfide emissions from EPCRA reporting is proceeding before the U.S. Court of Appeals for the D.C. Circuit; oral arguments expected this fall or possibly not until spring 2027, with no date set yet.",
+    "why_watch": "A reversal would reinstate EPCRA air-emissions reporting obligations for larger dairy and livestock operations that the industry has spent years litigating to avoid; NMPF and dairy groups are tracking closely.",
+    "source_url": "https://www.nmpf.org/dairy-farmers-near-win-in-decades-long-regulatory-fight/",
+    "status": "upcoming",
+    "added": "2026-08-17",
     "resolution": null
   }
 ]
