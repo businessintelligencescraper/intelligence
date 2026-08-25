@@ -28,3 +28,4 @@ Automated daily monitoring of regulatory, nutrition, dairy-industry, sustainabil
 - The admin-portal password is a client-side convenience gate, not real security; the portal only edits a public source list.
 - The Gmail app password lives exclusively in GitHub Actions encrypted secrets. The portal token lives exclusively in your browser's localStorage. No credential is ever committed to this repo.
 - The dashboard URL is public (unlisted). Content is analysis of public news.
+test
