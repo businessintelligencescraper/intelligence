@@ -245,5 +245,18 @@
     "status": "upcoming",
     "added": "2026-08-22",
     "resolution": null
+  },
+  {
+    "id": "codex-ccmmp11-public-meeting",
+    "title": "US Codex Office public meeting on 11th Session of the Codex Committee on Milk and Milk Products",
+    "date": "2026-09-17",
+    "date_precision": "exact",
+    "category": "Regulatory",
+    "what_happens": "USDA/FDA's U.S. Codex Office holds a public meeting to brief stakeholders and take comment on the draft U.S. position ahead of CCMMP11, which then convenes by written correspondence Sept. 29-Oct. 29, 2026.",
+    "why_watch": "Sets the US negotiating position on international dairy compositional and labeling standards; a formal channel for industry (including individual processors) to weigh in before the US position is finalized.",
+    "source_url": "https://www.federalregister.gov/documents/2026/08/20/2026-17044/codex-alimentarius-commission-meeting-of-the-codex-committee-on-milk-and-milk-products",
+    "status": "upcoming",
+    "added": "2026-08-26",
+    "resolution": null
   }
 ]
