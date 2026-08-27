@@ -258,5 +258,18 @@
     "status": "upcoming",
     "added": "2026-08-26",
     "resolution": null
+  },
+  {
+    "id": "hhs-depend-first-awards",
+    "title": "First round of HHS DEPEND school-nutrition pilot funding awards",
+    "date": "2026-10-01",
+    "date_precision": "month",
+    "category": "Public Affairs",
+    "what_happens": "HHS/AHRQ/NIH expect to make the first round of DEPEND ($32.5M) school-meal pilot funding awards in October, after an application cycle that opens soon.",
+    "why_watch": "Which pilot approaches and criteria get funded will signal how the administration's 'real food' framing could translate into future school-meal procurement standards.",
+    "source_url": "https://www.hhs.gov/press-room/hhs-depend-initiative-healthier-school-meals-real-food.html",
+    "status": "upcoming",
+    "added": "2026-08-27",
+    "resolution": null
   }
 ]
