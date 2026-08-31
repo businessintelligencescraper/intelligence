@@ -271,5 +271,18 @@
     "status": "upcoming",
     "added": "2026-08-27",
     "resolution": null
+  },
+  {
+    "id": "section-338-tariff-legal-challenge",
+    "title": "First legal challenge to Section 338 dairy/auto/alcohol tariffs",
+    "date": "2026-09-15",
+    "date_precision": "unknown",
+    "category": "Regulatory",
+    "what_happens": "Trade attorneys (Holland & Knight and others) say a lawsuit challenging President Trump's first-ever use of Section 338 tariff authority -- the basis for the 50% tariffs on Canadian dairy ingredients, alcohol and autos -- is expected imminently; none had been filed as of Aug. 29. No court date is set; the listed date is a rough placeholder pending an actual filing.",
+    "why_watch": "A successful challenge could invalidate the Section 338 tariffs on Canadian-origin whey, milk protein concentrates, lactose and casein currently in effect, changing the cost and sourcing picture for ingredient-dependent processors; also relevant to a competing legislative repeal effort (the BAD DEAL Act) introduced Aug. 27.",
+    "source_url": "https://www.hklaw.com/en/news/intheheadlines/2026/08/lawyers-lawsuits-against-section-338-tariffs-expected",
+    "status": "upcoming",
+    "added": "2026-08-31",
+    "resolution": null
   }
 ]
