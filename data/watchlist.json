@@ -28,10 +28,10 @@
   {
     "id": "childhood-diabetes-reduction-act-floor",
     "title": "Senate floor action on the Childhood Diabetes Reduction Act of 2026",
-    "date": "2026-09-01",
-    "date_precision": "month",
+    "date": "2026-10-01",
+    "date_precision": "unknown",
     "category": "Legislative",
-    "what_happens": "Bill advanced out of the Senate HELP Committee 12-10 and awaits a full Senate vote; would require front-of-pack warning labels on high sugar, saturated fat and sodium products.",
+    "what_happens": "Bill advanced out of the Senate HELP Committee 12-10 on July 22, 2026 and awaits a full Senate floor vote; would require front-of-pack warning labels on high sugar, saturated fat and sodium products. UPDATED Sept. 4 scan: no floor vote has occurred as of early September; lawmakers have signaled the bill is likely to see revisions before it comes to the floor, and no new date has been reported.",
     "why_watch": "Thresholds would directly implicate whole milk, butter, full-fat cheese and sweetened dairy; the pre-floor-vote window is when positioning matters.",
     "source_url": "https://www.foodnavigator.com/Article/2026/07/29/upf-warning-label-bill-clears-senate-panel/",
     "status": "upcoming",
@@ -309,6 +309,19 @@
     "source_url": "https://www.bakeryandsnacks.com/Article/2026/09/01/california-passes-non-upf-food-certification-bill/",
     "status": "upcoming",
     "added": "2026-09-03",
+    "resolution": null
+  },
+  {
+    "id": "pack-act-rmaa-full-committee-markup",
+    "title": "Full House Energy & Commerce Committee markup of the PACK Act and Recycled Materials Attribution Act",
+    "date": "2026-10-01",
+    "date_precision": "unknown",
+    "category": "Legislative",
+    "what_happens": "The Commerce, Manufacturing and Trade Subcommittee voice-voted to advance the PACK Act (H.R. 6832) and the Recycled Materials Attribution Act (H.R. 7502) to the full Energy and Commerce Committee on Sept. 1, 2026. No full-committee markup date has been scheduled yet.",
+    "why_watch": "Would set the next step toward a federal preemption framework for packaging 'recyclable'/'recycled content' claims; environmental advocates are contesting the mass-balance accounting provision as the bills move forward.",
+    "source_url": "https://resource-recycling.com/policy-now/2026/09/01/house-subcommittee-advances-pack-act/",
+    "status": "upcoming",
+    "added": "2026-09-04",
     "resolution": null
   }
 ]
