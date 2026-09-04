@@ -323,5 +323,18 @@
     "status": "upcoming",
     "added": "2026-09-04",
     "resolution": null
+  },
+  {
+    "id": "epa-wotus-supplemental-comment-period",
+    "title": "Comment period on EPA/Army Corps' supplemental WOTUS proposal",
+    "date": "2026-10-15",
+    "date_precision": "unknown",
+    "category": "Sustainability",
+    "what_happens": "EPA and the Army Corps issued a Supplemental Notice of Proposed Rulemaking Sept. 4, 2026 seeking further public input on defining \"waters of the United States\" (WOTUS) under the Clean Water Act, including how to define \"relatively permanent\" waters and a \"continuous surface water connection.\" The supplemental notice is expected to publish in the Federal Register within about a week of the Sept. 4 announcement, opening a 30-day comment period; no confirmed Federal Register publication date yet, so the date above is a rough placeholder (~30 days after expected publication) pending the official notice.",
+    "why_watch": "WOTUS jurisdiction determines which on-farm and processing-facility waters/wetlands require Clean Water Act permits; the agencies are moving toward a \"durable final rule\" after 22,000+ comments on the original November 2025 proposal, giving dairy/ag stakeholders a fresh window to weigh in before it is finalized.",
+    "source_url": "https://www.epa.gov/newsreleases/epa-and-army-seek-additional-input-proposed-waters-us-definition-while-advancing",
+    "status": "upcoming",
+    "added": "2026-09-04",
+    "resolution": null
   }
 ]
