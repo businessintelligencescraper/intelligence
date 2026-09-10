@@ -349,5 +349,18 @@
     "status": "upcoming",
     "added": "2026-09-09",
     "resolution": null
+  },
+  {
+    "id": "canada-cheese-tariff-section-338-expansion",
+    "title": "50% Section 338 tariff on Canadian specialty cheese and ~70 other goods takes effect",
+    "date": "2026-09-15",
+    "date_precision": "exact",
+    "category": "Regulatory",
+    "what_happens": "As part of the same Sept. 8, 2026 proclamation package that set the Sept. 29 Canadian dairy/alcohol/motorcycle import ban (see companion watch item), the administration also modified the scope of goods already subject to the 50% Section 338 tariff first imposed July 20: roughly 70 additional product categories are added, including specialty cheeses, boats and furniture, effective 12:01 a.m. ET Sept. 15, 2026, while a smaller number of items (including rock salt and non-white cement) are removed from the list.",
+    "why_watch": "Specialty cheese had been exempted from the original July 2026 Section 338 tariffs (which targeted whey, milk protein concentrates, lactose, caseinates and milk powders); this is the first time a finished dairy product — specialty cheese — is added to the 50% tariff, a new and direct cost exposure for anyone sourcing or co-packing Canadian specialty cheese, distinct from the ingredient-tariff and import-ban tracks already on this list.",
+    "source_url": "https://www.supplychaindive.com/news/trump-escalates-canada-trade-war-with-new-tariffs-import-bans/829876/",
+    "status": "upcoming",
+    "added": "2026-09-10",
+    "resolution": null
   }
 ]
