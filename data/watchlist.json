@@ -362,5 +362,18 @@
     "status": "upcoming",
     "added": "2026-09-10",
     "resolution": null
+  },
+  {
+    "id": "ca-sb343-truth-in-recycling-effective",
+    "title": "California SB 343 'Truth in Recycling' labeling restrictions — scheduled effective date",
+    "date": "2026-10-04",
+    "date_precision": "exact",
+    "category": "Sustainability",
+    "what_happens": "SB 343 would bar the 'chasing arrows' recycling symbol and other recyclability claims on packaging unless a producer can show the material is actually collected and reprocessed by most California recycling programs, with an Oct. 4, 2026 effective date. However, on July 14, 2026 a federal judge (S.D. Cal., California League of Food Producers v. Bonta) granted a preliminary injunction barring the state Attorney General from enforcing the law, finding several provisions likely unconstitutionally vague; California is expected to appeal to the Ninth Circuit. Unless that injunction is stayed or reversed before Oct. 4, the law will not actually take effect as scheduled on that date despite remaining on the books.",
+    "why_watch": "Would restrict recyclability claims on food and beverage packaging nationally in practice (California is the de facto standard for many national labels), directly affecting dairy tubs, cups and cartons; the pending Ninth Circuit appeal is what will determine whether the Oct. 4 date ends up mattering.",
+    "source_url": "https://www.packagingdive.com/news/california-sb343-preliminary-injunction-granted/825270/",
+    "status": "upcoming",
+    "added": "2026-09-10",
+    "resolution": null
   }
 ]
