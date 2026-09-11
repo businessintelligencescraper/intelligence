@@ -375,5 +375,18 @@
     "status": "upcoming",
     "added": "2026-09-10",
     "resolution": null
+  },
+  {
+    "id": "2018-farm-bill-extension-expires",
+    "title": "2018 Farm Bill extension (covering dairy support programs) expires",
+    "date": "2026-09-30",
+    "date_precision": "exact",
+    "category": "Legislative",
+    "what_happens": "The third extension of the 2018 Farm Bill, enacted Nov. 12, 2025 as part of the legislation ending the federal government shutdown, runs through Sept. 30, 2026; it is what currently keeps Dairy Margin Coverage and other lapsed-authority dairy support programs operating pending a new Farm Bill. The Senate Agriculture Committee's planned Sept. 15 retry markup of Farm Bill 2.0 (Agricultural Act of 2026 — see companion watch item) is the main vehicle in play to replace it before the deadline; if that markup fails again or a full bill isn't enacted in time, dairy programs would need a fourth extension or would lapse to permanent (1949) law.",
+    "why_watch": "A distinct statutory deadline from the Sept. 15 committee markup: Dairy Margin Coverage, the Dairy Indemnity Payment Program, and dairy promotion/research authorities depend on Farm Bill authority being extended or replaced by this date, regardless of how the Sept. 15 markup goes.",
+    "source_url": "https://www.iedconline.org/news/2025/11/20/federal-policy-updates/farm-bill-programs-extended-through-2026-in-legislation-ending-federal-government-shutdown/",
+    "status": "upcoming",
+    "added": "2026-09-11",
+    "resolution": null
   }
 ]
