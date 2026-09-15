@@ -275,10 +275,10 @@
   {
     "id": "fda-ultrafiltered-milk-cheese-final-rule",
     "title": "FDA final rule on ultrafiltered/microfiltered milk in standardized cheeses",
-    "date": "2026-09-01",
+    "date": "2026-09-30",
     "date_precision": "month",
     "category": "Regulatory",
-    "what_happens": "The 2026 Unified Regulatory Agenda (RIN 0910-AI42) targets September 2026 for a final rule amending standards of identity to permit fluid ultrafiltered milk, ultrafiltered nonfat milk, microfiltered milk and microfiltered nonfat milk as ingredients in standardized cheeses and related cheese products, with an exemption from having to separately declare those forms on the label when used alongside milk or nonfat milk. The rulemaking dates to an Oct. 2005 proposal; trade press has flagged the rule as close to release but no publication date has been confirmed yet. UPDATED Sept. 7 scan: no final rule has been published in the Federal Register as of this evening; the September 2026 Unified Agenda target has not yet lapsed, so this remains on track rather than overdue. Watching for publication over the rest of the month.",
+    "what_happens": "The 2026 Unified Regulatory Agenda (RIN 0910-AI42) targets September 2026 for a final rule amending standards of identity to permit fluid ultrafiltered milk, ultrafiltered nonfat milk, microfiltered milk and microfiltered nonfat milk as ingredients in standardized cheeses and related cheese products, with an exemption from having to separately declare those forms on the label when used alongside milk or nonfat milk. The rulemaking dates to an Oct. 2005 proposal; trade press has flagged the rule as close to release but no publication date has been confirmed yet. UPDATED Sept. 7 scan: no final rule has been published in the Federal Register as of this evening; the September 2026 Unified Agenda target has not yet lapsed, so this remains on track rather than overdue. Watching for publication over the rest of the month. UPDATED Sept. 15 scan: still no final rule published as of mid-September; date moved to Sept. 30 (month-end) since the Unified Agenda target is a monthly estimate, not an exact day.",
     "why_watch": "Would give cheesemakers more formulation and sourcing flexibility (using ultrafiltration/microfiltration to standardize protein content) without a labeling change \u2014 a direct, decades-pending compliance and cost question for any US cheese manufacturer once finalized.",
     "source_url": "https://www.reginfo.gov/public/do/eAgendaViewRule?pubId=202510&RIN=0910-AI42",
     "status": "upcoming",
@@ -288,10 +288,10 @@
   {
     "id": "section-338-tariff-legal-challenge",
     "title": "First legal challenge to Section 338 dairy/auto/alcohol tariffs",
-    "date": "2026-09-15",
+    "date": "2026-09-29",
     "date_precision": "unknown",
     "category": "Regulatory",
-    "what_happens": "Trade attorneys (Holland & Knight and others) say a lawsuit challenging President Trump's first-ever use of Section 338 tariff authority -- the basis for the 50% tariffs on Canadian dairy ingredients, alcohol and autos -- is expected imminently; none had been filed as of Aug. 29. No court date is set; the listed date is a rough placeholder pending an actual filing.",
+    "what_happens": "Trade attorneys (Holland & Knight and others) say a lawsuit challenging President Trump's first-ever use of Section 338 tariff authority -- the basis for the 50% tariffs on Canadian dairy ingredients, alcohol and autos -- is expected imminently; none had been filed as of Aug. 29. No court date is set; the listed date is a rough placeholder pending an actual filing. UPDATED Sept. 15 scan: still no lawsuit filed; Liberty Justice Center says it is seeking a plaintiff but has had limited interest so far. Date moved to Sept. 29 as the next likely trigger point (the Canadian dairy/alcohol/motorcycle import ban's effective date), still unconfirmed.",
     "why_watch": "A successful challenge could invalidate the Section 338 tariffs on Canadian-origin whey, milk protein concentrates, lactose and casein currently in effect, changing the cost and sourcing picture for ingredient-dependent processors; also relevant to a competing legislative repeal effort (the BAD DEAL Act) introduced Aug. 27.",
     "source_url": "https://www.hklaw.com/en/news/intheheadlines/2026/08/lawyers-lawsuits-against-section-338-tariffs-expected",
     "status": "upcoming",
@@ -359,9 +359,9 @@
     "what_happens": "As part of the same Sept. 8, 2026 proclamation package that set the Sept. 29 Canadian dairy/alcohol/motorcycle import ban (see companion watch item), the administration also modified the scope of goods already subject to the 50% Section 338 tariff first imposed July 20: roughly 70 additional product categories are added, including specialty cheeses, boats and furniture, effective 12:01 a.m. ET Sept. 15, 2026, while a smaller number of items (including rock salt and non-white cement) are removed from the list.",
     "why_watch": "Specialty cheese had been exempted from the original July 2026 Section 338 tariffs (which targeted whey, milk protein concentrates, lactose, caseinates and milk powders); this is the first time a finished dairy product \u2014 specialty cheese \u2014 is added to the 50% tariff, a new and direct cost exposure for anyone sourcing or co-packing Canadian specialty cheese, distinct from the ingredient-tariff and import-ban tracks already on this list.",
     "source_url": "https://www.supplychaindive.com/news/trump-escalates-canada-trade-war-with-new-tariffs-import-bans/829876/",
-    "status": "upcoming",
+    "status": "resolved",
     "added": "2026-09-10",
-    "resolution": null
+    "resolution": "Took effect as scheduled at 12:01 a.m. ET Sept. 15, 2026: CBP guidance under the Sept. 14 Federal Register proclamation confirms the 50% Section 338 duty now covers Canadian specialty cheeses (cheddar, Swiss, Gruyere, Parmesan, blue-veined and others, under HTSUS headings 9903.03.12 and 9903.03.14) and roughly 70 other goods, while rock salt and cement were removed from the list."
   },
   {
     "id": "ca-sb343-truth-in-recycling-effective",
