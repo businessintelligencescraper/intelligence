@@ -47,9 +47,9 @@
     "what_happens": "Committee vote failed 10-11 on Aug. 6 over an unrelated SNAP payment-error-rate dispute (dairy title was not the sticking point). UPDATED Sept. 7 scan: trade-press reporting (Politico Pro, Farm Policy News) now names Sept. 15 specifically \u2014 the day after the Senate returns from recess \u2014 as the date Chairman Boozman plans to reconvene the committee for the retry vote, tightening this from a 'week of' estimate to a specific day; no formal committee notice has been issued yet and the date could still slip if absent GOP Sens. McConnell or Tuberville are not back. UPDATED Sept. 15 scan: the retry markup has slipped one day \u2014 Agri-Pulse now reports the committee is scheduled to reconvene Wednesday, Sept. 16 at 3:30 p.m. ET in the Russell Senate Office Building, not Sept. 15 as earlier reporting indicated. Sen. McConnell is reported returning to work this week after his recovery absence, addressing one of the two attendance risks flagged earlier; Sen. Tuberville's status is unconfirmed.",
     "why_watch": "Mandatory dairy-manufacturer cost/yield reporting tied to FMMO pricing, plus reauthorization of the Dairy Indemnity Payment Program and Dairy Promotion and Research Board through 2031, remain pending in the stalled bill.",
     "source_url": "https://www.agri-pulse.com/articles/25237-senate-ag-committee-to-vote-on-farm-bill-as-soon-as-wednesday",
-    "status": "upcoming",
+    "status": "resolved",
     "added": "2026-08-04",
-    "resolution": null
+    "resolution": "Committee reconvened Wednesday, Sept. 16 (one day later than the Sept. 15 date reported earlier in the week) and passed the Agricultural Act of 2026 12-11 along party lines, with Sen. McConnell back on the panel. Sens. Ernst and Grassley objected to the closed amendment process but did not block passage. The dairy title -- reauthorization of the Dairy Forward Pricing Program, Dairy Indemnity Payment Program and Dairy Promotion and Research Board through 2031, plus mandatory dairy-manufacturer cost/yield reporting tied to FMMO pricing -- survived unchanged. Bill advances to the full Senate floor; see companion watch item for the next step."
   },
   {
     "id": "us-canada-dairy-tariffs-effective",
@@ -387,6 +387,19 @@
     "source_url": "https://www.iedconline.org/news/2025/11/20/federal-policy-updates/farm-bill-programs-extended-through-2026-in-legislation-ending-federal-government-shutdown/",
     "status": "upcoming",
     "added": "2026-09-11",
+    "resolution": null
+  },
+  {
+    "id": "senate-farm-bill-floor-vote",
+    "title": "Full Senate floor vote on Farm Bill 2.0 (Agricultural Act of 2026)",
+    "date": "2026-10-01",
+    "date_precision": "unknown",
+    "category": "Legislative",
+    "what_happens": "Following the Senate Agriculture Committee's 12-11 party-line passage on Sept. 16, 2026, the bill awaits scheduling for a full Senate floor vote; no date has been reported. It would then need reconciliation with a House version before enactment. No timeframe has been reported; using early-October as a rough placeholder given the bill just cleared committee.",
+    "why_watch": "The dairy title's program reauthorizations (through 2031) and new mandatory dairy-manufacturer cost/yield reporting tied to FMMO pricing remain in the bill as it moves to the floor.",
+    "source_url": "https://www.agri-pulse.com/articles/25257-senate-ag-passes-farm-bill-along-party-lines-amid-gop-drama",
+    "status": "upcoming",
+    "added": "2026-09-16",
     "resolution": null
   }
 ]
