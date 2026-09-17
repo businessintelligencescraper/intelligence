@@ -401,5 +401,18 @@
     "status": "upcoming",
     "added": "2026-09-16",
     "resolution": null
+  },
+  {
+    "id": "swan-v-rollins-dairy-checkoff-esg-lawsuit-status",
+    "title": "Status of Swan v. Rollins dairy-checkoff ESG lawsuit after USDA's funding cutoff",
+    "date": "2026-12-31",
+    "date_precision": "unknown",
+    "category": "Regulatory",
+    "what_happens": "Three Wisconsin dairy farmers (represented by the Wisconsin Institute for Law & Liberty) sued USDA and the National Dairy Promotion and Research Board on June 9, 2026 (E.D. Wis., No. 1:26-cv-01033), arguing mandatory dairy-checkoff assessments were unconstitutionally funding the Innovation Center for U.S. Dairy's ESG/net-zero advocacy. On Sept. 17, 2026 USDA Secretary Rollins directed the National Dairy Board to stop using checkoff funds for ESG/net-zero programs effective immediately (see companion story in today's digest); WILL characterized this as a direct result of the suit, but no source confirms a court order, settlement or dismissal — the case's docket status past the June filing is unconfirmed. No date is set for further proceedings; this entry tracks whatever comes next (a dismissal, a scope dispute, or IDFA/NMPF/DMI's response) with a year-end placeholder pending real developments.",
+    "why_watch": "Whether the case is dismissed as moot, narrows to a scope/compliance dispute over USDA's directive, or continues will determine how durable this week's checkoff funding change is; also watch for the currently-missing public response from IDFA, NMPF and DMI/Innovation Center for U.S. Dairy, which administer the affected programs.",
+    "source_url": "https://www.usda.gov/about-usda/news/press-releases/2026/09/17/usda-ends-mandatory-farmer-funding-esg-commitments-dairy-checkoff",
+    "status": "upcoming",
+    "added": "2026-09-17",
+    "resolution": null
   }
 ]
