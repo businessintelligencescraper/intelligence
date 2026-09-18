@@ -414,5 +414,18 @@
     "status": "upcoming",
     "added": "2026-09-17",
     "resolution": null
+  },
+  {
+    "id": "ca-central-valley-dairy-waste-discharge-revision",
+    "title": "Central Valley Regional Water Board revision of dairy waste discharge requirements",
+    "date": "2031-09-15",
+    "date_precision": "unknown",
+    "category": "Sustainability",
+    "what_happens": "Following the State Water Resources Control Board's Sept. 15, 2026 statewide order, the Central Valley Regional Water Quality Control Board must revise the region's 2013 dairy general waste discharge requirements to add a 10 mg/L nitrate drinking-water standard, tighter manure storage/land-application rules and alternative drinking-water provisions for affected households. The statewide order sets a five-year outside deadline (by approximately Sept. 2031) for the regional board to finalize those revisions, with phased compliance schedules expected for existing dairies along the way.",
+    "why_watch": "Sets the compliance timeline and cost exposure for dairy farms across California's Central Valley -- the top US milk-producing region -- that supply a national dairy manufacturer; interim regional board actions and phase-in schedules over the coming years will shape sourcing-region compliance costs well before the outside deadline.",
+    "source_url": "https://www.waterboards.ca.gov/water_issues/programs/enforcement/dairy_general_order.shtml",
+    "status": "upcoming",
+    "added": "2026-09-18",
+    "resolution": null
   }
 ]
