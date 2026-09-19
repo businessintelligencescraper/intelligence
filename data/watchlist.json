@@ -314,15 +314,15 @@
   {
     "id": "pack-act-rmaa-full-committee-markup",
     "title": "Full House Energy & Commerce Committee markup of the PACK Act and Recycled Materials Attribution Act",
-    "date": "2026-10-01",
-    "date_precision": "unknown",
+    "date": "2026-09-16",
+    "date_precision": "exact",
     "category": "Legislative",
     "what_happens": "The Commerce, Manufacturing and Trade Subcommittee voice-voted to advance the PACK Act (H.R. 6832) and the Recycled Materials Attribution Act (H.R. 7502) to the full Energy and Commerce Committee on Sept. 1, 2026. No full-committee markup date has been scheduled yet.",
     "why_watch": "Would set the next step toward a federal preemption framework for packaging 'recyclable'/'recycled content' claims; environmental advocates are contesting the mass-balance accounting provision as the bills move forward.",
     "source_url": "https://resource-recycling.com/policy-now/2026/09/01/house-subcommittee-advances-pack-act/",
-    "status": "upcoming",
+    "status": "resolved",
     "added": "2026-09-04",
-    "resolution": null
+    "resolution": "Full committee markup occurred Sept. 16, 2026: House Energy & Commerce Committee advanced both the PACK Act and the Recycled Materials Attribution Act to the full House floor as part of a bipartisan 16-bill markup. No House floor vote date set yet -- see companion watch item."
   },
   {
     "id": "epa-wotus-supplemental-comment-period",
@@ -439,6 +439,19 @@
     "source_url": "https://thehill.com/policy/energy-environment/6097215-new-mexico-screwworm-horse-confirmed/",
     "status": "upcoming",
     "added": "2026-09-18",
+    "resolution": null
+  },
+  {
+    "id": "pack-act-rmaa-house-floor-vote",
+    "title": "Full House floor vote on the PACK Act and Recycled Materials Attribution Act",
+    "date": "2026-12-31",
+    "date_precision": "unknown",
+    "category": "Legislative",
+    "what_happens": "Following the House Energy & Commerce Committee's Sept. 16, 2026 full-committee markup advancing both bills, they await scheduling for a full House floor vote. No date has been set.",
+    "why_watch": "Would be the next step toward a federal preemption framework for packaging recyclable/recycled-content claims that would affect dairy packaging labeling nationally; the mass-balance accounting provision remains contested by environmental advocates.",
+    "source_url": "https://cheesereporter.com/news/policy-legislation/2026/09/18/house-committee-advances-two-packaging-and-recycling-related-bills/",
+    "status": "upcoming",
+    "added": "2026-09-19",
     "resolution": null
   }
 ]
