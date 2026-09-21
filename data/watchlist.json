@@ -447,7 +447,7 @@
     "date": "2026-09-24",
     "date_precision": "exact",
     "category": "Dairy Industry",
-    "what_happens": "USDA plans to reopen the Santa Teresa, NM Port of Entry to Mexican cattle imports on Sept. 24, 2026, the next phase after Douglas, AZ reopened Aug. 24; Santa Teresa has handled roughly 43% of Mexican cattle imports over the past five years, making it the largest single crossing in the phased reopening. Agriculture Secretary Brooke Rollins announced the date at a Sept. 17 news conference in Santa Teresa. The same day, New Mexico confirmed its second New World screwworm case since June -- a horse in Grant County, near the border -- which officials called unrelated to the reopening and said is unlikely to delay it.",
+    "what_happens": "USDA plans to reopen the Santa Teresa, NM Port of Entry to Mexican cattle imports on Sept. 24, 2026, the next phase after Douglas, AZ reopened Aug. 24; Santa Teresa has handled roughly 43% of Mexican cattle imports over the past five years, making it the largest single crossing in the phased reopening. Agriculture Secretary Brooke Rollins announced the date at a Sept. 17 news conference in Santa Teresa. The same day, New Mexico confirmed its second New World screwworm case since June -- a horse in Grant County, near the border -- which officials called unrelated to the reopening and said is unlikely to delay it. UPDATED Sept. 21 scan: New Mexico livestock and agriculture officials announced expanded surveillance following the Grant County horse case, including additional fly-trapping and a 12.4-mile inspection/treatment radius around the affected site; officials reiterated the case is not expected to delay the Sept. 24 Santa Teresa reopening. No further screwworm cases have been confirmed and no change to the reopening date has been reported.",
     "why_watch": "The largest-volume port in the cattle-import reopening, feeding a cattle and dairy-replacement-heifer supply chain a national dairy manufacturer depends on; a new US-side screwworm detection just a week before reopening is the kind of development that reversed or delayed prior reopening steps (Sonora's case nearly stalled the Douglas reopening in August), so watch for any change to the Sept. 24 date.",
     "source_url": "https://thehill.com/policy/energy-environment/6097215-new-mexico-screwworm-horse-confirmed/",
     "status": "upcoming",
@@ -465,6 +465,19 @@
     "source_url": "https://cheesereporter.com/news/policy-legislation/2026/09/18/house-committee-advances-two-packaging-and-recycling-related-bills/",
     "status": "upcoming",
     "added": "2026-09-19",
+    "resolution": null
+  },
+  {
+    "id": "ca-ab2779-food-date-labeling-signature",
+    "title": "California Governor's decision on AB 2779 (uniform food date-labeling / 'sell by' ban)",
+    "date": "2026-10-10",
+    "date_precision": "exact",
+    "category": "Legislative",
+    "what_happens": "AB 2779 (Assemblymember Jacqui Irwin) was enrolled and presented to Gov. Newsom at 3 p.m. on Sept. 10, 2026, starting the standard 30-day window (ending on or about Oct. 10, 2026) for him to sign or veto. The bill would require food manufacturers, processors and retailers to use only two standardized date-label terms -- \"BEST if Used by\"/\"BEST if Used or Frozen by\" for quality dates and \"USE by\"/\"USE by or Freeze by\" for safety dates -- and would bar the phrase \"sell by\" on date labels for food manufactured after the bill's operative date. Not previously on this watch list; added this scan after a targeted search surfaced the Sept. 10 presentment. No signing or veto action has been reported yet.",
+    "why_watch": "Would make California the first state to bar \"sell by\" labeling outright and require uniform date-label terms across all packaged food, including dairy; California's food-labeling rules frequently become the de facto national standard given the size of its market, putting this alongside New York's still-pending Food Date Labeling Reform Act as a second state moving on the same issue.",
+    "source_url": "https://leginfo.legislature.ca.gov/faces/billStatusClient.xhtml?bill_id=202520260AB2779",
+    "status": "upcoming",
+    "added": "2026-09-21",
     "resolution": null
   }
 ]
