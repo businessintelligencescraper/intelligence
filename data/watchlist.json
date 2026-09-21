@@ -184,14 +184,27 @@
   {
     "id": "co-epr-naw-lawsuit-injunction-response",
     "title": "Colorado's response to NAW's preliminary-injunction motion in its packaging-EPR lawsuit",
-    "date": "2026-09-17",
+    "date": "2026-12-31",
     "date_precision": "unknown",
     "category": "Legislative",
-    "what_happens": "The National Association of Wholesaler-Distributors sued Colorado (CDPHE) on July 30, 2026 challenging the constitutionality of the Producer Responsibility Program for Statewide Recycling Act (HB 22-1355) on First Amendment (compelled association/dues to Circular Action Alliance) and due-process grounds, and moved Aug. 5 for a preliminary injunction to bar enforcement and defer EPR payment obligations. Colorado's response to that motion was due Sept. 16, 2026. UPDATED Sept. 17 scan: no filing, hearing date or ruling has been reported as of this scan, so the entry now tracks the still-undated next milestone (a ruling on the injunction motion) rather than the passed response deadline.",
+    "what_happens": "The National Association of Wholesaler-Distributors sued Colorado (CDPHE) on July 30, 2026 challenging the constitutionality of the Producer Responsibility Program for Statewide Recycling Act (HB 22-1355) on First Amendment (compelled association/dues to Circular Action Alliance) and due-process grounds, and moved Aug. 5 for a preliminary injunction to bar enforcement and defer EPR payment obligations. Colorado's response to that motion was due Sept. 16, 2026. UPDATED Sept. 17 scan: no filing, hearing date or ruling has been reported as of this scan, so the entry now tracks the still-undated next milestone (a ruling on the injunction motion) rather than the passed response deadline. UPDATED Sept. 21 scan: still no filing, hearing date or ruling reported; date field moved to a year-end placeholder (consistent with this entry's other genuinely-undated watch items) since Sept. 17 had already passed with no news to update it against.",
     "why_watch": "Third state EPR program NAW has challenged after Oregon and California; Oregon's court already granted NAW a partial preliminary injunction, so a similar result in Colorado would extend court-ordered relief from EPR enforcement to a second state ahead of the pending Oregon bellwether ruling (also on this watch list) and add to the litigation risk overhang on all seven EPR states.",
     "source_url": "https://www.packagingdive.com/news/naw-files-lawsuit-challenging-colorado-epr-law/826722/",
     "status": "upcoming",
     "added": "2026-08-15",
+    "resolution": null
+  },
+  {
+    "id": "naw-oregon-epr-ninth-circuit-appeal-deadline",
+    "title": "Deadline for NAW to appeal Oregon EPR ruling to the Ninth Circuit",
+    "date": "2026-09-30",
+    "date_precision": "month",
+    "category": "Legislative",
+    "what_happens": "Following Judge Michael Simon's Aug. 27, 2026 ruling upholding Oregon's packaging EPR law in NAW v. Feldon (see companion resolved watch item), legal-press coverage indicates the National Association of Wholesaler-Distributors has roughly 30 days from the ruling to file a notice of appeal to the Ninth Circuit; the district court is not expected to pause implementation of the law during any appeal. No notice of appeal has been confirmed as filed yet.",
+    "why_watch": "An appeal would extend the first bellwether trial testing packaging-EPR constitutionality into a second court, with potential implications for the pending Colorado lawsuit and other EPR states (CA, CO, MD, ME, MN, WA) a national dairy manufacturer's packaging touches.",
+    "source_url": "https://www.hklaw.com/en/insights/publications/2026/08/federal-court-upholds-oregons-epr-law-in-full-after-constitutional",
+    "status": "upcoming",
+    "added": "2026-09-21",
     "resolution": null
   },
   {
