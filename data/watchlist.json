@@ -479,5 +479,18 @@
     "status": "upcoming",
     "added": "2026-09-21",
     "resolution": null
+  },
+  {
+    "id": "idfa-ice-cream-artificial-colors-deadline",
+    "title": "IDFA industry pledge deadline to eliminate certified artificial colors from ice cream",
+    "date": "2027-12-31",
+    "date_precision": "exact",
+    "category": "Dairy Industry",
+    "what_happens": "Voluntary industry-wide deadline for ~40 U.S. ice cream makers (over 90% of category volume) to remove seven certified artificial colors from ice cream and frozen dairy desserts made with real milk and sold at retail.",
+    "why_watch": "A visible, dated voluntary commitment tied to the administrations MAHA food-additive agenda; progress will be publicly tracked (USDA/HHS held a progress event Sept. 22, 2026), so any signatory falling behind faces comparison pressure.",
+    "source_url": "https://www.idfa.org/news/dozens-of-u-s-ice-cream-makers-pledge-to-eliminate-certified-artificial-colors-from-ice-cream-products-by-end-of-2027",
+    "status": "upcoming",
+    "added": "2026-09-22",
+    "resolution": null
   }
 ]
