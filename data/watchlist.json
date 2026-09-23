@@ -317,12 +317,12 @@
     "date": "2026-09-30",
     "date_precision": "exact",
     "category": "Legislative",
-    "what_happens": "AB 2244 passed the Legislature unanimously (32-0 Senate, 72-0 Assembly) and was sent to Gov. Newsom on Sept. 1, 2026. He has until Sept. 30, 2026 to sign or veto; reporting suggests he is expected to sign.",
+    "what_happens": "AB 2244 passed the Legislature unanimously (32-0 Senate, 72-0 Assembly) and was sent to Gov. Newsom on Sept. 1, 2026. He has until Sept. 30, 2026 to sign or veto. CORRECTION Sept. 23 scan: this entry was marked resolved on Sept. 20 based on an EWG press release claiming Newsom had signed the bill; EWG has since confirmed to The Hagstrom Report that release was premature and no signature is on record with the Governor's office. Reopening as upcoming — the decision is still pending with one week left before the Sept. 30 deadline.",
     "why_watch": "Would create the first state certification seal built around a UPF definition, excluding products with synthetic dyes, flavor enhancers, non-sugar sweeteners and certain processing aids — a likely template for other states and a new voluntary labeling distinction touching flavored dairy and processed cheese formulations.",
-    "source_url": "https://www.bakeryandsnacks.com/Article/2026/09/01/california-passes-non-upf-food-certification-bill/",
-    "status": "resolved",
+    "source_url": "https://www.thefencepost.com/news/newsom-has-not-signed-non-ultraprocessed-foods-label/",
+    "status": "upcoming",
     "added": "2026-09-03",
-    "resolution": "Gov. Newsom signed AB 2244 into law (exact signing date not independently confirmed via available sources, reported between the bill's Sept. 8 presentment and the Sept. 30 deadline); creates the voluntary ‘Non-Ultraprocessed Certified’ seal overseen by the California Department of Public Health, with third-party certifiers to be accredited by June 1, 2029."
+    "resolution": null
   },
   {
     "id": "pack-act-rmaa-full-committee-markup",
