@@ -518,5 +518,18 @@
     "status": "resolved",
     "added": "2026-09-25",
     "resolution": "Vetoed by Gov. Newsom on Sept. 21, 2026; he said it risked complicating SB 54/fund implementation. Fund spending rules remain unset for now."
+  },
+  {
+    "id": "pfas-food-packaging-senate-bill-committee-action",
+    "title": "Senate HELP Committee action on the Keep Food Containers Safe from PFAS Act (S.5516)",
+    "date": "2026-12-31",
+    "date_precision": "unknown",
+    "category": "Legislative",
+    "what_happens": "S.5516 (Hassan-Tuberville), which would ban interstate sale of food packaging with intentionally added PFAS starting Jan. 1, 2028 and give FDA enforcement authority, was introduced Sept. 24, 2026 and referred to the Senate HELP Committee; no markup has been scheduled. A companion bill, H.R. 9593, is pending in the House Energy & Commerce Committee. Year-end placeholder pending a scheduled markup or floor date.",
+    "why_watch": "Would be the first binding federal ban (rather than a voluntary industry phase-out) on intentionally added PFAS in food packaging, directly touching grease- and moisture-resistant wrappers and cartons used across dairy packaging.",
+    "source_url": "https://www.congress.gov/bill/119th-congress/senate-bill/5516",
+    "status": "upcoming",
+    "added": "2026-09-26",
+    "resolution": null
   }
 ]
