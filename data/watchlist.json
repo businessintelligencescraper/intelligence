@@ -544,5 +544,18 @@
     "status": "upcoming",
     "added": "2026-09-29",
     "resolution": null
+  },
+  {
+    "id": "us-china-board-of-trade-dairy-tariff-relief",
+    "title": "U.S.-China Board of Trade decision on lifting retaliatory dairy tariffs",
+    "date": "2027-01-10",
+    "date_precision": "exact",
+    "category": "Regulatory",
+    "what_happens": "NMPF and USDEC statements on Sept. 28, 2026 welcomed the launch of the U.S.-China Board of Trade, created as part of the broader US-China tariff truce that was extended the same week to Jan. 10, 2027. Dairy was named among products slated for retaliatory-tariff review; no tariff removal has been announced yet.",
+    "why_watch": "China has applied retaliatory tariffs that sharply cut US dairy competitiveness there (whey was previously roughly half of China's dairy import volume); a Board decision to fully lift them would reopen a major export market for US-origin whey, lactose and other dairy ingredients, while a lapse of the truce without action would leave the tariffs in place.",
+    "source_url": "https://www.nmpf.org/u-s-dairy-statement-on-u-s-china-board-of-trade/",
+    "status": "upcoming",
+    "added": "2026-09-29",
+    "resolution": null
   }
 ]
