@@ -469,16 +469,16 @@
   },
   {
     "id": "ca-ab2779-food-date-labeling-signature",
-    "title": "California Governor's decision on AB 2779 (uniform food date-labeling / 'sell by' ban)",
-    "date": "2026-10-10",
+    "title": "California AB 2779 \u2014 dietary-supplement exclusion from the state's food date-labeling law",
+    "date": "2026-09-18",
     "date_precision": "exact",
-    "category": "Legislative",
-    "what_happens": "AB 2779 (Assemblymember Jacqui Irwin) was enrolled and presented to Gov. Newsom at 3 p.m. on Sept. 10, 2026, starting the standard 30-day window (ending on or about Oct. 10, 2026) for him to sign or veto. The bill would require food manufacturers, processors and retailers to use only two standardized date-label terms -- \"BEST if Used by\"/\"BEST if Used or Frozen by\" for quality dates and \"USE by\"/\"USE by or Freeze by\" for safety dates -- and would bar the phrase \"sell by\" on date labels for food manufactured after the bill's operative date. Not previously on this watch list; added this scan after a targeted search surfaced the Sept. 10 presentment. No signing or veto action has been reported yet.",
-    "why_watch": "Would make California the first state to bar \"sell by\" labeling outright and require uniform date-label terms across all packaged food, including dairy; California's food-labeling rules frequently become the de facto national standard given the size of its market, putting this alongside New York's still-pending Food Date Labeling Reform Act as a second state moving on the same issue.",
-    "source_url": "https://leginfo.legislature.ca.gov/faces/billStatusClient.xhtml?bill_id=202520260AB2779",
-    "status": "upcoming",
+    "category": "Regulatory",
+    "what_happens": "CORRECTION Sept. 29 scan: this entry previously mischaracterized AB 2779 as the underlying bill that would ban \"sell by\" dates and require uniform \"Best if Used By\"/\"Use By\" terms \u2014 that law is actually AB 660, enacted in 2024 and already in effect for food manufactured on or after July 1, 2026. AB 2779 (Assemblymember Jacqui Irwin) is a narrower cleanup bill clarifying that dietary supplements are not \"food items for human consumption\" and are therefore excluded from AB 660's date-labeling requirements, so supplement makers can keep FDA-consistent shelf-life dating. It carried an urgency clause and took effect immediately upon signing; trade-press and law-firm coverage (Packaging Dive, Haynes Boone, Chain Drug Review) consistently date its effective date to Sept. 18, 2026, matching its appearance in the Governor's Sept. 18 legislative update.",
+    "why_watch": "Closes out a minor scope question on California's already-effective date-labeling law (AB 660); not itself a new obligation for dairy manufacturers, but corrects this watch list's earlier error conflating the two bills.",
+    "source_url": "https://www.packagingdive.com/news/california-newsom-date-label-recycled-content-microplastics/728393/",
+    "status": "resolved",
     "added": "2026-09-21",
-    "resolution": null
+    "resolution": "Signed with an urgency clause and effective Sept. 18, 2026: dietary supplements are excluded from AB 660's uniform food date-labeling requirements. AB 660 itself (the actual \"sell by\" ban and \"Best if Used By\"/\"Use By\" standard) remains in effect for food manufactured on or after July 1, 2026, unaffected by this entry's earlier mischaracterization."
   },
   {
     "id": "idfa-ice-cream-artificial-colors-deadline",
