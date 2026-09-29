@@ -531,5 +531,18 @@
     "status": "upcoming",
     "added": "2026-09-26",
     "resolution": null
+  },
+  {
+    "id": "marler-raw-milk-cheese-fda-petition",
+    "title": "Public comment closes on draft FDA citizen petition for raw milk cheese warning labels",
+    "date": "2026-10-09",
+    "date_precision": "exact",
+    "category": "Regulatory",
+    "what_happens": "Food-safety attorney Bill Marler's public comment period on his draft 22-page citizen petition (asking FDA to require a warning statement on all cheese made from unpasteurized milk) closes Oct. 9, 2026. He has said he will revise the draft based on feedback and file it with FDA under 21 CFR 10.30 in October; FDA is then required to respond within 180 days of filing.",
+    "why_watch": "Filing would put a category-wide raw-milk-cheese warning-label mandate in front of FDA for the first time, prompted by the recent E. coli O26 Graziers outbreak; any manufacturer selling aged raw-milk cheese should track the eventual FDA docket.",
+    "source_url": "http://www.prnewswire.com/news-releases/public-comment-sought-on-draft-fda-petition-to-require-a-warning-label-on-raw-milk-cheese--all-comments-due-by-october-9-302892245.html",
+    "status": "upcoming",
+    "added": "2026-09-29",
+    "resolution": null
   }
 ]
