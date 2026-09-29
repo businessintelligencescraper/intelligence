@@ -557,5 +557,18 @@
     "status": "upcoming",
     "added": "2026-09-29",
     "resolution": null
+  },
+  {
+    "id": "ibach-usda-trade-confirmation",
+    "title": "Senate confirmation process for Greg Ibach as USDA Under Secretary for Trade and Foreign Agricultural Affairs",
+    "date": "2026-11-01",
+    "date_precision": "month",
+    "category": "Regulatory",
+    "what_happens": "President Trump nominated Greg Ibach, a former USDA Under Secretary for Marketing and Regulatory Programs, to lead USDA's Trade and Foreign Agricultural Affairs mission area, succeeding Luke Lindberg (who departed for the UN World Food Programme). Senate Agriculture Committee confirmation proceedings are expected when the Senate reconvenes in November 2026; no hearing date has been set yet.",
+    "why_watch": "TFAA leads USDA's agricultural trade negotiating team during active dairy trade disputes with Canada and China; NMPF and the U.S. Dairy Export Council have publicly urged swift confirmation.",
+    "source_url": "https://www.nmpf.org/u-s-dairy-statement-on-greg-ibach-usda-under-secretary-nomination/",
+    "status": "upcoming",
+    "added": "2026-09-29",
+    "resolution": null
   }
 ]
