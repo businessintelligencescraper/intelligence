@@ -570,5 +570,31 @@
     "status": "upcoming",
     "added": "2026-09-29",
     "resolution": null
+  },
+  {
+    "id": "texas-sb25-ingredient-warning-label-effective",
+    "title": "Texas SB 25 ingredient-warning-label requirement — scheduled effective date",
+    "date": "2027-01-01",
+    "date_precision": "exact",
+    "category": "Legislative",
+    "what_happens": "Texas SB 25, signed June 2025, requires any food product label developed or copyrighted on or after Jan. 1, 2027 to carry a warning (\"This product contains an ingredient that is not recommended for human consumption by the appropriate authority in Australia, Canada, the European Union, or the United Kingdom\") if the product contains any of 44 listed ingredients, with civil penalties up to $50,000/day. Texas finalized its implementing rule ahead of the deadline. Food-industry groups have challenged the law in federal court, and enforcement is currently blocked by injunction, but manufacturers are advised to prepare for compliance regardless.",
+    "why_watch": "The first state ingredient-warning-label law with a hard compliance date; applies to any flavored, colored or additive-containing dairy product sold in Texas (flavored milk, processed cheese, novelty ice cream, etc.), and — like California on packaging claims — Texas is large enough that compliance often becomes a de facto national label change. The pending court injunction is the key variable determining whether Jan. 1, 2027 actually triggers enforcement.",
+    "source_url": "https://www.hklaw.com/en/insights/publications/2025/07/food-for-thought-tx-enacts-food-product-warning-labels-for-44-chemical",
+    "status": "upcoming",
+    "added": "2026-10-01",
+    "resolution": null
+  },
+  {
+    "id": "louisiana-sb14-qr-code-disclosure-effective",
+    "title": "Louisiana SB 14/SB 57 food-additive QR-code disclosure requirement — scheduled effective date",
+    "date": "2028-12-31",
+    "date_precision": "exact",
+    "category": "Legislative",
+    "what_happens": "Louisiana SB 14 (2025) created a first-of-its-kind mandate requiring a QR code linking to additional ingredient information on food products containing any of 44 specified additives. Gov. Jeff Landry signed SB 57 on June 1, 2026, narrowing the covered-ingredient criteria (to additives FDA already requires be named on the label) and pushing the effective date back from Jan. 1, 2028 to Dec. 31, 2028.",
+    "why_watch": "A second state (after Texas) with a hard compliance date for a novel ingredient-disclosure mechanic; the narrowed scope and 2028 pushback give manufacturers more runway than Texas's law, but it sets a second template other states may follow.",
+    "source_url": "https://www.dailyintakeblog.com/2026/06/louisiana-enacts-a-bill-delaying-and-modifying-food-additive-disclosure-requirements/",
+    "status": "upcoming",
+    "added": "2026-10-01",
+    "resolution": null
   }
 ]
