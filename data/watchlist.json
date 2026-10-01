@@ -28,10 +28,10 @@
   {
     "id": "childhood-diabetes-reduction-act-floor",
     "title": "Senate floor action on the Childhood Diabetes Reduction Act of 2026",
-    "date": "2026-10-01",
+    "date": "2026-12-31",
     "date_precision": "unknown",
     "category": "Legislative",
-    "what_happens": "Bill advanced out of the Senate HELP Committee 12-10 on July 22, 2026 and awaits a full Senate floor vote; would require front-of-pack warning labels on high sugar, saturated fat and sodium products. UPDATED Sept. 4 scan: no floor vote has occurred as of early September; lawmakers have signaled the bill is likely to see revisions before it comes to the floor, and no new date has been reported. UPDATED Sept. 10 (evening scan): NMPF and IDFA, joined by 76 dairy companies, cooperatives and producer organizations, publicly urged Congress to reject the bill (now referenced in coverage as S. 5026), warning its warning-label thresholds would mischaracterize nutrient-dense dairy foods; no new floor-vote date has been reported.",
+    "what_happens": "Bill advanced out of the Senate HELP Committee 12-10 on July 22, 2026 and awaits a full Senate floor vote; would require front-of-pack warning labels on high sugar, saturated fat and sodium products. UPDATED Sept. 4 scan: no floor vote has occurred as of early September; lawmakers have signaled the bill is likely to see revisions before it comes to the floor, and no new date has been reported. UPDATED Sept. 10 (evening scan): NMPF and IDFA, joined by 76 dairy companies, cooperatives and producer organizations, publicly urged Congress to reject the bill (now referenced in coverage as S. 5026), warning its warning-label thresholds would mischaracterize nutrient-dense dairy foods; no new floor-vote date has been reported. UPDATED Oct. 1 scan: no floor vote has occurred; the Oct. 1 date on this entry was an unconfirmed placeholder set when the item was first added and has now passed with no new scheduling signal reported, so this entry moves to a year-end placeholder pending an actual floor-vote announcement.",
     "why_watch": "Thresholds would directly implicate whole milk, butter, full-fat cheese and sweetened dairy; the pre-floor-vote window is when positioning matters.",
     "source_url": "https://www.foodnavigator.com/Article/2026/07/29/upf-warning-label-bill-clears-senate-panel/",
     "status": "upcoming",
@@ -593,6 +593,19 @@
     "what_happens": "Louisiana SB 14 (2025) created a first-of-its-kind mandate requiring a QR code linking to additional ingredient information on food products containing any of 44 specified additives. Gov. Jeff Landry signed SB 57 on June 1, 2026, narrowing the covered-ingredient criteria (to additives FDA already requires be named on the label) and pushing the effective date back from Jan. 1, 2028 to Dec. 31, 2028.",
     "why_watch": "A second state (after Texas) with a hard compliance date for a novel ingredient-disclosure mechanic; the narrowed scope and 2028 pushback give manufacturers more runway than Texas's law, but it sets a second template other states may follow.",
     "source_url": "https://www.dailyintakeblog.com/2026/06/louisiana-enacts-a-bill-delaying-and-modifying-food-additive-disclosure-requirements/",
+    "status": "upcoming",
+    "added": "2026-10-01",
+    "resolution": null
+  },
+  {
+    "id": "fy2027-continuing-resolution-funding-deadline",
+    "title": "Continuing resolution funding the federal government expires",
+    "date": "2026-12-11",
+    "date_precision": "exact",
+    "category": "Legislative",
+    "what_happens": "Congress enacted and the President signed a continuing resolution (the Continuing and Appropriations and Extensions Act, 2027, H.R. 6500, House vote 370-48) on Sept. 1-2, 2026, funding federal agencies at FY2026 levels through Dec. 11, 2026 and averting a shutdown when FY2027 began Oct. 1. None of the 12 FY2027 appropriations bills (including Agriculture-FDA) have been enacted; lawmakers are expected to resume funding negotiations after the Nov. 3 midterms, with a renewed shutdown risk if a full-year deal or another stopgap isn't reached by Dec. 11.",
+    "why_watch": "A lapse would again curtail FDA's Human Foods Program inspection and guidance activity and could disrupt WIC and other USDA nutrition-program funding, as the Oct.-Nov. 2025 FY2026 shutdown did; the Agriculture-FDA appropriations bill, not yet enacted for FY2027, ultimately funds the agencies the company's regulatory and nutrition-program exposure runs through.",
+    "source_url": "https://www.govexec.com/management/2026/09/shutdown-threat-lifted-house-passes-stopgap-spending-bill/415753/",
     "status": "upcoming",
     "added": "2026-10-01",
     "resolution": null
