@@ -405,10 +405,10 @@
   {
     "id": "senate-farm-bill-floor-vote",
     "title": "Full Senate floor vote on Farm Bill 2.0 (Agricultural Act of 2026)",
-    "date": "2026-11-10",
-    "date_precision": "unknown",
+    "date": "2026-12-15",
+    "date_precision": "month",
     "category": "Legislative",
-    "what_happens": "Following the Senate Agriculture Committee's 12-11 party-line passage on Sept. 16, 2026, the bill awaits scheduling for a full Senate floor vote. UPDATED Sept. 17 scan: trade press (Farm Policy News/Illinois, DTN) now reports the Senate recesses for the Nov. 3 midterm elections at the end of next week and a floor vote is unlikely before that break; Chairman Boozman has pointed to precedent for passing a farm bill during a post-election lame-duck session. Politico reporting cited in the same coverage flags a real possibility of another short-term extension instead of full Senate passage, given the fragile 12-11 committee margin. Date moved from an early-October placeholder to mid-November to reflect the lame-duck expectation; still unconfirmed.",
+    "what_happens": "Following the Senate Agriculture Committee's 12-11 party-line passage on Sept. 16, 2026, the bill awaits scheduling for a full Senate floor vote. UPDATED Sept. 17 scan: trade press (Farm Policy News/Illinois, DTN) now reports the Senate recesses for the Nov. 3 midterm elections at the end of next week and a floor vote is unlikely before that break; Chairman Boozman has pointed to precedent for passing a farm bill during a post-election lame-duck session. Politico reporting cited in the same coverage flags a real possibility of another short-term extension instead of full Senate passage, given the fragile 12-11 committee margin. Date moved from an early-October placeholder to mid-November to reflect the lame-duck expectation; still unconfirmed. UPDATED Oct. 9 scan: Farm Progress (Oct. 5) reports Congress is unlikely to take up the farm bill before mid-December as Senate floor time is consumed by SNAP-related disputes; no floor-vote date has been scheduled. Estimate moved from mid-November to mid-December accordingly.",
     "why_watch": "The dairy title's program reauthorizations (through 2031) and new mandatory dairy-manufacturer cost/yield reporting tied to FMMO pricing remain in the bill as it moves to the floor; a slip to lame-duck timing also raises the odds of a further stopgap extension rather than enactment this year (see companion Sept. 30 extension-expiration watch item).",
     "source_url": "https://farmpolicynews.illinois.edu/2026/09/farm-bill-2-0-advances-to-uncertain-future-in-full-senate/",
     "status": "upcoming",
