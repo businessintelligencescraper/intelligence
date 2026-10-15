@@ -635,5 +635,31 @@
     "status": "upcoming",
     "added": "2026-10-09",
     "resolution": null
+  },
+  {
+    "id": "fda-salt-substitutes-dairy-objection-window",
+    "title": "Objection window on dairy-specific provisions of FDA salt-substitutes final rule",
+    "date": "2026-11-12",
+    "date_precision": "exact",
+    "category": "Regulatory",
+    "what_happens": "Objections to the dairy standards-of-identity provisions (21 CFR parts 131 and 133, covering cheese and sour cream) of FDA's Oct. 13, 2026 final rule allowing salt substitutes in 139 standardized foods are due 30 days after Federal Register publication.",
+    "why_watch": "A procedural checkpoint specific to the dairy provisions of an otherwise broadly welcomed rule; worth confirming no objections surface that could delay or narrow the dairy-specific flexibility.",
+    "source_url": "https://www.federalregister.gov/d/2026-20848",
+    "status": "upcoming",
+    "added": "2026-10-15",
+    "resolution": null
+  },
+  {
+    "id": "fda-salt-substitutes-rule-effective-date",
+    "title": "FDA salt-substitutes final rule takes effect",
+    "date": "2026-12-12",
+    "date_precision": "exact",
+    "category": "Regulatory",
+    "what_happens": "FDA's final rule permitting salt substitutes in 139 standardized foods, including dairy standards for cheese and sour cream, becomes effective 60 days after its Oct. 13, 2026 Federal Register publication.",
+    "why_watch": "Marks the date dairy processors can formally rely on the new flexibility to reformulate standardized products with salt substitutes for sodium reduction.",
+    "source_url": "https://www.fda.gov/food/hfp-constituent-updates/fda-issues-final-rule-salt-substitutes-standardized-foods",
+    "status": "upcoming",
+    "added": "2026-10-15",
+    "resolution": null
   }
 ]
