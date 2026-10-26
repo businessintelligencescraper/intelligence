@@ -700,5 +700,18 @@
     "status": "upcoming",
     "added": "2026-10-26",
     "resolution": null
+  },
+  {
+    "id": "naw-oregon-epr-stay-motion-ruling",
+    "title": "Ruling on NAW's motion to stay its own Oregon EPR judgment pending Ninth Circuit appeal",
+    "date": "2026-12-31",
+    "date_precision": "unknown",
+    "category": "Legislative",
+    "what_happens": "NAW filed a motion Oct. 19, 2026 in the U.S. District Court for the District of Oregon (NAW v. Feldon) asking the court to stay its own Aug. 27 judgment -- which upheld Oregon's packaging EPR law and dissolved NAW's earlier preliminary injunction -- while NAW's appeal is pending before the Ninth Circuit (No. 26-6404, opening brief due Dec. 17, 2026). The American Forest & Paper Association has filed a similar request. No ruling has been reported yet; this entry uses a year-end placeholder pending one.",
+    "why_watch": "Circular Action Alliance plans to send NAW members their next round of Oregon EPR compliance invoices in January 2027, so whether the stay is granted determines whether NAW-member packaging suppliers to a national dairy manufacturer owe those fees starting then, or get a reprieve pending the Ninth Circuit's constitutionality review; runs on the same track as the companion Lollicup stay and the Ninth Circuit briefing schedule already on this list.",
+    "source_url": "https://resource-recycling.com/policy-now/2026/10/20/naw-asks-to-pause-oregon-epr-fees/",
+    "status": "upcoming",
+    "added": "2026-10-26",
+    "resolution": null
   }
 ]
