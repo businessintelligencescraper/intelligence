@@ -626,10 +626,10 @@
   {
     "id": "marler-raw-milk-cheese-petition-fda-filing",
     "title": "Bill Marler files raw milk cheese warning-label citizen petition with FDA",
-    "date": "2026-10-31",
+    "date": "2026-11-15",
     "date_precision": "month",
     "category": "Regulatory",
-    "what_happens": "Having closed his own public-comment window on the draft Oct. 9, 2026 (see companion resolved watch item), food-safety attorney Bill Marler has said he will revise the petition based on commenter feedback and file it with FDA under 21 CFR 10.30 sometime in October 2026; no exact filing date has been announced, so this entry uses a rough month-end placeholder. Once filed, FDA is required to respond within 180 days.",
+    "what_happens": "Having closed his own public-comment window on the draft Oct. 9, 2026 (see companion resolved watch item), food-safety attorney Bill Marler has said he will revise the petition based on commenter feedback and file it with FDA under 21 CFR 10.30 sometime in October 2026; no exact filing date has been announced, so this entry uses a rough month-end placeholder. Once filed, FDA is required to respond within 180 days. UPDATED Oct. 29 scan: Marler extended his own draft public-comment window a second time -- now closing Friday, Oct. 30, 2026 (not Oct. 9 as originally set) -- per an Oct. 24 blog post responding to reader feedback; the petition (now revised to state the bacteria \"can cause serious illness or death,\" with new appendices showing proposed package/deli-placard/online wording) still had not been filed with FDA as of Oct. 26. Filing now looks more likely mid-November than month-end October; this entry's date is pushed accordingly.",
     "why_watch": "The actual FDA filing \u2014 not the draft comment window \u2014 is what starts the agency's 180-day response clock on a first-of-its-kind, category-wide push for a raw-milk-cheese warning label, prompted by the Sierra Nevada Graziers E. coli O26 outbreak; any manufacturer selling aged raw-milk cheese should track the resulting FDA docket once open.",
     "source_url": "https://www.marlerblog.com/files/2026/10/Raw-Milk-Cheese-Petition_CLEAN_10-3-26.pdf",
     "status": "upcoming",
@@ -725,6 +725,19 @@
     "source_url": "https://nffc.net/over-90-farmer-labor-environmental-consumer-groups-demand-fair-dairy-policy-reform/",
     "status": "upcoming",
     "added": "2026-10-27",
+    "resolution": null
+  },
+  {
+    "id": "fda-outbreak-firm-disclosure-petition",
+    "title": "FDA response due on Outbreak Firm Disclosure citizen petition",
+    "date": "2027-04-14",
+    "date_precision": "exact",
+    "category": "Public Affairs",
+    "what_happens": "Food-safety attorney Bill Marler, backed by STOP Foodborne Illness, filed a citizen petition with FDA on Oct. 16, 2026 under 21 CFR 10.30 asking the agency to rule that a firm's identity is not confidential commercial information and to disclose growers/processors/distributors implicated in an outbreak whether or not a recall occurs. Under 21 CFR 10.30, FDA is required to respond within 180 days of filing, which falls around April 14, 2027.",
+    "why_watch": "If granted, this would change FDA practice toward earlier, more routine public naming of companies tied to outbreak investigations -- raising reputational exposure for any food or dairy manufacturer swept into a future investigation before a recall is issued; see companion item on the related raw-milk-cheese warning-label petition, which grew out of the same transparency debate.",
+    "source_url": "https://www.marlerblog.com/files/2026/10/Outbreak-Firm-Disclosure-Citizen-Petition_WDM_10_16_26_REDLINE2.pdf",
+    "status": "upcoming",
+    "added": "2026-10-29",
     "resolution": null
   }
 ]
