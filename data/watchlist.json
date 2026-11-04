@@ -739,5 +739,18 @@
     "status": "upcoming",
     "added": "2026-10-29",
     "resolution": null
+  },
+  {
+    "id": "ustr-2027-nte-report-publication",
+    "title": "USTR publication of 2027 National Trade Estimate Report (dairy trade barriers)",
+    "date": "2027-03-31",
+    "date_precision": "month",
+    "category": "Public Affairs",
+    "what_happens": "USTR is expected to publish its annual National Trade Estimate Report, historically released around late March/early April, incorporating IDFA's Oct. 29, 2026 comments flagging dairy export barriers in Canada, China, the EU, Indonesia, India, Malaysia, Mexico and Turkiye.",
+    "why_watch": "The report shapes U.S. trade-negotiation priorities for the coming year on issues like Canadian dairy tariff-rate-quota administration and EU environmental reporting rules that affect any dairy exporter.",
+    "source_url": "https://www.idfa.org/news/idfa-urges-u-s-government-to-address-global-trade-barriers-and-expand-market-opportunities-for-u-s-dairy",
+    "status": "upcoming",
+    "added": "2026-11-04",
+    "resolution": null
   }
 ]
