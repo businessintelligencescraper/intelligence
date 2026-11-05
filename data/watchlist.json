@@ -752,5 +752,18 @@
     "status": "upcoming",
     "added": "2026-11-04",
     "resolution": null
+  },
+  {
+    "id": "fda-infant-formula-nutrient-rule-comment-close",
+    "title": "Comment period closes on FDA's phase-1 infant formula nutrient requirements proposed rule",
+    "date": "2027-02-26",
+    "date_precision": "week",
+    "category": "Regulatory",
+    "what_happens": "Comments close on FDA's Nov. 2, 2026 proposed rule (FDA-2026-N-10832, RIN 0910-AJ34) revising iodine, manganese and vitamin A/D requirements for infant formula and reaffirming chloride, potassium, selenium and sodium levels -- phase 1 of a planned three-phase, first-in-decades overhaul. Sources differ on the exact close date (Feb. 26 vs. Mar. 2, 2027); date_precision reflects that uncertainty pending confirmation against the Federal Register notice itself.",
+    "why_watch": "Start of a multi-year rewrite of infant formula composition standards; later phases are expected to reach carbohydrate sources and the remaining required nutrients, which would matter more directly to dairy-ingredient suppliers into the category.",
+    "source_url": "https://public-inspection.federalregister.gov/2026-22273.pdf",
+    "status": "upcoming",
+    "added": "2026-11-05",
+    "resolution": null
   }
 ]
