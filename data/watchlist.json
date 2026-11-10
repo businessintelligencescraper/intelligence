@@ -778,5 +778,18 @@
     "status": "upcoming",
     "added": "2026-11-05",
     "resolution": null
+  },
+  {
+    "id": "mn-epr-needs-assessment-comment-close",
+    "title": "Minnesota MPCA packaging EPR draft 2026 Needs Assessment \u2014 comment period closes",
+    "date": "2026-11-13",
+    "date_precision": "exact",
+    "category": "Sustainability",
+    "what_happens": "Public comment period on the Minnesota Pollution Control Agency's draft 2026 Needs Assessment for the state's packaging Extended Producer Responsibility law closes Nov. 13. A final assessment is due by year-end (sources differ: Dec. 1 vs Dec. 31, 2026), with EPR program rulemaking expected to begin around January 2027.",
+    "why_watch": "Minnesota's packaging EPR law reaches food packaging and paper products; the Needs Assessment will shape the compliance obligations and cost structure of the rulemaking that follows, one of several state EPR regimes (alongside CA, OR, CO, MD, WA) a national dairy manufacturer must track.",
+    "source_url": "https://www.wastedive.com/news/minnesota-epr-needs-assessment-comments-responsible-end-markets/832483/",
+    "status": "upcoming",
+    "added": "2026-11-10",
+    "resolution": null
   }
 ]
