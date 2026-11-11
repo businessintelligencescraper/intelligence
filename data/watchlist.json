@@ -1,18 +1,5 @@
 [
   {
-    "id": "eu-ppwr-applicable",
-    "title": "EU Packaging and Packaging Waste Regulation becomes applicable",
-    "date": "2026-08-12",
-    "date_precision": "exact",
-    "category": "Sustainability",
-    "what_happens": "PFAS limits on food-contact packaging take effect with no transition period for non-compliant stock; conformity, minimisation and EPR requirements apply to any packaging placed on the EU market. The European Commission's Aug. 1 second-edition FAQ clarified that packaging already produced or in stock before Aug. 12 does not need to be destroyed or relabeled provided it isn't newly placed on the market after that date, and that enforcement will begin with a warning/corrective-action opportunity rather than immediate penalties.",
-    "why_watch": "Applies regardless of origin, so any EU-bound product or packaging component must comply from this date.",
-    "source_url": "https://www.food-safety.com/articles/11228-pfas-free-food-packaging-by-august-2026",
-    "status": "resolved",
-    "added": "2026-07-30",
-    "resolution": "Became applicable Aug. 12, 2026 as scheduled: PFAS limits on food-contact packaging, conformity/EPR registration and minimisation requirements now apply to any packaging newly placed on the EU market. Per the European Commission's Aug. 1 FAQ, pre-Aug.-12 stock does not need to be destroyed or relabeled, and enforcement begins with a warning/corrective-action step rather than immediate penalties."
-  },
-  {
     "id": "ny-gras-veto-window",
     "title": "New York Governor's decision on the GRAS ingredient-disclosure bill",
     "date": "2026-12-31",
@@ -89,19 +76,6 @@
     "status": "upcoming",
     "added": "2026-08-16",
     "resolution": null
-  },
-  {
-    "id": "fda-gras-mandatory-notification-rule-publication",
-    "title": "FDA's mandatory GRAS-notification proposed rule \u2014 Federal Register publication",
-    "date": "2026-08-11",
-    "date_precision": "exact",
-    "category": "Regulatory",
-    "what_happens": "UPDATED: Trade-press and health-policy reporting on Aug. 10 (Food Safety Magazine, STAT News) clarifies the rule (RIN 0910-AJ02) is being filed for Federal Register publication this week \u2014 Aug. 11 \u2014 not December as earlier reporting anticipated; December was a misread of the comment-period close, not the publication date. Once published it opens a 120-day public comment period (see companion watch item for the close date). HHS Secretary Kennedy publicly announced the proposal Aug. 10, shifting GRAS notification from voluntary to mandatory.",
-    "why_watch": "Publication starts the comment clock on the biggest change to the GRAS pathway in decades, affecting nearly every food and dairy ingredient supplier that relies on self-affirmed GRAS determinations \u2014 four months sooner than the company's tracking assumed.",
-    "source_url": "https://www.food-safety.com/articles/11713-fda-proposes-mandatory-gras-notifications-for-ingredients-introduced-to-us-food-supply",
-    "status": "resolved",
-    "added": "2026-08-04",
-    "resolution": "Published in the Federal Register Aug. 11, 2026 as scheduled (Document 2026-16296, Docket FDA-2025-N-3262), opening the 120-day comment period."
   },
   {
     "id": "fda-gras-rule-comment-period-closes",
