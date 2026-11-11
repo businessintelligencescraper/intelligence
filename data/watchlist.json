@@ -791,5 +791,18 @@
     "status": "upcoming",
     "added": "2026-11-10",
     "resolution": null
+  },
+  {
+    "id": "fda-traceability-rule-comment-period-closes",
+    "title": "Comment period closes on FDA's Nov. 6 public meeting on Food Traceability Rule implementation",
+    "date": "2026-12-06",
+    "date_precision": "exact",
+    "category": "Regulatory",
+    "what_happens": "Written comments on lot-level tracking and record-keeping flexibilities discussed at FDA's Nov. 6, 2026 public meeting are due in Docket No. FDA-2014-N-0053.",
+    "why_watch": "Second of FDA's quarterly engagement meetings on Food Traceability Rule (FSMA 204) flexibilities; outcome could affect compliance scope for dairy/cheese products on the Food Traceability List ahead of enforcement, which is delayed until July 2028.",
+    "source_url": "https://www.fda.gov/food/workshops-meetings-webinars-food-and-dietary-supplements/fda-public-meeting-challenges-and-solutions-lot-level-food-traceability-11062026",
+    "status": "upcoming",
+    "added": "2026-11-11",
+    "resolution": null
   }
 ]
