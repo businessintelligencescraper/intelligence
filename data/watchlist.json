@@ -778,5 +778,18 @@
     "status": "upcoming",
     "added": "2026-11-11",
     "resolution": null
+  },
+  {
+    "id": "ri-epr-needs-assessment-comment-close",
+    "title": "Rhode Island packaging EPR/bottle-bill needs assessment — comment period closes",
+    "date": "2026-11-16",
+    "date_precision": "exact",
+    "category": "Sustainability",
+    "what_happens": "Rhode Island DEM's public comment period on its draft statewide implementation analysis (needs assessment) for packaging EPR and a possible deposit-return system, opened Oct. 15, 2026, closes Monday, Nov. 16, 2026 at 4:00 p.m.; a public hearing was already held Nov. 4. A final report is due under the enabling law (H6207) no later than Dec. 1, 2026.",
+    "why_watch": "Industry groups (e.g., AMERIPEN) are pushing to have this assessment finished before any EPR legislation (H7910/H7911) advances; the findings will shape what a Rhode Island packaging-EPR program would require of food and beverage manufacturers, one of several state EPR regimes (alongside CA, OR, CO, MD, WA, MN) a national dairy manufacturer must track.",
+    "source_url": "https://www.packagingdive.com/news/rhode-island-needs-assessment-epr-deposit-return/873840/",
+    "status": "upcoming",
+    "added": "2026-11-13",
+    "resolution": null
   }
 ]
