@@ -104,19 +104,6 @@
     "resolution": null
   },
   {
-    "id": "ca-sb54-epr-program-plan-comment-period",
-    "title": "Public comment period closes on California SB 54's draft EPR program plan",
-    "date": "2026-08-14",
-    "date_precision": "exact",
-    "category": "Sustainability",
-    "what_happens": "Circular Action Alliance's draft statewide Extended Producer Responsibility program plan for SB 54 (California's packaging and plastic EPR law) is open for public comment through August 14, 2026; a final plan is due to CalRecycle in October 2026.",
-    "why_watch": "SB 54 is the largest state EPR packaging law now in effect; the program plan sets the fee structure and compliance mechanics that determine actual cost to packaged-food manufacturers, and other EPR states are watching California's approach as a template.",
-    "source_url": "https://resource-recycling.com/recycling/2026/02/02/calrecycle-opens-sb-54-draft-for-comments/",
-    "status": "resolved",
-    "added": "2026-08-06",
-    "resolution": "Comment period closed Aug. 14, 2026 as scheduled. Circular Action Alliance will review comments as it prepares the final program plan, due to CalRecycle by October 2026 \u2014 that filing is what will actually set the fee structure and compliance mechanics producers face; projected 2027-2031 program costs run $9.3B-$17.2B, funded entirely through producer fees."
-  },
-  {
     "id": "screwworm-douglas-port-reopening",
     "title": "Douglas, AZ port reopens to Mexican cattle imports under New World screwworm safeguards",
     "date": "2026-08-24",
@@ -762,9 +749,9 @@
     "what_happens": "Public comment period on the Minnesota Pollution Control Agency's draft 2026 Needs Assessment for the state's packaging Extended Producer Responsibility law closes Nov. 13. A final assessment is due by year-end (sources differ: Dec. 1 vs Dec. 31, 2026), with EPR program rulemaking expected to begin around January 2027.",
     "why_watch": "Minnesota's packaging EPR law reaches food packaging and paper products; the Needs Assessment will shape the compliance obligations and cost structure of the rulemaking that follows, one of several state EPR regimes (alongside CA, OR, CO, MD, WA) a national dairy manufacturer must track.",
     "source_url": "https://www.wastedive.com/news/minnesota-epr-needs-assessment-comments-responsible-end-markets/832483/",
-    "status": "upcoming",
+    "status": "resolved",
     "added": "2026-11-10",
-    "resolution": null
+    "resolution": "Comment period on MPCA's draft 2026 Needs Assessment closed Nov. 13, 2026 as scheduled, with no extension reported. The full Needs Assessment is due by year-end 2026, with EPR rulemaking expected to begin around January 2027 -- that rulemaking is what will actually set compliance obligations for food and paper packaging producers."
   },
   {
     "id": "fda-traceability-rule-comment-period-closes",
@@ -781,7 +768,7 @@
   },
   {
     "id": "ri-epr-needs-assessment-comment-close",
-    "title": "Rhode Island packaging EPR/bottle-bill needs assessment — comment period closes",
+    "title": "Rhode Island packaging EPR/bottle-bill needs assessment \u2014 comment period closes",
     "date": "2026-11-16",
     "date_precision": "exact",
     "category": "Sustainability",
