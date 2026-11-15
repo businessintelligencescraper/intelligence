@@ -778,5 +778,18 @@
     "status": "upcoming",
     "added": "2026-11-13",
     "resolution": null
+  },
+  {
+    "id": "fda-front-of-package-labeling-final-rule",
+    "title": "FDA final rule on front-of-package nutrition labeling",
+    "date": "2026-12-31",
+    "date_precision": "month",
+    "category": "Regulatory",
+    "what_happens": "FDA's proposed front-of-package nutrition labeling rule (RIN 0910-AI80, Docket FDA-2024-N-2910) would require most packaged foods bearing a Nutrition Facts label to carry a simplified front-of-pack box flagging saturated fat, sodium and added-sugar levels as low/medium/high; it was proposed Jan. 16, 2025 and its comment period closed in May 2025. The 2026 Unified Regulatory Agenda, released in early November 2026, lists a final rule now targeted for December 2026, pushed back from an earlier May 2026 target; Unified Agenda dates are agency estimates, not binding deadlines. HHS Secretary Kennedy has floated revising the design toward a traffic-light-style label, which trade press says could push the timeline further still.",
+    "why_watch": "Would set the specific nutrient thresholds and on-pack format most full-fat dairy products (whole milk, butter, full-fat cheese, flavored/sweetened dairy) would have to display; runs on a parallel, related track with the still-undefined FDA ultra-processed-food definition (also on this watch list) and is the clearest near-term labeling deadline affecting dairy packaging and claims.",
+    "source_url": "https://www.hlc.com/en/publications/omb-releases-2026-unified-agenda-of-regulatory-actions",
+    "status": "upcoming",
+    "added": "2026-11-15",
+    "resolution": null
   }
 ]
