@@ -791,5 +791,18 @@
     "status": "upcoming",
     "added": "2026-11-15",
     "resolution": null
+  },
+  {
+    "id": "usda-h5n1-dairy-vaccine-authorization-decision",
+    "title": "USDA response to state request to authorize an emergency H5N1 vaccine pilot for dairy cattle",
+    "date": "2026-12-31",
+    "date_precision": "unknown",
+    "category": "Regulatory",
+    "what_happens": "NASDA and the National Assembly of State Animal Health Officials asked USDA (letter and meeting Nov. 6, 2026) to authorize a voluntary, national emergency-use vaccination pilot for H5N1 in dairy cattle in willing states. USDA has not set a timeline for a decision; no H5N1 vaccine is currently approved for U.S. dairy cattle, though several candidates remain in field trials. Placeholder year-end date pending any USDA response.",
+    "why_watch": "A decision to authorize emergency vaccine use would be a major shift in H5N1 dairy-cattle policy, with trade and export-market-access implications, for an outbreak that has now reached at least 22 states and nearly 1,200 positive herds since March 2024.",
+    "source_url": "https://www.feedstuffs.com/dairy/state-organizations-urge-usda-to-authorize-dairy-hpai-vaccine",
+    "status": "upcoming",
+    "added": "2026-11-17",
+    "resolution": null
   }
 ]
