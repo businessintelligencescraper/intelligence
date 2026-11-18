@@ -2,12 +2,12 @@
   {
     "id": "ny-gras-veto-window",
     "title": "New York Governor's decision on the GRAS ingredient-disclosure bill",
-    "date": "2026-12-31",
-    "date_precision": "unknown",
+    "date": "2026-11-25",
+    "date_precision": "exact",
     "category": "Legislative",
-    "what_happens": "Signature or veto due on S.1239F/A.1556G (bans Red Dye 3, potassium bromate and propylparaben; mandates self-affirmed-GRAS disclosure). The bill has not yet been formally presented to the Governor; once presented she has 10 days (excluding Sundays) to act, with a statutory backstop of Dec. 31, 2026 if the Legislature holds delivery until year-end. On World Heart Day (Sept. 29), CSPI and legislative sponsors held a rally urging Gov. Hochul to sign this bill alongside a related package awaiting her desk: the Baby Food and Infant Formula Safety and Transparency Act, the Sodium Warning Bill (S.428A/A.5207A, chain-restaurant menu icons), and the Food Date Labeling Reform Act. IDFA has written urging a veto of the chemical-disclosure bill.",
+    "what_happens": "The Legislature formally delivered S.1239/A.1556 (bans Red Dye 3, potassium bromate and propylparaben; mandates self-affirmed-GRAS disclosure) to Gov. Hochul on Nov. 13, 2026, starting her 10-day (excluding Sundays) constitutional window to sign or veto. Absent action by Nov. 25, 2026, the bill becomes law without her signature. It is bundled in public advocacy with sibling bills awaiting her desk: the Baby Food and Infant Formula Safety and Transparency Act, the Sodium Warning Bill (S.428A/A.5207A, chain-restaurant menu icons), and the Food Date Labeling Reform Act. IDFA has written urging a veto of the chemical-disclosure bill.",
     "why_watch": "Would be the first state law mandating disclosure of self-affirmed GRAS safety data, and a likely template for other states; now bundled in public advocacy with sibling bills (sodium warning labels, baby formula testing, date labeling) that separately touch dairy-based infant formula, cheese sold through food service, and shelf-life labeling on packaged dairy products.",
-    "source_url": "https://www.idfa.org/news/idfa-submits-letter-in-support-of-new-yorks-veto-letter-on-gras-bill",
+    "source_url": "https://www.packaginglaw.com/news/new-york-gras-bill-formally-presented-governor",
     "status": "upcoming",
     "added": "2026-07-30",
     "resolution": null
