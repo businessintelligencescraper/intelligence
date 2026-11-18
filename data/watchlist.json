@@ -804,5 +804,18 @@
     "status": "upcoming",
     "added": "2026-11-17",
     "resolution": null
+  },
+  {
+    "id": "who-upf-profiling-model-comment-close",
+    "title": "WHO's draft integrated profiling model for ultra-processed foods \u2014 public comment closes",
+    "date": "2026-11-27",
+    "date_precision": "exact",
+    "category": "Nutrition",
+    "what_happens": "WHO opened public comment (reported Nov. 9, 2026) on a draft 'integrated profiling model' meant to help governments identify industrially produced, prepackaged foods for which consumption should be limited or moderated, combining nutrient criteria with ingredient/processing factors tied to sensory appeal. WHO says it is not itself a UPF classification tool. Comments from member states, academia, civil society, industry and the public close Nov. 27, 2026.",
+    "why_watch": "A WHO framework for identifying UPF-type products could inform future regulatory approaches internationally and in the US (including FDA/HHS's own pending UPF definition under OIRA review), and would extend to a wide range of processed dairy products (flavored milks, cheese products, yogurt with additives). The International Food and Beverage Alliance has already pushed back, arguing the model shifts focus away from nutrient quality.",
+    "source_url": "https://www.foodbev.com/news/world-health-organization-opens-consultation-on-integrated-profiling-model-to-inform-upf-regulation",
+    "status": "upcoming",
+    "added": "2026-11-18",
+    "resolution": null
   }
 ]
