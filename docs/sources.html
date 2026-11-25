@@ -54,12 +54,18 @@
   <div class="wrap">
     <h1>Corporate Affairs Intelligence</h1>
     <div class="sub">Where the intelligence comes from</div>
-    <nav>
+    <div class="areas">
+      <a href="index.html" class="area"><span class="dot"></span>Industry tracking</a>
+      <a href="brands.html" class="area"><span class="dot"></span>Brand tracking</a>
+    </div>
+    <nav class="sub">
       <a href="index.html">Feed</a>
       <a href="highrisk.html">High risk</a>
       <a href="watch.html">Future dates</a>
-      <a href="information.html">Risk Definitions</a>
-      <a href="sources.html" class="active" aria-current="page">Sources</a>
+      <a href="brands.html">Brand coverage</a>
+      <span class="spacer"></span>
+      <a href="information.html" class="util">Risk definitions</a>
+      <a href="sources.html" class="util active" aria-current="page">Sources</a>
     </nav>
   </div>
 </header>
@@ -104,6 +110,12 @@
   <h2 class="secthead">Sources monitored</h2>
   <div class="bar" id="bar"></div>
   <div id="list"></div>
+
+  <h2 class="secthead">Brand-tracking outlets</h2>
+  <p class="lead">A fixed list of named publications watched for mentions of our company and
+  brands, from the agreed media list. Local outlets are grouped by the market they cover.</p>
+  <div class="bar" id="bbar"></div>
+  <div id="blist"></div>
 
   <h2 class="secthead">Outlets that have actually appeared</h2>
   <p class="lead">Every publisher credited in a brief so far. Most were reached through topic monitors rather than being watched by name — which is how national coverage enters the system.</p>
@@ -191,8 +203,38 @@ async function renderOutlets(){
     `</div><p class="lead" style="margin-top:11px">${sorted.length} distinct outlets across ${(data.items||[]).length} items analysed so far.</p>`;
 }
 
+async function renderBrandSources(){
+  let srcs = null;
+  for (const u of ["https://raw.githubusercontent.com/businessintelligencescraper/intelligence/main/sources-brands.json?t=" + Date.now(),
+                   "sources-brands.json?t=" + Date.now()]){
+    try { const r = await fetch(u); if (r.ok){ const d = await r.json(); if (d.sources){ srcs = d.sources; break; } } }
+    catch(e){ /* try next */ }
+  }
+  if (!srcs){ $("#blist").innerHTML = '<div class="empty">Could not load the brand outlet list.</div>'; return; }
+
+  const on = srcs.filter(s => s.enabled !== false);
+  const markets = [...new Set(srcs.filter(s => s.market).map(s => s.market))].sort();
+  $("#bbar").innerHTML =
+    `<div><b>${srcs.length}</b>outlets watched</div>` +
+    `<div><b>${on.length}</b>currently active</div>` +
+    `<div><b>${markets.length}</b>local markets</div>`;
+
+  const block = (label, list, note) => !list.length ? "" : `<div class="catblock">
+      <div class="cathead"><h2>${esc(label)}</h2><span class="n">${list.length} outlet${list.length===1?"":"s"}${note?" · "+esc(note):""}</span></div>
+      <div class="srclist">${list.map(s => `<div class="src${s.enabled===false?" disabled":""}">
+          <div class="nm"><a href="${esc(s.url)}" target="_blank" rel="noopener">${esc(s.name)}</a></div>
+          <div class="host">${esc(s.domain || "matched by name")}</div>
+          <div class="tags"><span class="tag">${esc(s.tier)}</span>${s.market?`<span class="tag admin">${esc(s.market)}</span>`:""}</div>
+        </div>`).join("")}</div></div>`;
+
+  let html = block("National", srcs.filter(s => s.tier === "National"))
+           + block("Trade", srcs.filter(s => s.tier === "Trade"));
+  for (const m of markets) html += block(m, srcs.filter(s => s.market === m), "local market");
+  $("#blist").innerHTML = html;
+}
+
 (async function init(){
-  for (const url of [RAW + "?t=" + Date.now(), "../sources.json?t=" + Date.now()]){
+  for (const url of [RAW + "?t=" + Date.now(), "sources.json?t=" + Date.now()]){
     try {
       const r = await fetch(url);
       if (!r.ok) continue;
@@ -202,6 +244,7 @@ async function renderOutlets(){
   }
   if (!$("#list").innerHTML) $("#list").innerHTML = '<div class="empty">Could not load the source list.</div>';
   renderOutlets();
+  renderBrandSources();
 })();
 </script>
 </body>

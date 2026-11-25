@@ -1,0 +1,475 @@
+{
+  "_comment": "Outlets for the brand-tracking pass, from 'Media Outlets to monitor'. Local outlets are tagged with the market (plant location) they cover. Each entry is a search monitor scoped to that outlet; the brand terms come from brands.json.",
+  "sources": [
+    {
+      "id": "bloomberg",
+      "name": "Bloomberg",
+      "tier": "National",
+      "market": null,
+      "domain": "bloomberg.com",
+      "url": "https://news.google.com/rss/search?q=site%3Abloomberg.com&hl=en-US&gl=US&ceid=US:en",
+      "origin": "seed",
+      "enabled": true
+    },
+    {
+      "id": "reuters",
+      "name": "Reuters",
+      "tier": "National",
+      "market": null,
+      "domain": "reuters.com",
+      "url": "https://news.google.com/rss/search?q=site%3Areuters.com&hl=en-US&gl=US&ceid=US:en",
+      "origin": "seed",
+      "enabled": true
+    },
+    {
+      "id": "wall-street-journal",
+      "name": "Wall Street Journal",
+      "tier": "National",
+      "market": null,
+      "domain": "wsj.com",
+      "url": "https://news.google.com/rss/search?q=site%3Awsj.com&hl=en-US&gl=US&ceid=US:en",
+      "origin": "seed",
+      "enabled": true
+    },
+    {
+      "id": "forbes",
+      "name": "Forbes",
+      "tier": "National",
+      "market": null,
+      "domain": "forbes.com",
+      "url": "https://news.google.com/rss/search?q=site%3Aforbes.com&hl=en-US&gl=US&ceid=US:en",
+      "origin": "seed",
+      "enabled": true
+    },
+    {
+      "id": "politico",
+      "name": "Politico",
+      "tier": "National",
+      "market": null,
+      "domain": "politico.com",
+      "url": "https://news.google.com/rss/search?q=site%3Apolitico.com&hl=en-US&gl=US&ceid=US:en",
+      "origin": "seed",
+      "enabled": true
+    },
+    {
+      "id": "food-navigator",
+      "name": "Food Navigator",
+      "tier": "Trade",
+      "market": null,
+      "domain": "foodnavigator-usa.com",
+      "url": "https://news.google.com/rss/search?q=site%3Afoodnavigator-usa.com&hl=en-US&gl=US&ceid=US:en",
+      "origin": "seed",
+      "enabled": true
+    },
+    {
+      "id": "deli-market-news",
+      "name": "Deli Market News",
+      "tier": "Trade",
+      "market": null,
+      "domain": "delimarketnews.com",
+      "url": "https://news.google.com/rss/search?q=site%3Adelimarketnews.com&hl=en-US&gl=US&ceid=US:en",
+      "origin": "seed",
+      "enabled": true
+    },
+    {
+      "id": "cheese-reporter",
+      "name": "Cheese Reporter",
+      "tier": "Trade",
+      "market": null,
+      "domain": "cheesereporter.com",
+      "url": "https://news.google.com/rss/search?q=site%3Acheesereporter.com&hl=en-US&gl=US&ceid=US:en",
+      "origin": "seed",
+      "enabled": true
+    },
+    {
+      "id": "dairy-foods-magazine",
+      "name": "Dairy Foods Magazine",
+      "tier": "Trade",
+      "market": null,
+      "domain": "dairyfoods.com",
+      "url": "https://news.google.com/rss/search?q=site%3Adairyfoods.com&hl=en-US&gl=US&ceid=US:en",
+      "origin": "seed",
+      "enabled": true
+    },
+    {
+      "id": "cheese-market-news",
+      "name": "Cheese Market News",
+      "tier": "Trade",
+      "market": null,
+      "domain": "cheesemarketnews.com",
+      "url": "https://news.google.com/rss/search?q=site%3Acheesemarketnews.com&hl=en-US&gl=US&ceid=US:en",
+      "origin": "seed",
+      "enabled": true
+    },
+    {
+      "id": "the-progressive-dairy",
+      "name": "The Progressive Dairy",
+      "tier": "Trade",
+      "market": null,
+      "domain": "progressivedairy.com",
+      "url": "https://news.google.com/rss/search?q=site%3Aprogressivedairy.com&hl=en-US&gl=US&ceid=US:en",
+      "origin": "seed",
+      "enabled": true
+    },
+    {
+      "id": "and-now-u-know",
+      "name": "And Now U Know",
+      "tier": "Trade",
+      "market": null,
+      "domain": "andnowuknow.com",
+      "url": "https://news.google.com/rss/search?q=site%3Aandnowuknow.com&hl=en-US&gl=US&ceid=US:en",
+      "origin": "seed",
+      "enabled": true
+    },
+    {
+      "id": "food-business-news",
+      "name": "Food Business News",
+      "tier": "Trade",
+      "market": null,
+      "domain": "foodbusinessnews.net",
+      "url": "https://news.google.com/rss/search?q=site%3Afoodbusinessnews.net&hl=en-US&gl=US&ceid=US:en",
+      "origin": "seed",
+      "enabled": true
+    },
+    {
+      "id": "progressive-grocer",
+      "name": "Progressive Grocer",
+      "tier": "Trade",
+      "market": null,
+      "domain": "progressivegrocer.com",
+      "url": "https://news.google.com/rss/search?q=site%3Aprogressivegrocer.com&hl=en-US&gl=US&ceid=US:en",
+      "origin": "seed",
+      "enabled": true
+    },
+    {
+      "id": "buffalo-news",
+      "name": "Buffalo News",
+      "tier": "Local",
+      "market": "Buffalo, NY",
+      "domain": "buffalonews.com",
+      "url": "https://news.google.com/rss/search?q=site%3Abuffalonews.com&hl=en-US&gl=US&ceid=US:en",
+      "origin": "seed",
+      "enabled": true
+    },
+    {
+      "id": "buffalo-business-first",
+      "name": "Buffalo Business First",
+      "tier": "Local",
+      "market": "Buffalo, NY",
+      "domain": "bizjournals.com/buffalo",
+      "url": "https://news.google.com/rss/search?q=site%3Abizjournals.com%2Fbuffalo&hl=en-US&gl=US&ceid=US:en",
+      "origin": "seed",
+      "enabled": true
+    },
+    {
+      "id": "wivb",
+      "name": "WIVB",
+      "tier": "Local",
+      "market": "Buffalo, NY",
+      "domain": "wivb.com",
+      "url": "https://news.google.com/rss/search?q=site%3Awivb.com&hl=en-US&gl=US&ceid=US:en",
+      "origin": "seed",
+      "enabled": true
+    },
+    {
+      "id": "wgrz",
+      "name": "WGRZ",
+      "tier": "Local",
+      "market": "Buffalo, NY",
+      "domain": "wgrz.com",
+      "url": "https://news.google.com/rss/search?q=site%3Awgrz.com&hl=en-US&gl=US&ceid=US:en",
+      "origin": "seed",
+      "enabled": true
+    },
+    {
+      "id": "wkbw",
+      "name": "WKBW",
+      "tier": "Local",
+      "market": "Buffalo, NY",
+      "domain": "wkbw.com",
+      "url": "https://news.google.com/rss/search?q=site%3Awkbw.com&hl=en-US&gl=US&ceid=US:en",
+      "origin": "seed",
+      "enabled": true
+    },
+    {
+      "id": "chicago-tribune",
+      "name": "Chicago Tribune",
+      "tier": "Local",
+      "market": "Chicago, IL",
+      "domain": "chicagotribune.com",
+      "url": "https://news.google.com/rss/search?q=site%3Achicagotribune.com&hl=en-US&gl=US&ceid=US:en",
+      "origin": "seed",
+      "enabled": true
+    },
+    {
+      "id": "wgn",
+      "name": "WGN",
+      "tier": "Local",
+      "market": "Chicago, IL",
+      "domain": "wgntv.com",
+      "url": "https://news.google.com/rss/search?q=site%3Awgntv.com&hl=en-US&gl=US&ceid=US:en",
+      "origin": "seed",
+      "enabled": true
+    },
+    {
+      "id": "crains-chicago",
+      "name": "Crain's Chicago",
+      "tier": "Local",
+      "market": "Chicago, IL",
+      "domain": "chicagobusiness.com",
+      "url": "https://news.google.com/rss/search?q=site%3Achicagobusiness.com&hl=en-US&gl=US&ceid=US:en",
+      "origin": "seed",
+      "enabled": true
+    },
+    {
+      "id": "star-tribune",
+      "name": "Star Tribune",
+      "tier": "Local",
+      "market": "Minneapolis, MN",
+      "domain": "startribune.com",
+      "url": "https://news.google.com/rss/search?q=site%3Astartribune.com&hl=en-US&gl=US&ceid=US:en",
+      "origin": "seed",
+      "enabled": true
+    },
+    {
+      "id": "minneapolis-st--paul-business-journal",
+      "name": "Minneapolis/St. Paul Business Journal",
+      "tier": "Local",
+      "market": "Minneapolis, MN",
+      "domain": "bizjournals.com/twincities",
+      "url": "https://news.google.com/rss/search?q=site%3Abizjournals.com%2Ftwincities&hl=en-US&gl=US&ceid=US:en",
+      "origin": "seed",
+      "enabled": true
+    },
+    {
+      "id": "murfreesboro-post",
+      "name": "Murfreesboro Post",
+      "tier": "Local",
+      "market": "Murfreesboro, TN",
+      "domain": "murfreesboropost.com",
+      "url": "https://news.google.com/rss/search?q=site%3Amurfreesboropost.com&hl=en-US&gl=US&ceid=US:en",
+      "origin": "seed",
+      "enabled": true
+    },
+    {
+      "id": "columbia-daily-herald",
+      "name": "Columbia Daily Herald",
+      "tier": "Local",
+      "market": "Murfreesboro, TN",
+      "domain": "columbiadailyherald.com",
+      "url": "https://news.google.com/rss/search?q=site%3Acolumbiadailyherald.com&hl=en-US&gl=US&ceid=US:en",
+      "origin": "seed",
+      "enabled": true
+    },
+    {
+      "id": "the-daily-news-journal",
+      "name": "The Daily News Journal",
+      "tier": "Local",
+      "market": "Murfreesboro, TN",
+      "domain": "dnj.com",
+      "url": "https://news.google.com/rss/search?q=site%3Adnj.com&hl=en-US&gl=US&ceid=US:en",
+      "origin": "seed",
+      "enabled": true
+    },
+    {
+      "id": "the-murfreesboro-pulse",
+      "name": "The Murfreesboro Pulse",
+      "tier": "Local",
+      "market": "Murfreesboro, TN",
+      "domain": "boropulse.com",
+      "url": "https://news.google.com/rss/search?q=site%3Aboropulse.com&hl=en-US&gl=US&ceid=US:en",
+      "origin": "seed",
+      "enabled": true
+    },
+    {
+      "id": "the-post-crescent",
+      "name": "The Post-Crescent",
+      "tier": "Local",
+      "market": "Murfreesboro, TN",
+      "domain": "postcrescent.com",
+      "url": "https://news.google.com/rss/search?q=site%3Apostcrescent.com&hl=en-US&gl=US&ceid=US:en",
+      "origin": "seed",
+      "enabled": true
+    },
+    {
+      "id": "nashville-business-journal",
+      "name": "Nashville Business Journal",
+      "tier": "Local",
+      "market": "Murfreesboro, TN",
+      "domain": "bizjournals.com/nashville",
+      "url": "https://news.google.com/rss/search?q=site%3Abizjournals.com%2Fnashville&hl=en-US&gl=US&ceid=US:en",
+      "origin": "seed",
+      "enabled": true
+    },
+    {
+      "id": "merrill-foto-news",
+      "name": "Merrill Foto News",
+      "tier": "Local",
+      "market": "Wisconsin",
+      "domain": "merrillfotonews.com",
+      "url": "https://news.google.com/rss/search?q=site%3Amerrillfotonews.com&hl=en-US&gl=US&ceid=US:en",
+      "origin": "seed",
+      "enabled": true
+    },
+    {
+      "id": "wisconsin-public-radio",
+      "name": "Wisconsin Public Radio",
+      "tier": "Local",
+      "market": "Wisconsin",
+      "domain": "wpr.org",
+      "url": "https://news.google.com/rss/search?q=site%3Awpr.org&hl=en-US&gl=US&ceid=US:en",
+      "origin": "seed",
+      "enabled": true
+    },
+    {
+      "id": "antigo-times",
+      "name": "Antigo Times",
+      "tier": "Local",
+      "market": "Wisconsin",
+      "domain": "antigotimes.com",
+      "url": "https://news.google.com/rss/search?q=site%3Aantigotimes.com&hl=en-US&gl=US&ceid=US:en",
+      "origin": "seed",
+      "enabled": true
+    },
+    {
+      "id": "milwaukee-journal-sentinel",
+      "name": "Milwaukee Journal Sentinel",
+      "tier": "Local",
+      "market": "Wisconsin",
+      "domain": "jsonline.com",
+      "url": "https://news.google.com/rss/search?q=site%3Ajsonline.com&hl=en-US&gl=US&ceid=US:en",
+      "origin": "seed",
+      "enabled": true
+    },
+    {
+      "id": "biztimes-milwaukee",
+      "name": "BizTimes Milwaukee",
+      "tier": "Local",
+      "market": "Wisconsin",
+      "domain": "biztimes.com",
+      "url": "https://news.google.com/rss/search?q=site%3Abiztimes.com&hl=en-US&gl=US&ceid=US:en",
+      "origin": "seed",
+      "enabled": true
+    },
+    {
+      "id": "the-preamble",
+      "name": "The Preamble",
+      "tier": "Local",
+      "market": "Wisconsin",
+      "domain": null,
+      "url": "https://news.google.com/rss/search?q=%22The+Preamble%22&hl=en-US&gl=US&ceid=US:en",
+      "origin": "seed",
+      "enabled": true
+    },
+    {
+      "id": "wausau-pilot-and-review",
+      "name": "Wausau Pilot and Review",
+      "tier": "Local",
+      "market": "Wisconsin",
+      "domain": "wausaupilotandreview.com",
+      "url": "https://news.google.com/rss/search?q=site%3Awausaupilotandreview.com&hl=en-US&gl=US&ceid=US:en",
+      "origin": "seed",
+      "enabled": true
+    },
+    {
+      "id": "wausau-daily-herald",
+      "name": "Wausau Daily Herald",
+      "tier": "Local",
+      "market": "Wisconsin",
+      "domain": "wausaudailyherald.com",
+      "url": "https://news.google.com/rss/search?q=site%3Awausaudailyherald.com&hl=en-US&gl=US&ceid=US:en",
+      "origin": "seed",
+      "enabled": true
+    },
+    {
+      "id": "capital-press",
+      "name": "Capital Press",
+      "tier": "Local",
+      "market": "Nampa, ID",
+      "domain": "capitalpress.com",
+      "url": "https://news.google.com/rss/search?q=site%3Acapitalpress.com&hl=en-US&gl=US&ceid=US:en",
+      "origin": "seed",
+      "enabled": true
+    },
+    {
+      "id": "idaho-press",
+      "name": "Idaho Press",
+      "tier": "Local",
+      "market": "Nampa, ID",
+      "domain": "idahopress.com",
+      "url": "https://news.google.com/rss/search?q=site%3Aidahopress.com&hl=en-US&gl=US&ceid=US:en",
+      "origin": "seed",
+      "enabled": true
+    },
+    {
+      "id": "boisedev",
+      "name": "BoiseDev",
+      "tier": "Local",
+      "market": "Nampa, ID",
+      "domain": "boisedev.com",
+      "url": "https://news.google.com/rss/search?q=site%3Aboisedev.com&hl=en-US&gl=US&ceid=US:en",
+      "origin": "seed",
+      "enabled": true
+    },
+    {
+      "id": "ktvb",
+      "name": "KTVB",
+      "tier": "Local",
+      "market": "Nampa, ID",
+      "domain": "ktvb.com",
+      "url": "https://news.google.com/rss/search?q=site%3Aktvb.com&hl=en-US&gl=US&ceid=US:en",
+      "origin": "seed",
+      "enabled": true
+    },
+    {
+      "id": "big-rapids-pioneer",
+      "name": "Big Rapids Pioneer",
+      "tier": "Local",
+      "market": "Reed City, MI",
+      "domain": "bigrapidsnews.com",
+      "url": "https://news.google.com/rss/search?q=site%3Abigrapidsnews.com&hl=en-US&gl=US&ceid=US:en",
+      "origin": "seed",
+      "enabled": true
+    },
+    {
+      "id": "cadillac-news",
+      "name": "Cadillac News",
+      "tier": "Local",
+      "market": "Reed City, MI",
+      "domain": "cadillacnews.com",
+      "url": "https://news.google.com/rss/search?q=site%3Acadillacnews.com&hl=en-US&gl=US&ceid=US:en",
+      "origin": "seed",
+      "enabled": true
+    },
+    {
+      "id": "grand-rapids-herald-review",
+      "name": "Grand Rapids Herald-Review",
+      "tier": "Local",
+      "market": "Reed City, MI",
+      "domain": "grandrapidsmn.com",
+      "url": "https://news.google.com/rss/search?q=site%3Agrandrapidsmn.com&hl=en-US&gl=US&ceid=US:en",
+      "origin": "seed",
+      "enabled": true
+    },
+    {
+      "id": "the-sun-gazette",
+      "name": "The Sun Gazette",
+      "tier": "Local",
+      "market": "Tulare, CA",
+      "domain": "thesungazette.com",
+      "url": "https://news.google.com/rss/search?q=site%3Athesungazette.com&hl=en-US&gl=US&ceid=US:en",
+      "origin": "seed",
+      "enabled": true
+    },
+    {
+      "id": "the-reporter",
+      "name": "The Reporter",
+      "tier": "Local",
+      "market": "Walton, KY",
+      "domain": null,
+      "url": "https://news.google.com/rss/search?q=%22The+Reporter%22&hl=en-US&gl=US&ceid=US:en",
+      "origin": "seed",
+      "enabled": true
+    }
+  ]
+}

@@ -96,3 +96,23 @@ footer a{color:var(--navy2)}
 .md a{color:var(--navy2)}
 
 @media (max-width:640px){ .toolbar{flex-direction:column;align-items:stretch} .seg{width:100%} .seg button{flex:1} }
+
+/* ---- top-level area switch (Industry / Brands) ---- */
+.areas{display:flex;gap:7px;margin-top:14px;flex-wrap:wrap}
+.areas a{
+  display:inline-flex;align-items:center;gap:7px;
+  font-family:var(--display);font-size:14px;font-weight:700;letter-spacing:.01em;
+  color:#cfe0f5;text-decoration:none;padding:8px 16px;border-radius:9px;line-height:1;
+  background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.14);
+}
+.areas a:hover{background:rgba(255,255,255,.17);color:#fff}
+.areas a.on{background:#fff;color:var(--navy);border-color:#fff}
+.areas a:focus-visible{outline:2px solid #fff;outline-offset:2px}
+.areas .dot{width:7px;height:7px;border-radius:50%;background:currentColor;opacity:.55}
+.areas a.on .dot{opacity:1}
+
+/* sub-nav sits under the area switch */
+nav.sub{margin-top:10px;padding-top:9px;border-top:1px solid rgba(255,255,255,.13)}
+nav .spacer{flex:1}
+nav .util{opacity:.82;font-weight:600}
+@media (max-width:640px){ nav .spacer{display:none} }
